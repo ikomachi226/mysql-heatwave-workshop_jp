@@ -1,6 +1,6 @@
 # Lab 1 - Create VCN and allow MySQL ports
 
-_**1.1 -**_ Log-in to your OCI tenancy. Once you have logged-in, select _**Networking >> Virtual Cloud**_ Networks from the _**hamburger menu**_
+_**1.1 -**_ Log-in to your OCI tenancy. Once you have logged-in, select _**Networking >> Virtual Cloud Networks**_ from the _**hamburger menu**_
 ![](./images/HW1_vcn.png)
 
 _**1.2 -**_ From the Compartment picker on the bottom right, select your compartment
