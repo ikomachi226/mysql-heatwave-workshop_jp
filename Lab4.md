@@ -15,6 +15,7 @@ _**4.4-**_ We suggest to increase the font size, as per picture below:
 ![](./images/cloud-shell-3.png)
 
 _**4.5-**_ On the top left corner of the cloud shell there are Minimize, Maximize and Close buttons. If you Maximize the cloud shell it will take the size of the entire page. Remember to Restore the size or Minimize prior of changing page in the OCI interface.
+
 ![](./images/cloud-shell-4.png)
 
 _**4.6-**_ Drag and drop the previously saved private key into the cloud shell. Get the file name with the command_**ll**_
