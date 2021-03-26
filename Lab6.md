@@ -11,6 +11,10 @@ _**6.3 -**_ From the MySQL Shell connection, import the data set into MySQL DB S
 ```
 util.loadDump("/home/opc/tpch_dump", {dryRun: true, resetProgress:true, ignoreVersion:true})
 ```
+This command will run a dry run of the import. If it terminates without errors, execute the followin to load the dump for real:
+```
+util.loadDump("/home/opc/tpch_dump", {dryRun: false, resetProgress:true, ignoreVersion:true})
+```
 
 _**6.4 -**_ Check the imported data. From MySQL Shell execute the commands:
 
