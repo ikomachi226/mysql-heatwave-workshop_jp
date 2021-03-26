@@ -18,7 +18,7 @@ _**4.5-**_ On the top left corner of the cloud shell there are Minimize, Maximiz
 
 ![](./images/cloud-shell-4.png)
 
-_**4.6-**_ Drag and drop the previously saved private key into the cloud shell. Get the file name with the command_**ll**_
+_**4.6-**_ Drag and drop the previously saved private key into the cloud shell. Get the file name with the command _**ll**_ 
 ![](./images/cloud-shell-5.png)
 
 _**4.7-**_ In order to establish an ssh connection with the bastion host using the Public IP, execute the following commands:
