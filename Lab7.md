@@ -1,6 +1,7 @@
 # Lab 7 - Execute queries using Heatwave
 
-_**7.1 -**_ On the OCI console, check that HeatWave nodes are in "Active" status.
+_**7.1 -**_ On the OCI console, check that HeatWave nodes are in _**Active**_ status.
+![](./images/HW34_hw.png)
 
 _**7.2 -**_ If HeatWave nodes are in "Active" status, you can load the tpch database tables into HeatWave, from your bastion host ssh connection, using the following command:
 ```
