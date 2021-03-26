@@ -3,7 +3,7 @@
 _**7.1 -**_ On the OCI console, check that HeatWave nodes are in _**Active**_ status.
 ![](./images/HW34_hw.png)
 
-_**7.2 -**_ If HeatWave nodes are in "Active" status, you can load the tpch database tables into HeatWave, from your bastion host ssh connection, using the following command:
+_**7.2 -**_ If HeatWave nodes are in _**Active**_ status, you can load the tpch database tables into HeatWave, from your bastion host ssh connection, using the following command:
 ```
 mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --sql < tpch_offload.sql
 ```
