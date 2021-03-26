@@ -1,4 +1,4 @@
-##Configure MySQL Cloud Service + Heatwave to run Analytics workloads in Oracle Cloud
+## Configure MySQL Cloud Service + Heatwave to run Analytics workloads in Oracle Cloud
 
 **Key Objectives:**
 - Learn how to deploy MySQL Database Service (MDS) DB System for HeatWave
