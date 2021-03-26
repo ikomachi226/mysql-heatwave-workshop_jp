@@ -124,3 +124,5 @@ Now, you can compare the execution times obtained using HeatWave or only MySQL o
 
 Optional: inspect the tpch_queries_mysql.sql and the tpch_queries_rapid.sql scripts using vi.
 
+
+## Great Work - All Done!
