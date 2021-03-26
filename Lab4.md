@@ -33,7 +33,7 @@ _**4.8-**_ From the established ssh connection, install MySQL Shell and MySQL cl
 ```
 wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
 sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
-sudo yum install mysql-shell            (when prompted a warning about the public key enter_**y**_)
+sudo yum install mysql-shell            /*when prompted a warning about the public key enter "y"*/
 sudo yum install mysql-community-client
 ```
 
