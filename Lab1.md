@@ -35,3 +35,4 @@ Click _**+ Another Ingress Rule**_ and repeat for port 33060
 At the end click the blue button _**Add Ingress Rules**_
 ![](./images/HW10_vcn.png)
 
+**[Go to the next Lab](Lab2.md)**
