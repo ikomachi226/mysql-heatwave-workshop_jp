@@ -1,6 +1,6 @@
 # Lab 6 - Import data into MDS and load tables to HeatWave
 
-_**6.1 -**_ Go back to your cloud shell ssh connection to the bastion host.
+_**6.1 -**_ Go back to your ssh connection to the bastion host.
 
 _**6.2 -**_ Connect to MySQL DB System using MySQL Shell, with the following command:
 ```
@@ -31,6 +31,7 @@ SHOW DATABASES;
 | tpch               |
 +--------------------+
 ```
+Continue with commands:
 ```
 USE TPCH;
 
@@ -50,7 +51,9 @@ SHOW TABLES;
 | region         |
 | supplier       |
 +----------------+
-
+```
+Continue with commands:
+```
 \exit
 ```
 
@@ -59,7 +62,7 @@ _**6.5 -**_ Connect to MySQL DB System:
 mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --database=tpch --sql
 ```
 
-_**6.6 -**_ Let's start testing a simple query.
+_**6.6 -**_ Let's start testing a simple query but yet effective query.
 Run the following query and check the execution time (approximately 12-13s):
 ```
 SELECT
