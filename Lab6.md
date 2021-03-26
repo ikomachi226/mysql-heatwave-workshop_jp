@@ -52,18 +52,9 @@ SHOW TABLES;
 | supplier       |
 +----------------+
 ```
-Continue with commands:
-```
-\exit
-```
-
-_**6.5 -**_ Connect to MySQL DB System:
-```
-mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --database=tpch --sql
-```
 
 _**6.6 -**_ Let's start testing a simple query but yet effective query.
-Run the following query and check the execution time (approximately 12-13s):
+From the previous SQL prompt, run the following query and check the execution time (approximately 12-13s):
 ```
 SELECT
     l_returnflag,
