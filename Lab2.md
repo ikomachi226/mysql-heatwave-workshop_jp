@@ -6,7 +6,7 @@ _**2.1 -**_ From the main menu on the left select _**Compute >> Instances**_
 _**2.2 -**_ Look at the compartment selector on the left and check that you are using the same compartment used to create the VCN and click on the _**Create Instance**_ blue button
 ![](./images/HW12_ci.png)
 
-_**2.3 -**_ In the _**Name_** filed, insert _**mysql-analytics-test-bridge**_ (or any other name at your convenience). This name will be used also as internal FQDN. 
+_**2.3 -**_ In the _**Name**_ filed, insert _**mysql-analytics-test-bridge**_ (or any other name at your convenience). This name will be used also as internal FQDN. 
 The _**Placement and Hardware section**_ is the section where you can change Availability Domain, Fault Domain, Image to be used, and Shape of resources. For the scope of this workshop leave everything as is.
 ![](./images/HW13_ci.png)
 
