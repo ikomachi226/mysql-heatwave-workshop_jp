@@ -27,13 +27,13 @@ chmod 600 <private-key-file-name>.key
 ssh -i <private-key-file-name>.key opc@<compute_instance_public_ip>
 ```
 
-If prompted to accept the finger print, enter_**yes**_ and hit enter.
+If prompted to accept the finger print, enter _**yes**_ and hit enter.
 
 _**4.8-**_ From the established ssh connection, install MySQL Shell and MySQL client executing the following commands:
 ```
 wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
 sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
-sudo yum install mysql-shell ```(when prompted a warning about the public key enter_**y**_)```
+sudo yum install mysql-shell            (when prompted a warning about the public key enter_**y**_)
 sudo yum install mysql-community-client
 ```
 
