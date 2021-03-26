@@ -7,7 +7,7 @@
 - Understand how tables are loaded to HeatWave
 - Learn how to run queries using traditional MySQL and/or HeatWave
 
-**Prerequisite**
+**Prerequisites:**
 - An already created OCI tenancy
 - An already existing compartment within the OCI tenancy
 
