@@ -29,7 +29,7 @@ _**3.7 -**_ Scroll down and click on _**Show Advanced Options**_
 _**3.8 -**_ In the Configuration tab click on _**Select Configuration**_ 
 ![](./images/HW24_mds.png)
 
-_**3.9 -**_ In the _**Browse All Configurations**_ window, select MySQL.HeatWave.VM.Standard.E_**3.Standalone, and click the button _**Select a Configuration**_ 
+_**3.9 -**_ In the _**Browse All Configurations**_ window, select MySQL.HeatWave.VM.Standard.E3.Standalone, and click the button _**Select a Configuration**_ 
 ![](./images/HW25_mds.png)
 
 _**3.10 -**_ If everything is correct you should see something corresponding to the below
