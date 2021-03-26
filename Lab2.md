@@ -1,6 +1,6 @@
 # Lab 2 - Create compute instance bastion host
 
-_**2.1 -**_ From the main menu on the left select Compute >> Instances
+_**2.1 -**_ From the main menu on the left select _**Compute >> Instances**_
 ![](./images/HW11_ci.png)
 
 _**2.2 -**_ Look at the compartment selector on the left and check that you are using the same compartment used to create the VCN and click on the _**Create Instance**_ blue button
