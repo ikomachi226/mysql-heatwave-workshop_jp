@@ -11,8 +11,10 @@ _**3.3 -**_ Start creating the DB System. Cross check again the compartment and 
 ![](./images/HW19_mds.png)
 
 _**3.4 -**_ In the _**Create Administrator Credential**_ section enter the following:
+```
 username: admin
 password: Oracle.123
+```
 In the _**Configure Networking**_ section make sure you select the same subnet which you have used to create the Compute Instance (Public-Subnet-analytics_vcn_test).
 ![](./images/HW20_mds.png)
 
