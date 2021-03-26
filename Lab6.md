@@ -1,6 +1,6 @@
 # Lab 6 - Import data into MDS and load tables to HeatWave
 
-_**6.1 -**_ Go back to your ssh connection to the bastion host.
+_**6.1 -**_ Go back to your cloud shell ssh connection to the bastion host.
 
 _**6.2 -**_ Connect to MySQL DB System using MySQL Shell, with the following command:
 ```
