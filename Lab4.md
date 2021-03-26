@@ -1,6 +1,6 @@
 # Lab 4 - Connect to bastion host, install MySQL Shell and download workshop data
 
-_**4.1-**_ In the main menu on the left go to Compute >> Instances.
+_**4.1-**_ In the main menu on the left go to _**Compute >> Instances**_
 Click on the instance you have previously created and take note of the Public IP Address.
 ![](./images/HW16_ci.png)
 
