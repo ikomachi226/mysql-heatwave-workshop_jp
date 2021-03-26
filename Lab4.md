@@ -51,7 +51,7 @@ wget https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/wTJ02aU-A5C2RCfBn3ym
 unzip heatwave_workshop.zip
 ```
 
-_**4.11-**_ Verify the extracted material executing_**ll**_ command.
+_**4.11-**_ Verify the extracted material executing _**ll**_ command.
 Among the output, you should see the following file names:
 ```
 tpch_dump
