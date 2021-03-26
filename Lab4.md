@@ -1,7 +1,7 @@
 # Lab 4 - Connect to bastion host, install MySQL Shell and download workshop data
 
 _**4.1-**_ In the main menu on the left go to _**Compute >> Instances**_
-Click on the instance you have previously created and take note of the Public IP Address.
+Click on the instance you have previously created and take note of the _**Public IP Address**_.
 ![](./images/HW16_ci.png)
 
 _**4.2-**_ In order to connect to the bastion host, we will use the cloud shell, a small linux terminal embedded in the OCI interface.
