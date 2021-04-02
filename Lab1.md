@@ -2,7 +2,12 @@
 
 ## Introduction
 
-Virtual Cloud Network helps you define your own data centre network topology inside the Oracle Cloud, by defining some of the following components (Subnets, Route Tables, Security Lists, Gateways, etc.)
+Virtual Cloud Network helps you define your own data centre network topology inside the Oracle Cloud, by defining some of the following components (Subnets, Route Tables, Security Lists, Gateways, etc.), some of these components are set by default automatically within every VCN that can't be deleted:
+ - Default route table, with no route rules
+ - Default security list, with default security rules
+ - Default set of DHCP options, with default values
+
+A security list acts as a virtual firewall for an instance, with ingress and egress rules that specify the types of traffic allowed in and out. Each subnet can have multiple security lists associated with it, and each list can have multiple rules.
 
 ## Key Objectives:
 
@@ -70,5 +75,5 @@ At the end click the blue button _**Add Ingress Rules**_
 
 ![](./images/HW10_vcn.png)
 
-
+Now that you have created the VCN and allowed MySQL ports you can proceed to the next step and create the compute instance bastion host
 **[Go to the next Lab](Lab2.md)**
