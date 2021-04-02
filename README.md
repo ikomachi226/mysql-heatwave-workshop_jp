@@ -1,18 +1,10 @@
 # MySQL Cloud Service & Heatwave Configuration Workshop 
 
-This workshop will guide you to configure MySQL Cloud Service + Heatwave to run Analytics workloads in Oracle Cloud
-
+This workshop will walk you through the process to configure MySQL Cloud Service & Heatwave to run Analytics workloads in Oracle Cloud
+The dataset useed for this workshop includes many attributes that we will use to run some queries with and without Heatwave and compare the execution times obtained using HeatWave or only MySQL on InnoDB. 
 ![](./images/Intro.jpg)
 
-## Goals for this workshop
 
-- Create VCN and allow MySQL ports
-- Create compute instance bastion host
-- Create MySQL DB System (MDS) for Heatwave
-- Connect to bastion host, install MySQL Shell and download workshop data
-- Add Heatwave cluster to MySQL DB-System
-- Import data into MDS and load tables to HeatWave 
-- Execute queries using Heatwave
 
 **Key Objectives:**
 
@@ -23,7 +15,7 @@ This workshop will guide you to configure MySQL Cloud Service + Heatwave to run 
 - Learn how to run queries using traditional MySQL and/or HeatWave
 
 **Prerequisites:**
-- you will need an Oracle Cloud Account
+- You will need an Oracle Cloud Account
 - A cloud tenancy where you have a compartment provisioned in
   
 
@@ -32,6 +24,7 @@ This workshop will guide you to configure MySQL Cloud Service + Heatwave to run 
  
  ## Before You Begin
  **What is the Heatwave?**
+
  HeatWave is a new, integrated, high-performance analytics engine for MySQL Database Service. HeatWave accelerates MySQL performance by 400X for analytics queries, scales out to thousands of cores, and is 2.7X faster at one-third the cost of Amazon Redshift. MySQL Database Service, with HeatWave, is the only service that enables database admins and app developers to run OLTP and OLAP workloads directly from their MySQL database, eliminating the need for complex, time-consuming, and expensive data movement and integration with a separate analytics database. The service is optimized for and exclusively available in Oracle Cloud Infrastructure (OCI).
 
  **All set? Let's start**
