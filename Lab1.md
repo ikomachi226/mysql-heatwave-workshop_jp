@@ -11,7 +11,7 @@ A security list acts as a virtual firewall for an instance, with ingress and egr
 
 ## Key Objectives:
 
-- Learn how to create a Virtual Cloud Network 
+- Learn how to create a Virtual Cloud Network with internet connectivity and add ingress rules in the security list to allow MySQL ports
 
 ## Required Artifacts
 
