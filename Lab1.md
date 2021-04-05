@@ -23,56 +23,58 @@ The default security list comes with an initial set of stateful rules, which sho
 ## Steps
 
 ### **Step 1.1:**
- Log-in to your OCI tenancy. Once you have logged-in, select _**Networking >> Virtual Cloud Networks**_ from the _**hamburger menu**_
+ - Log-in to your OCI tenancy. Once you have logged-in, select _**Networking >> Virtual Cloud Networks**_ from the _**menu icon**_ on the top left corner
 
 ![](./images/HW1_vcn.png)
 
 ### **Step 1.2:**
- From the Compartment picker on the bottom right, select your compartment
+- From the Compartment picker on the bottom left side, select your compartment from the list
 
 ![](./images/HW1b_vcn.png)
 
 ### **Step 1.3:** 
- In the main area of the page, click on _**Start VCN Wizard**_
+- To create a virtual cloud network, click on _**Start VCN Wizard**_ , 
+  
 ![](./images/HW2_vcn.png)
 
 ### **Step 1.4:** 
- Select _**VCN with Internet Connectivity**_ and click _**Start VCN Wizard**_
+- Select _**VCN with Internet Connectivity**_ and click _**Start VCN Wizard**_
 
 ![](./images/HW3_vcn.png)
 
 ### **Step 1.5:**
- In the _**VCN NAME**_ field enter the value _**analytics_vcn_test**_ (or any name at your convenience), and make sure that the selected compartment is the right one. Leave all the rest as per default. Click next.
+- Now you need to complete some infromation and set the configuration for the VCN. In the _**VCN NAME**_ field enter the value _**analytics_vcn_test**_ (or any name at your convenience), and make sure that the selected compartment is the right one. Leave all the rest as per default. Click next.
 
 ![](./images/HW4_vcn.png)
 
 ### **Step 1.6:** 
- Review and click _**Create**_
+- Review and click _**Create**_
 
 ![](./images/HW5_vcn.png)
 
 ### **Step 1.7:** 
- Once the VCN will be created click _**View Virtual Cloud Network**_
+- Once the VCN will be created click _**View Virtual Cloud Network**_
 
 ![](./images/HW6_vcn.png)
 
 ### **Step 1.8:** 
- Click on the _**Public_Subnet-analytics_vcn_test**_ link
+- Click on the _**Public_Subnet-analytics_vcn_test**_ link. 
 
 ![](./images/HW7_vcn.png)
 
 ### **Step 1.9:** 
- Click on _**Default_Security_List_for_analytics_vcn_test**_
+- Earlier you set up the subnet to use the VCN's default security list, that has default rules, which are designed to make it easy to get started with Oracle Cloud Infrastructure. Now to add additional rules to the default security list to allow access for MySQL ports, click on _**Default_Security_List_for_analytics_vcn_test**_
 
 ![](./images/HW8_vcn.png)
 
 ### **Step 1.10:** 
- Click on _**Add Ingress Rules**_
+- Click on _**Add Ingress Rules**_
 
 ![](./images/HW9_vcn.png)
 
 ### **Step 1.11:**
- Follow the instructions on the below image to add the port 3306.
+- Here's how to add another rule to the default security list to enable that traffic:
+
 Click _**+ Another Ingress Rule**_ and repeat for port 33060
 At the end click the blue button _**Add Ingress Rules**_
 
