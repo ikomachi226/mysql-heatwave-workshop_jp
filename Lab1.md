@@ -7,18 +7,14 @@ Virtual Cloud Network helps you define your own data centre network topology ins
  - Default security list, with default security rules
  - Default set of DHCP options, with default values
   
-For an overview of VCNs, allowed size, default VCN components, and scenarios for using a VCN, check Networking Overview https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm#network_landing.
+For an overview of VCNs, allowed size, default VCN components, and scenarios for using a VCN, check **[Networking Overview] (https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm#network_landing)**.
 A security list acts as a virtual firewall for an instance, with ingress and egress rules that specify the types of traffic allowed in and out. Each subnet can have multiple security lists associated with it, and each list can have multiple rules. 
-The default security list comes with an initial set of stateful rules, which should in most cases be changed to only allow inbound traffic from authorized subnets relevant to the region that homes that VCN or subnet. A list of authorized subnet ranges relevant to each region can be found at https://docs.cloud.oracle.com/iaas/tools/public_ip_ranges.json.
+The default security list comes with an initial set of stateful rules, which should in most cases be changed to only allow inbound traffic from authorized subnets relevant to the region that homes that VCN or subnet. A list of authorized subnet ranges relevant to each region can be found **[here] (https://docs.cloud.oracle.com/iaas/tools/public_ip_ranges.json)**.
 
 ## Key Objectives:
 
 - Learn how to create a Virtual Cloud Network with internet connectivity 
 - Add ingress rules in the security list to allow MySQL ports
-
-## Required Artifacts
-
-- The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
 ## Steps
 
@@ -80,5 +76,4 @@ At the end click the blue button _**Add Ingress Rules**_
 
 ![](./images/HW10_vcn.png)
 
-Now that you have created the VCN and allowed MySQL ports you can proceed to the next step and create the compute instance bastion host
-**[Go to the next Lab](Lab2.md)**
+Now that you have created the VCN and allowed MySQL ports you can proceed to the next step and create the compute instance bastion host, **[Click Here to go to the next lab!](Lab2.md)**
