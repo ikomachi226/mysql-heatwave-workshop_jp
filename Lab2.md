@@ -48,4 +48,4 @@ Once done, click _**Create**_
 ![](./images/HW16_ci.png)
 
 
-Go on let's go ahead and create MySQL DB System (MDS) for Heatwave,**[Click Here to go to the next lab!](Lab3.md)**
+Go on let's go ahead and create MySQL DB System (MDS) for Heatwave, **[Click Here to go to the next lab!](Lab3.md)**
