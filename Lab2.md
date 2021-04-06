@@ -4,7 +4,7 @@
 
 A bastion host is a compute instance that serves as the public entry point for accessing a private network from external networks like the internet. Traffic must flow through the bastion host to access the private network, and you can set up security mechanisms on the bastion to handle that traffic.
 
-See the white paper Bastion Hosts: **[Protected Access for Virtual Cloud Networks] (https://www.oracle.com/a/ocom/docs/bastion-hosts.pdf)**. 
+See the white paper Bastion Hosts: **[Protected Access for Virtual Cloud Networks](https://www.oracle.com/a/ocom/docs/bastion-hosts.pdf)**. 
 
 ## Key Objectives:
 
