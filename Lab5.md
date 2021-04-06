@@ -25,25 +25,25 @@ Take note of the _**Private IP Address**_ of the MySQL DB System.
   
 ![](./images/HW30_hw.png)
 
-### **Step 5.1:**
+### **Step 5.3:**
 - Click on the button _**Add HeatWave Cluster**_ located on the right.
   
 ![](./images/HW31_hw.png)
 
-### **Step 5.1:**
+### **Step 5.4:**
 - Check that Shape looks as per picture below and that Node Count is set to 2.
 Click the blue button _**Add HeatWave Cluster**_
 
 ![](./images/HW32_hw.png)
 
-### **Step 5.1:**
+### **Step 5.5:**
 - You will be brought back to the main page and you can check for the creation status. After some seconds you should see the nodes in _**Creating**_ status.
   
 ![](./images/HW33_hw.png)
 
-### **Step 5.1:**
+### **Step 5.6:**
 - After completion the nodes will switch to _**Active**_ status. This will take some time complete. 
   
 ![](./images/HW34_hw.png)
 
-**[Click Here to go to the next lab!](Lab6.md)**
+Heatwave cluster is active! **[Click Here to go to the next lab!](Lab6.md)**
