@@ -5,7 +5,7 @@
 
 HeatWave configures a Standalone DB System with a HeatWave-compatible shape (MySQL.HeatWave.VM.Standard.E3) and 1TB of data storage, by default. The DB System and HeatWave cluster must use the same shape. For more information, see **[HeatWave}(https://docs.oracle.com/en-us/iaas/mysql-database/doc/heatwave1.html#GUID-9401C69A-B379-48EB-B96C-56462C23E4FD)**. 
 
-**## Key Objectives:**
+## Key Objectives:
 - Learn how to to launch a new DB System.
 
 ## Steps
