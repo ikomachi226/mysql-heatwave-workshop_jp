@@ -16,8 +16,8 @@ The dataset useed for this workshop includes many attributes that we will use to
 - Learn how to run queries using traditional MySQL and/or HeatWave
 
 **Prerequisites:**
-- You will need an Oracle Cloud Account
-- A cloud tenancy where you have a compartment provisioned in
+- This workshop requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
+- A Cloud tenancy where you have a compartment provisioned in.
   
 
 
