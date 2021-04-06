@@ -1,13 +1,24 @@
 # Lab 6 - Import data into MDS and load tables to HeatWave
 
-_**6.1 -**_ Go back to your ssh connection to the bastion host.
+## Key Objectives:
+- Learn how to import the downloaded data set into MySQL DB System using cloud shell.
+- Run query without Heatwave service enabled to note the execution time .
 
-_**6.2 -**_ Connect to MySQL DB System using MySQL Shell, with the following command:
+## Steps
+
+### **Step 6.1:**
+- Go back to your ssh connection to the bastion host.
+
+![](./images/cloud-shell-5.png)
+
+### **Step 6.2:**
+- Connect to MySQL DB System using MySQL Shell, with the following command:
 ```
 mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --js
 ```
 
-_**6.3 -**_ From the MySQL Shell connection, import the data set into MySQL DB System:
+### **Step 6.3:**
+- From the MySQL Shell connection, import the data set into MySQL DB System:
 ```
 util.loadDump("/home/opc/tpch_dump", {dryRun: true, resetProgress:true, ignoreVersion:true})
 ```
@@ -16,7 +27,8 @@ This command will run a dry run of the import. If it terminates without errors, 
 util.loadDump("/home/opc/tpch_dump", {dryRun: false, resetProgress:true, ignoreVersion:true})
 ```
 
-_**6.4 -**_ Check the imported data. From MySQL Shell execute the commands:
+### **Step 6.4:**
+- Check the imported data. From MySQL Shell execute the commands:
 
 ```
 \sql
@@ -57,7 +69,8 @@ SHOW TABLES;
 +----------------+
 ```
 
-_**6.6 -**_ Let's start testing a simple query but yet effective query.
+### **Step 6.5:**
+- Let's start testing a simple query but yet effective query.
 From the previous SQL prompt, run the following query and check the execution time (approximately 12-13s):
 ```
 SELECT
@@ -80,4 +93,4 @@ ORDER BY l_returnflag , l_linestatus;
 ```
 
 
-**[Go to the next Lab](Lab7.md)**
+You see that time consumed to run the query! let's enable Heatwave and run the query again to compare. [Click here to go to the next Lab!](Lab7.md)**
