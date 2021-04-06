@@ -81,4 +81,4 @@ Once done, click the _**Create**_ button.
   
 ![](./images/HW28_mds.png)
 
-All done? now we can connect to the bastion host, and install MySQL Shell **[Click Here to go to the next lab!](Lab4.md)**
+All done? now we can connect to the bastion host, and install MySQL Shell,  **[Click Here to go to the next lab!](Lab4.md)**
