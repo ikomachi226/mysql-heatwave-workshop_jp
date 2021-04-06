@@ -1,9 +1,22 @@
 # Lab 7 - Execute queries using Heatwave
 
-_**7.1 -**_ On the OCI console, check that HeatWave nodes are in _**Active**_ status.
+## Introduction
+
+HeatWave Cluster Node Count Estimates provide recommendations on how many HeatWave nodes are needed to run a workload. When the service is started, database tables on which HeatWave queries are run need to be loaded to HeatWave cluster memory. The size of the HeatWave cluster needed depends on tables and columns required to load, and the compression achieved in memory for this data. Under-provisioning the HeatWave cluster results in data load or query execution failure due to space limitations
+
+## Key Objectives:
+- Observing the accelerated execution time when Heatwave cluster is enabled.
+
+## Steps
+
+### **Step 7.1:**
+- On the OCI console, check that HeatWave nodes are in _**Active**_ status.
+  
 ![](./images/HW34_hw.png)
 
-_**7.2 -**_ If HeatWave nodes are in _**Active**_ status, you can load the tpch database tables into HeatWave, from your bastion host ssh connection, using the following command:
+
+### **Step 7.2:**
+- If HeatWave nodes are in _**Active**_ status, you can load the tpch database tables into HeatWave, from your bastion host ssh connection, using the following command:
 ```
 mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --sql < tpch_offload.sql
 ```
@@ -18,9 +31,10 @@ Additionally you can inspect the full content of the file, executing, from the L
 cat tpch_offload.sql
 ```
 
-_**7.3 -**_ If the previous step completed without errors, you are good to go!
+- If the previous step completed without errors, you are good to go!
 
-_**7.4 -**_ Let's come back to the previous query and execute it this time using HeatWave.
+### **Step 7.3:**
+- Let's come back to the previous query and execute it this time using HeatWave.
 
 Connect to MySQL DB System:
 ```
@@ -76,14 +90,15 @@ GROUP BY l_returnflag , l_linestatus
 ORDER BY l_returnflag , l_linestatus;
 ```
 
-This time execution time should be about 0.2-0.5s!!
+- This time execution time should be about 0.2-0.5s!!
 
 Exit from MySQL Shell:
 ```
 \exit
 ```
 
-_**7.5 -**_ Now that you have understood how HeatWave offloading works and which performance gain it can give, it is time to run some batch execution.
+### **Step 7.4:**
+- Now that you have understood how HeatWave offloading works and which performance gain it can give, it is time to run some batch execution.
 
 We will run the script tpch_queries_mysql.sql to execute some queries without using HeatWave.
 Then, we will run the script tpch_queries_rapid.sql to execute the same queries using HeatWave.
@@ -97,7 +112,7 @@ mysql -h<mysql ip addr> -uadmin -pOracle.123 -Dtpch < tpch_queries_mysql.sql
 diff -y rapid_rt_profiles.log mysql_rt_profiles.log
 ```
 
-The output of the last command should look as follows:
+- The output of the last command should look as follows:
 
 ```
 Query_ID	Duration	Query				Query_ID	Duration	Query
@@ -121,7 +136,7 @@ Query_ID	Duration	Query				Query_ID	Duration	Query
 18	0.05721275	SELECT \n    CNTRYCODE, COUNT(*) AS N |	18	0.75508325	SELECT \n    CNTRYCODE, COUNT(*) AS N
 ```
 
-Now, you can compare the execution times obtained using HeatWave or only MySQL on InnoDB.
+- Now, you can compare the execution times obtained using HeatWave or only MySQL on InnoDB.
 
 Optional: inspect the tpch_queries_mysql.sql and the tpch_queries_rapid.sql scripts using vi.
 
