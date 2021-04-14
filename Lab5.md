@@ -46,4 +46,8 @@ Click the blue button _**Add HeatWave Cluster**_
   
 ![](./images/HW34_hw.png)
 
-Heatwave cluster is active! **[Click Here to go to the next lab!](Lab6.md)**
+## Conclusion
+
+In this lab we created a HeatWave cluster, now that it is active **[Click Here to go to the next lab!](Lab6.md)**
+
+Learn more about **[HeatWave service on Oracle Cloud](https://docs.oracle.com/en-us/iaas/mysql-database/doc/heatwave1.html)** 
