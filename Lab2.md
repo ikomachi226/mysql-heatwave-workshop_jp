@@ -47,5 +47,9 @@ Once done, click _**Create**_
   
 ![](./images/HW16_ci.png)
 
+## Conclusion
 
-Go on let's go ahead and create MySQL DB System (MDS) for Heatwave, **[Click Here to go to the next lab!](Lab3.md)**
+In this lab we created a compute instance with bastion host that serves as the public entry point, and select the VCN that we have created in the privous lab, and saved the private key on our local device that will be used later in this workshop
+Now let's go ahead and create MySQL DB System (MDS) for Heatwave **[in the next lab!](Lab3.md)**
+
+Learn more about **[Compute Service on Oracle Cloud](https://docs.oracle.com/en-us/iaas/Content/Compute/Concepts/computeoverview.htm)** 
