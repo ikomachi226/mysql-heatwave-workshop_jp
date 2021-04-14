@@ -76,4 +76,9 @@ At the end click the blue button _**Add Ingress Rules**_
 
 ![](./images/HW10_vcn.png)
 
-Now that you have created the VCN and allowed MySQL ports you can proceed to the next step and create the compute instance bastion host, **[Click Here to go to the next lab!](Lab2.md)**
+
+## Conclusion
+
+Now that we have learnt how to create the VCN and added an additional Ingress rules to the security list of the public subnet to  allow MySQL ports, you can proceed **[to the next lab!](Lab2.md)**
+
+Learn more about **[VCN and Subnets](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingVCNs_topic-Overview_of_VCNs_and_Subnets.htm)**
