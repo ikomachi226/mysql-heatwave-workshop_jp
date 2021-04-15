@@ -1,4 +1,4 @@
-# Lab 2 - Create compute instance bastion host
+# Lab 2: Create compute instance bastion host
 
 ## Introduction
 
