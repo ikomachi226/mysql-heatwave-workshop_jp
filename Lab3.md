@@ -1,4 +1,4 @@
-# Lab 3 - Create MySQL DB System (MDS) for Heatwave
+# Lab 3: Create MySQL DB System (MDS) for Heatwave
 
 
 ## Introduction
