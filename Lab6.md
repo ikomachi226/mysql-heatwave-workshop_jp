@@ -1,4 +1,4 @@
-# Lab 6 - Import data into MDS and load tables to HeatWave
+# Lab 6: Import data into MDS and load tables to HeatWave
 
 ## Key Objectives:
 - Learn how to import the downloaded data set into MySQL DB System using cloud shell.
@@ -92,5 +92,6 @@ GROUP BY l_returnflag , l_linestatus
 ORDER BY l_returnflag , l_linestatus;
 ```
 
+## Conclusion
 
-You see that time consumed to run the query! let's enable Heatwave and run the query again to compare. [Click here to go to the next Lab!](Lab7.md)**
+As we can see the time consumed to run the query is relatively long, so let's enable Heatwave service and run the query again to compare the result **[in the next Lab!](Lab7.md)**
