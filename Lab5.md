@@ -1,4 +1,4 @@
-# Lab 5 - Add Heatwave cluster to MySQL DB-System
+# Lab 5: Add Heatwave cluster to MySQL DB-System
 
 ## Introduction
 
@@ -48,6 +48,7 @@ Click the blue button _**Add HeatWave Cluster**_
 
 ## Conclusion
 
-In this lab we created a HeatWave cluster, now that it is active **[Click Here to go to the next lab!](Lab6.md)**
-
+Now we have created HeatWave cluster, that consists of a MySQL DB System node and two or more HeatWave nodes.The MySQL DB System node includes a HeatWave plugin that is responsible for cluster management, query scheduling, and returning query results to the MySQL DB System. HeatWave nodes store data in memory and process queries. 
 Learn more about **[HeatWave service on Oracle Cloud](https://docs.oracle.com/en-us/iaas/mysql-database/doc/heatwave1.html)** 
+So let's connect to MySQL DB System and run some queries before we enable the HeatWave cluster **[in the next lab!](Lab6.md)**
+
