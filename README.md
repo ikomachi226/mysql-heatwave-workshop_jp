@@ -88,3 +88,11 @@ The dataset useed for this workshop includes many attributes that we will use to
 - Learn how to enable Heatwave and compare the service performance 
   
 **[Click here to run Lab 7](./Lab7.md)**
+
+## Lab 8 – Use Analytics Cloud on MySQL Database Service powered by Heatwawe
+
+**Key Objectives:**
+
+- We wanted to give and additional experience post workshop to learn how to Use Analytics Cloud on MySQL Database Service powered by Heatwawe
+  
+**[Click here to run Lab 8](./Lab8_Bonus_OAC.md)**
