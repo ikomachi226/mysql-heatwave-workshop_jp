@@ -1,4 +1,4 @@
-# Lab 4 - Connect to bastion host, install MySQL Shell and download workshop data
+# Lab 4: Connect to bastion host, install MySQL Shell and download workshop data
 
 ## Introduction
 
