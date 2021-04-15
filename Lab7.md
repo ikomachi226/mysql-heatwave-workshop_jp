@@ -1,4 +1,4 @@
-# Lab 7 - Execute queries using Heatwave
+# Lab 7: Execute queries using Heatwave
 
 ## Introduction
 
@@ -140,5 +140,8 @@ Query_ID	Duration	Query				Query_ID	Duration	Query
 
 Optional: inspect the tpch_queries_mysql.sql and the tpch_queries_rapid.sql scripts using vi.
 
+## Conclusion
+
+Observing the results, we got the query result back in less than a second when a HeatWave cluster is enabled, queries that meet certain prerequisites are automatically offloaded from the MySQL DB System to the HeatWave cluster for accelerated execution. Queries are issued from a MySQL client or application that interacts with the HeatWave cluster by connecting to the MySQL DB System node. Results are returned to the MySQL DB System node and to the MySQL client or application that issued the query. 
 
 ## Great Work - All Done!
