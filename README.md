@@ -89,7 +89,7 @@ The dataset useed for this workshop includes many attributes that we will use to
   
 **[Click here to run Lab 7](./Lab7.md)**
 
-## Lab 8 – Use Analytics Cloud on MySQL Database Service powered by Heatwawe
+## Bonus Lab 8 – Use Analytics Cloud on MySQL Database Service powered by Heatwawe
 
 **Key Objectives:**
 
