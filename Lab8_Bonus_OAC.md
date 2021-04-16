@@ -4,6 +4,8 @@
 
 Oracle Analytics Cloud gives you a complete, connected, collaborative platform that brings the power of data and analytics to every process, interaction, and decision in every environment – cloud, on-premises, desktop and data center. You can read more **[here!](https://www.oracle.com/middleware/technologies/oracle-analytics-cloud.html)**
 
+**To address your question you can send it on Discord channel.**
+
 ## Steps
 
 ### **Step 1:**
@@ -68,8 +70,7 @@ Now you can see the data that has been retrieved. From the _**Reccomendations**_
 To move forward click on _**Create Project**_  button on the top right corner. You will see the Visualisation screen where you can start building your dashboards!
 ![](./images/fifhteen.png)
 
-### **Step 12:**
-CREATE YOUR FIRST DASHBOARD
+### **Step 12:** CREATE YOUR FIRST DASHBOARD
 
 From the left, select the column _**N_NAME**_ and then, while pressing CTRL (or Comamnd if you are on Mac) _**O_TOTALPRICE**_, right click and select _**Create Best Visualisation**_.
 ![](./images/sixteen.png)
@@ -84,4 +85,3 @@ You now have all the tools to discover insights in your data!
 
 If you want to discover more on how to use Oracle Analytics Cloud check our tutorials and Live Labs!
 
-To address your question you can send it on Discord chanel.
