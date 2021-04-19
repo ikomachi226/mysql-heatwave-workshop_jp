@@ -28,6 +28,8 @@ When the status of the instance changes to _Active_, click on the button _**Conf
 
 ### **Step 8.4:**
 In the next window you first need to choose a name for the channel. Then, fill in the VCN name with the same one where you provisioned the MySQL Database Service and the Heatwawe cluster. Make sure you select the correct subnet! (In lab 1 you had the option to select Private Subnet or Public Subnet) make sure you select the correct one otherwise you won't be able to connect!
+Check _**Virtal Cloud Network's domain name as DNS zone**_, and you can remove the additional _**DNS Zone**_, and finally click _**Configure**_.  
+
 _**Note:**_ It will take about _**50 minutes**_ to create the private channel so go get a nice cup of tea to kill the time! 
 ![](./images/four.png)
 
