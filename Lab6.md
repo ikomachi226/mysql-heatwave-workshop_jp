@@ -9,7 +9,7 @@
 ### **Step 6.1:**
 - Go back to your ssh connection to the bastion host.
 
-![](./images/cloud-shell-5.png)
+![](./images/lab6_1.png)
 
 ### **Step 6.2:**
 - Connect to MySQL DB System using MySQL Shell, with the following command:
@@ -49,7 +49,7 @@ SHOW DATABASES;
 ```
 Continue with commands:
 ```
-USE TPCH;
+USE tpch;
 
 SHOW TABLES;
 ```
