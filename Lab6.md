@@ -9,7 +9,7 @@
 ### **Step 6.1:**
 - Go back to your ssh connection to the bastion host.
 
-![](./images/lab6_1.png)
+![](./images/HW35_hw.png)
 
 ### **Step 6.2:**
 - Connect to MySQL DB System using MySQL Shell, with the following command:
