@@ -140,6 +140,16 @@ Query_ID	Duration	Query				Query_ID	Duration	Query
 
 Optional: inspect the tpch_queries_mysql.sql and the tpch_queries_rapid.sql scripts using vi.
 
+### **Step 7.5:**
+- For the proper execution of the bonus lab 8, it is recommended to execute the following SQL code at this stage 
+  
+```
+CREATE VIEW myAnalyticsView AS SELECT * 
+    FROM customer JOIN orders ON customer.C_CUSTKEY=orders.O_CUSTKEY
+    JOIN nation ON customer.C_NATIONKEY=nation.N_NATIONKEY;
+    
+```
+
 ## Conclusion
 
 Observing the results, we got the query result back in less than a second when a HeatWave cluster is enabled, queries that meet certain prerequisites are automatically offloaded from the MySQL DB System to the HeatWave cluster for accelerated execution. Queries are issued from a MySQL client or application that interacts with the HeatWave cluster by connecting to the MySQL DB System node. Results are returned to the MySQL DB System node and to the MySQL client or application that issued the query. 
