@@ -47,16 +47,18 @@ Browse the connection type or simply type in the search section _**MySQL**_, and
 
 ![](./images/HW36.PNG)
 
-In the new window we have a lot of information we need to provide. The host name we need to provide is a little bit tricky, we need to provide the Internal FQDN of the MySQL Database Instance. To find this out, you need to go back to the MySQL instance details.
+In the new window we have a lot of information we need to provide. The host name we need to provide is a little bit tricky, we need to provide the Internal FQDN (fully qualified domain name) of the MySQL Database Instance. To find this out, you need to go back to the MySQL instance details.
+
+![](./images/eight.png)
 
 In the section Endpoint you'll find all the information required. See the following images if you need guidance. After you filled out everything, click on _**Save**_
 
 You Oracle Analytics Instance is now connected to your MySQL Database Service powered by Heatwawe.
 
 _**Note:**_ As database name, you need to use _**tpch**_, the database we used in the previous labs.
+
 ![](./images/seven.png)
 
-![](./images/eight.png)
 
 ### **Step 8.8:**
 Let's now use this connection to create a very simple dashboard! From the top right corner click _**Create**_ and this time click on _**Dataset**_ as shown in the picture below.
