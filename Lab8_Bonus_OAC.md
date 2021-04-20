@@ -42,6 +42,11 @@ We now want to connect to our MySQL Database Service, so from the top right corn
 ![](./images/six.png)
 
 ### **Step 8.7:**
+
+Browse the connection type or simply type in the search section _**MySQL**_, and Click it.
+
+![](./images/HW36.PNG)
+
 In the new window we have a lot of information we need to provide. The host name we need to provide is a little bit tricky, we need to provide the Internal FQDN of the MySQL Database Instance. To find this out, you need to go back to the MySQL instance details.
 
 In the section Endpoint you'll find all the information required. See the following images if you need guidance. After you filled out everything, click on _**Save**_
