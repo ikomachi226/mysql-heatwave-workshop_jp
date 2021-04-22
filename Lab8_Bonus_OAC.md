@@ -7,7 +7,7 @@ Oracle Analytics Cloud gives you a complete, connected, collaborative platform t
 
 ## prerequisites
 - To be able to execute the bonus lab you have to complete all the previous labs in this workshop
-- Make sure you run the step 7.5 in lab 7 before you go through this lab
+- Make sure you run the step 7.5 in **[lab 7](Lab7.md)** before you go through this lab
 
 _**To address your question you can send it on**_ **[Discord channel.](https://discord.gg/73Gx9Ws7tM)** 
 
