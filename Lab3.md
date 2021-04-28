@@ -84,6 +84,8 @@ Once done, click the _**Create**_ button.
 ## Conclusion
 
 In this lab we created a DB system configured with HeatWave service, and created an administrator user for database.
-All set? now we are ready to connect to the bastion host, and install MySQL Shell,  **[Click Here to go to the next lab!](Lab4.md)**
+All set? now we are ready to connect to the bastion host, and install MySQL Shell in the next lab!
 
 Learn more about **[DB Systems on Oracle Cloud](https://docs.oracle.com/en-us/iaas/Content/Database/Concepts/overview.htm)**
+
+**[<< Go to Lab2](Lab2.md)** | **[Home](Readme.md)** | **[Go to Lab 4 >>](Lab4.md)**
