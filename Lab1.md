@@ -71,7 +71,7 @@ The default security list comes with an initial set of stateful rules, which sho
 ### **Step 1.11:**
 - Here's how to add another rule to the default security list to enable that traffic:
 
-Click _**+ Another Ingress Rule**_ and repeat for port 33060
+Click _**+ Another Ingress Rule**_ and repeat for port 3306
 At the end click the blue button _**Add Ingress Rules**_
 
 ![](./images/HW10_vcn.png)
