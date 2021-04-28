@@ -1,5 +1,10 @@
 # Lab 1: Create VCN and allow MySQL ports
 
+## Key Objectives:
+
+- Learn how to create a Virtual Cloud Network with internet connectivity 
+- Add ingress rules in the security list to allow MySQL ports
+
 ## Introduction
 
 Virtual Cloud Network helps you define your own data centre network topology inside the Oracle Cloud, by defining some of the following components (Subnets, Route Tables, Security Lists, Gateways, etc.), some of these components are set by default automatically within every VCN that can't be deleted:
@@ -10,11 +15,6 @@ Virtual Cloud Network helps you define your own data centre network topology ins
 For an overview of VCNs, allowed size, default VCN components, and scenarios for using a VCN, check **[Networking Overview](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm#network_landing)**.
 A security list acts as a virtual firewall for an instance, with ingress and egress rules that specify the types of traffic allowed in and out. Each subnet can have multiple security lists associated with it, and each list can have multiple rules. 
 The default security list comes with an initial set of stateful rules, which should in most cases be changed to only allow inbound traffic from authorized subnets relevant to the region that homes that VCN or subnet. A list of authorized subnet ranges relevant to each region can be found **[here](https://docs.cloud.oracle.com/iaas/tools/public_ip_ranges.json)**.
-
-## Key Objectives:
-
-- Learn how to create a Virtual Cloud Network with internet connectivity 
-- Add ingress rules in the security list to allow MySQL ports
 
 ## Steps
 
