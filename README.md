@@ -36,7 +36,7 @@ The dataset useed for this workshop includes many attributes that we will use to
 
 - Learn how to create a Virtual Cloud Network 
 
-**[Click here to run Lab 1](./Lab1.md)**
+**[Click here for Lab 1](./Lab1.md)**
 
 ## Lab 2 – Create compute instance bastion host
 
@@ -44,7 +44,7 @@ The dataset useed for this workshop includes many attributes that we will use to
 
 - Learn how to create a compute instance in the choosen compartment
   
-**[Click here to run Lab 2](./Lab2.md)**
+**[Click here for Lab 2](./Lab2.md)**
 
 ## Lab 3 - Create MySQL DB System (MDS) for Heatwave
 
@@ -53,7 +53,7 @@ The dataset useed for this workshop includes many attributes that we will use to
 - Learn how to create a MySQL DB System with Heatwave 
 - Learn how to create Administrator user for the DB
   
-**[Click here to run Lab 3](./Lab3.md)**
+**[Click here for Lab 3](./Lab3.md)**
 
 ## Lab 4 – Connect to bastion host, install MySQL Shell and download workshop data
 
@@ -63,7 +63,7 @@ The dataset useed for this workshop includes many attributes that we will use to
 - Learn how to launch MySQL shell
 - Setp the workshop material
 
-**[Click here to run Lab 4](./Lab4.md)**
+**[Click here for Lab 4](./Lab4.md)**
 
 ## Lab 5 – Add Heatwave cluster to MySQL DB-System
 
@@ -71,7 +71,7 @@ The dataset useed for this workshop includes many attributes that we will use to
 
 - Learn how to create Heatwave cluster
   
-**[Click here to run Lab 5](./Lab5.md)**
+**[Click here for Lab 5](./Lab5.md)**
 
 ## Lab 6 – Import data into MDS and load tables to HeatWave 
 
@@ -79,7 +79,7 @@ The dataset useed for this workshop includes many attributes that we will use to
 
 - Learn how to connect and import dataset into MySQL DB System
   
-**[Click here to run Lab 6](./Lab6.md)**
+**[Click here for Lab 6](./Lab6.md)**
 
 ## Lab 7 – Execute queries using Heatwave
 
@@ -87,7 +87,7 @@ The dataset useed for this workshop includes many attributes that we will use to
 
 - Learn how to enable Heatwave and compare the service performance 
   
-**[Click here to run Lab 7](./Lab7.md)**
+**[Click here for Lab 7](./Lab7.md)**
 
 ## Bonus Lab 8 – Use Analytics Cloud on MySQL Database Service powered by Heatwawe
 
@@ -95,4 +95,4 @@ The dataset useed for this workshop includes many attributes that we will use to
 
 - We wanted to give and additional experience post workshop to learn how to Use Analytics Cloud on MySQL Database Service powered by Heatwawe
   
-**[Click here to run Lab 8](./Lab8_Bonus_OAC.md)**
+**[Click here for Lab 8](./Lab8_Bonus_OAC.md)**
