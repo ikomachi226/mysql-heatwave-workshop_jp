@@ -90,5 +90,6 @@ tpch_queries_rapid.sql
 ## Conclusion
 
 Now that we opened the cloud shell we imported the private key and connected to the compute instance and  installed MySQL Shell and MySQL client. Finally we downloaded the dataset that will be used later in the workshop. 
-**[Click Here to go to the next lab!](Lab5.md)**
 
+
+**[<< Go to Lab 3](Lab3.md)** | **[Home](Readme.md)** | **[Go to Lab 5 >>](Lab5.md)**
