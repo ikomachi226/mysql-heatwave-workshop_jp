@@ -79,6 +79,8 @@ At the end click the blue button _**Add Ingress Rules**_
 
 ## Conclusion
 
-Now that we have learnt how to create the VCN and added an additional Ingress rules to the security list of the public subnet to  allow MySQL ports, you can proceed **[to the next lab!](Lab2.md)**
+Now that we have learnt how to create the VCN and added an additional Ingress rules to the security list of the public subnet to  allow MySQL ports, you can proceed to the next lab! 
 
 Learn more about **[VCN and Subnets](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingVCNs_topic-Overview_of_VCNs_and_Subnets.htm)**
+
+**[Home](Readme.md)** | **[Go to Lab 2 >>](Lab2.md)**
