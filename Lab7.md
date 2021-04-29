@@ -1,11 +1,12 @@
 # Lab 7: Execute queries using Heatwave
 
+## Key Objectives:
+- Observing the accelerated execution time when Heatwave cluster is enabled.
+
 ## Introduction
 
 HeatWave Cluster Node Count Estimates provide recommendations on how many HeatWave nodes are needed to run a workload. When the service is started, database tables on which HeatWave queries are run need to be loaded to HeatWave cluster memory. The size of the HeatWave cluster needed depends on tables and columns required to load, and the compression achieved in memory for this data. Under-provisioning the HeatWave cluster results in data load or query execution failure due to space limitations
 
-## Key Objectives:
-- Observing the accelerated execution time when Heatwave cluster is enabled.
 
 ## Steps
 
@@ -155,4 +156,5 @@ CREATE VIEW myAnalyticsView AS SELECT *
 Observing the results, we got the query result back in less than a second when a HeatWave cluster is enabled, queries that meet certain prerequisites are automatically offloaded from the MySQL DB System to the HeatWave cluster for accelerated execution. Queries are issued from a MySQL client or application that interacts with the HeatWave cluster by connecting to the MySQL DB System node. Results are returned to the MySQL DB System node and to the MySQL client or application that issued the query. 
 
 ## Great Work - All Done!
-**[<< Go to Lab 6](Lab4.md)** | **[Home](Readme.md)** | **[Go to Bonus Lab 8 >>](Lab8_Bonus_OAC.md)**
+
+**[<< Go to Lab 6](Lab6.md)** | **[Home](Readme.md)** | **[Go to Bonus Lab 8 >>](Lab8_Bonus_OAC.md)**
