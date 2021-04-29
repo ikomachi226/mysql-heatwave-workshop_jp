@@ -1,13 +1,14 @@
 # Lab 4: Connect to bastion host, install MySQL Shell and download workshop data
 
-## Introduction
-
-The Cloud Shell machine is a small virtual machine running a Bash shell which you access through the OCI Console. Cloud Shell comes with a pre-authenticated OCI CLI, set to the Console tenancy home page region, as well as up-to-date tools and utilities.Cloud Shell comes with 5GB of persistent storage for the home directory, so you can make local changes to your home directory, and then continue working on your project when you come back to Cloud Shell.Cloud Shell is free to use (within your tenancy's monthly limits) and doesn’t require any setup or prerequisites other than an IAM policy granting access to Cloud Shell. When you start Cloud Shell, the service configures your Cloud Shell session with the currently selected region in the Console so that the OCI CLI is interacting with the selected Console region.
-
 ## Key Objectives:
 - Learn how to connect to bastion host using cloud shell 
 - Learn how to  install MySQL Shell and MySQL client executing
 - Download dataset used in this workshop to run queries in the coming labs
+
+## Introduction
+
+The Cloud Shell machine is a small virtual machine running a Bash shell which you access through the OCI Console. Cloud Shell comes with a pre-authenticated OCI CLI, set to the Console tenancy home page region, as well as up-to-date tools and utilities.Cloud Shell comes with 5GB of persistent storage for the home directory, so you can make local changes to your home directory, and then continue working on your project when you come back to Cloud Shell.Cloud Shell is free to use (within your tenancy's monthly limits) and doesn’t require any setup or prerequisites other than an IAM policy granting access to Cloud Shell. When you start Cloud Shell, the service configures your Cloud Shell session with the currently selected region in the Console so that the OCI CLI is interacting with the selected Console region.
+
 
 ## Steps
 
@@ -53,12 +54,42 @@ ssh -i <private-key-file-name>.key opc@<compute_instance_public_ip>
 If prompted to accept the finger print, enter _**yes**_ and hit enter.
 
 ### **Step 4.8:**
-- From the established ssh connection, install MySQL Shell and MySQL client executing the following commands:
+- From the established ssh connection, install MySQL Shell and MySQL client executing the following commands and the expected outputput should be as following:
+  
 ```
-wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
-sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
-sudo yum install mysql-shell            /*when prompted a warning about the public key enter "y"*/
-sudo yum install mysql-community-client
+[opc@mysql-analytics-test-bridge ~]$ wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+--2021-04-28 19:37:44--  https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+Resolving dev.mysql.com (dev.mysql.com)... 137.254.60.11
+Connecting to dev.mysql.com (dev.mysql.com)|137.254.60.11|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+-------------
+---------
+
+[opc@mysql-analytics-test-bridge ~]$ sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
+Loaded plugins: langpacks, ulninfo
+Examining mysql80-community-release-el7-3.noarch.rpm: mysql80-community-release-el7-3.noarch
+Marking mysql80-community-release-el7-3.noarch.rpm to be installed
+Resolving Dependencies
+--------------
+--------
+
+      /*when prompted a warning about the public key enter "y"*/
+[opc@mysql-analytics-test-bridge ~]$ sudo yum install mysql-shell  
+Loaded plugins: langpacks, ulninfo
+mysql-connectors-community                                                                                                                                                                                                                                                                         | 2.6 kB  00:00:00     
+mysql-tools-community                                                                                                                                                                                                                                                                              | 2.6 kB  00:00:00     
+mysql80-community                                                                                                                                                                                                                                                                                  | 2.6 kB  00:00:00     
+(1/3): mysql-tools-community/x86_64/primary_db   
+-----------------
+--------
+
+[opc@mysql-analytics-test-bridge ~]$ sudo yum install mysql-community-client
+Loaded plugins: langpacks, ulninfo
+
+Resolving Dependencies
+--> Running transaction check
+-----------
+-------
 ```
 
 ### **Step 4.9:**
@@ -72,10 +103,16 @@ When you see the MySQL Shell colorful prompt, exit with the following command:
 ### **Step 4.10:**
 - Download and unzip the workshop material using the following commands:
 ```
-cd /home/opc
-wget https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/wTJ02aU-A5C2RCfBn3ymwm9jaAI01uR23_je6ZnFXMZ3-z3KqZOxpMOMX1zDZvxn/n/odca/b/mysql_data/o/heatwave_workshop.zip
-unzip heatwave_workshop.zip
+[opc@mysql-analytics-test-bridge ~]$ cd /home/opc
+
+[opc@mysql-analytics-test-bridge ~]$ wget https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/wTJ02aU-A5C2RCfBn3ymwm9jaAI01uR23_je6ZnFXMZ3-z3KqZOxpMOMX1zDZvxn/n/odca/b/mysql_data/o/heatwave_workshop.zip
+--2021-04-28 19:45:04--  https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/wTJ02aU-A5C2RCfBn3ymwm9jaAI01uR23_je6ZnFXMZ3-z3KqZOxpMOMX1zDZvxn/n/odca/b/mysql_data/o/heatwave_workshop.zip
+Resolving objectstorage.eu-frankfurt-1.oraclecloud.com (objectstorage.eu-frankfurt-1.oraclecloud.com)...
+
+[opc@mysql-analytics-test-bridge ~]$ unzip heatwave_workshop.zip
+
 ```
+After it is done extracting the files you can move to the next step and test it
 
 ### **Step 4.11:**
 - Verify the extracted material executing _**ll**_ command.
