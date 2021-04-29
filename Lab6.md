@@ -7,17 +7,16 @@
 ## Steps
 
 ### **Step 6.1:**
-- Going back to the ssh connection.
+- Back to the ssh connection.
 
 ![](./images/HW35_hw.png)
 
-### **Step 6.2:**
 - Connect to MySQL DB System using MySQL Shell, with the following command:
 ```
 mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --js
 ```
 
-### **Step 6.3:**
+### **Step 6.2:**
 - From the MySQL Shell connection, import the data set into MySQL DB System:
 ```
 util.loadDump("/home/opc/tpch_dump", {dryRun: true, resetProgress:true, ignoreVersion:true})
@@ -27,7 +26,7 @@ This command will run a dry run of the import. If it terminates without errors, 
 util.loadDump("/home/opc/tpch_dump", {dryRun: false, resetProgress:true, ignoreVersion:true})
 ```
 
-### **Step 6.4:**
+### **Step 6.3:**
 - Check the imported data. From MySQL Shell execute the commands:
 
 ```
@@ -69,7 +68,7 @@ SHOW TABLES;
 +----------------+
 ```
 
-### **Step 6.5:**
+### **Step 6.4:**
 - Let's start testing a simple query but yet effective query.
 From the previous SQL prompt, run the following query and check the execution time (approximately 12-13s):
 ```
@@ -102,6 +101,11 @@ ORDER BY l_returnflag , l_linestatus;
 +--------------+--------------+-------------+-----------------+-------------------+---------------------+-----------+--------------+----------+-------------+
 4 rows in set (12.6570 sec)
 ```
+- Exit from MySQL Shell:
+  
+  ```
+ \exit
+  ```
 
 ## Conclusion
 
