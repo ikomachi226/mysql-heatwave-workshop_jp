@@ -1,15 +1,15 @@
 # Bonus Lab: Use Analytics Cloud on MySQL Database Service powered by Heatwawe
 
-## Introduction
-
-Oracle Analytics Cloud gives you a complete, connected, collaborative platform that brings the power of data and analytics to every process, interaction, and decision in every environment – cloud, on-premises, desktop and data center. You can read more **[here!](https://www.oracle.com/middleware/technologies/oracle-analytics-cloud.html)**
-
-
 ## prerequisites
 - To be able to execute the bonus lab you have to complete all the previous labs in this workshop
 - Make sure you run the step 7.5 in **[lab 7](Lab7.md)** before you go through this lab
 
 _**To address your question you can send it on**_ **[Discord channel.](https://discord.gg/73Gx9Ws7tM)** 
+
+## Introduction
+
+Oracle Analytics Cloud gives you a complete, connected, collaborative platform that brings the power of data and analytics to every process, interaction, and decision in every environment – cloud, on-premises, desktop and data center. You can read more **[here!](https://www.oracle.com/middleware/technologies/oracle-analytics-cloud.html)**
+
 
 ## Steps
 
