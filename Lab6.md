@@ -103,9 +103,9 @@ ORDER BY l_returnflag , l_linestatus;
 ```
 - Exit from MySQL Shell:
   
-  ```
+```
  \exit
-  ```
+```
 
 ## Conclusion
 
