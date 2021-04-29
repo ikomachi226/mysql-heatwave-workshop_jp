@@ -1,15 +1,15 @@
 # Lab 5: Add Heatwave cluster to MySQL DB-System
 
+## Key Objectives:
+- Learn how to provision Heatwave cluster
+
+
 ## Introduction
 
 HeatWave enables provisioning of HeatWave clusters for accelerated processing of analytic queries. A HeatWave cluster consists of a MySQL DB System node and two or more HeatWave nodes. The MySQL DB System node includes a HeatWave plugin that is responsible for cluster management, query scheduling, and returning query results to the MySQL DB System. HeatWave nodes store data in memory and process queries.
 
 When a HeatWave cluster is enabled, queries that meet certain prerequisites are automatically offloaded from the MySQL DB System to the HeatWave cluster for accelerated execution. Queries are issued from a MySQL client or application that interacts with the HeatWave cluster by connecting to the MySQL DB System node. Results are returned to the MySQL DB System node and to the MySQL client or application that issued the query. 
 After deploying a HeatWave cluster, refer to the **[HeatWave User's Guide](https://dev.mysql.com/doc/heatwave/en/)** for information about how to load data and run queries. 
-
-## Key Objectives:
-- Learn how to provision Heatwave cluster
-
 
 ## Steps
 
