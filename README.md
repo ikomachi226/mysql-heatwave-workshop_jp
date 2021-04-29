@@ -3,9 +3,7 @@
 This workshop will walk you through the process to configure MySQL Cloud Service & Heatwave to run Analytics workloads in Oracle Cloud
 The dataset useed for this workshop includes many attributes that we will use to run some queries with and without Heatwave and compare the execution times obtained using HeatWave or only MySQL on InnoDB. 
 
-<p align="center">
-  <img width="460" height="300" src=./images/Intro.jpg>
-</p>
+![](./images/Intro.jpg)
 
 
 **Key Objectives:**
