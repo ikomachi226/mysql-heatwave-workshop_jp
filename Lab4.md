@@ -85,7 +85,9 @@ sudo yum install mysql-community-client
 - Launch MySQL Shell executing the following command:
 ```
 mysqlsh
+```
 When you see the MySQL Shell colorful prompt, exit with the following command:
+```
 \q
 ```
 
@@ -93,16 +95,20 @@ When you see the MySQL Shell colorful prompt, exit with the following command:
 - Download and unzip the workshop material using the following commands:
 ```
 cd /home/opc
-
+```
+```
 wget https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/wTJ02aU-A5C2RCfBn3ymwm9jaAI01uR23_je6ZnFXMZ3-z3KqZOxpMOMX1zDZvxn/n/odca/b/mysql_data/o/heatwave_workshop.zip
+```
 
 ![](./images/cloud-shell-10.png)
 
+```
 unzip heatwave_workshop.zip
+```
 
 ![](./images/cloud-shell-11.png)
 
-```
+
 After it is done extracting the files you can move to the next step and test it
 
 ### **Step 4.11:**
