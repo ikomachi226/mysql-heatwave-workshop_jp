@@ -47,7 +47,7 @@ Connect to MySQL DB System:
 ```
 mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --database=tpch --sql
 ```
-- Enable _**HeatWave**_ and let the Magic begin:
+- Now let's enable _**HeatWave**_  and let the Magic begin:
 ```
 set @@use_secondary_engine=ON;
 ```
