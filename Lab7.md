@@ -22,7 +22,11 @@ HeatWave Cluster Node Count Estimates provide recommendations on how many HeatWa
 mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --sql < tpch_offload.sql
 ```
 
-Note: The tpch_offload.sql scripts, apart from applying dictionary encoding to a some columns using _**'RAPID_COLUMN=ENCODING=SORTED'**_ (optional step), loads the tables into HeatWave setting the following values:
+![](./images/HW34_2_hw.png)
+
+-Now your good to go to _**Step 7.3**_, **YOU DON'T NEED TO RUN THE BELOW commands** unless you want to load additional tables into the tpch_offload.sql file 
+
+The tpch_offload.sql scripts, apart from applying dictionary encoding to a some columns using _**'RAPID_COLUMN=ENCODING=SORTED'**_ (optional step), loads the tables into HeatWave setting the following values:
 ```
 alter table <table_name> secondary_engine=rapid;
 alter table  <table_name> secondary_load;
@@ -32,7 +36,7 @@ Additionally you can inspect the full content of the file, executing, from the L
 cat tpch_offload.sql
 ```
 
-- If the previous step completed without errors, you are good to go!
+
 
 ### **Step 7.3:**
 - Let's come back to the previous query and execute it this time using HeatWave.
@@ -41,13 +45,12 @@ Connect to MySQL DB System:
 ```
 mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --database=tpch --sql
 ```
-
-Enable HeatWave:
+- Enable **HeatWave** and let the Magic begin:
 ```
 set @@use_secondary_engine=ON;
 ```
 
-Check the explain plan of the previous query and confirm it will be using secondary engine:
+- Check the explain plan of the previous query and confirm it will be using secondary engine:
 ```
 EXPLAIN SELECT
     l_returnflag,
@@ -69,8 +72,16 @@ ORDER BY l_returnflag , l_linestatus;
 ```
 (Look for the message "Using secondary engine RAPID" in the output)
 
+```
++----+-------------+----------+------------+------+---------------+------+---------+------+---------+----------+----------------------------------------------------------------------------+
+| id | select_type | table    | partitions | type | possible_keys | key  | key_len | ref  | rows    | filtered | Extra                                                                      |
++----+-------------+----------+------------+------+---------------+------+---------+------+---------+----------+----------------------------------------------------------------------------+
+|  1 | SIMPLE      | lineitem | NULL       | ALL  | NULL          | NULL | NULL    | NULL | 5970493 |    33.33 | Using where; Using temporary; Using filesort; Using secondary engine RAPID |
++----+-------------+----------+------------+------+---------------+------+---------+------+---------+----------+----------------------------------------------------------------------------+
+1 row in set, 1 warning (0.0123 sec)
+```
 
-Re-run the previous query and check the execution time again:
+- Re-run the previous query and check the execution time again:
 ```
 SELECT
     l_returnflag,
@@ -91,9 +102,20 @@ GROUP BY l_returnflag , l_linestatus
 ORDER BY l_returnflag , l_linestatus;
 ```
 
-- This time execution time should be about 0.2-0.5s!!
+- This time execution time should be about 0.2-0.05s!!
 
-Exit from MySQL Shell:
+```
++--------------+--------------+-------------+-----------------+-------------------+---------------------+-----------+--------------+----------+-------------+
+| l_returnflag | l_linestatus | sum_qty     | sum_base_price  | sum_disc_price    | sum_charge          | avg_qty   | avg_price    | avg_disc | count_order |
++--------------+--------------+-------------+-----------------+-------------------+---------------------+-----------+--------------+----------+-------------+
+| A            | F            | 37734107.00 |  56586554400.73 |  53758257134.8700 |  55909065222.827692 | 25.522005 | 38273.129734 | 0.049985 |     1478493 |
+| N            | F            |   991417.00 |   1487504710.38 |   1413082168.0541 |   1469649223.194375 | 25.516471 | 38284.467760 | 0.050093 |       38854 |
+| N            | O            | 74476040.00 | 111701729697.74 | 106118230307.6056 | 110367043872.497010 | 25.502226 | 38249.117988 | 0.049996 |     2920374 |
+| R            | F            | 37719753.00 |  56568041380.90 |  53741292684.6040 |  55889619119.831932 | 25.505793 | 38250.854626 | 0.050009 |     1478870 |
++--------------+--------------+-------------+-----------------+-------------------+---------------------+-----------+--------------+----------+-------------+
+4 rows in set (0.0820 sec)
+```
+- Exit from MySQL Shell:
 ```
 \exit
 ```
@@ -109,7 +131,11 @@ For this excercise, instead of MySQL Shell, we will use MySQL client:
 Run the following commands:
 ```
 mysql -h<mysql ip addr> -uadmin -pOracle.123 -Dtpch < tpch_queries_rapid.sql
+```
+```
 mysql -h<mysql ip addr> -uadmin -pOracle.123 -Dtpch < tpch_queries_mysql.sql
+```
+```
 diff -y rapid_rt_profiles.log mysql_rt_profiles.log
 ```
 
