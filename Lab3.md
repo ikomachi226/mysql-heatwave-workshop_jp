@@ -1,12 +1,12 @@
 # Lab 3: Create MySQL DB System (MDS) for Heatwave
 
+## Key Objectives:
+- Learn how to launch a new DB System.
 
 ## Introduction
 
 HeatWave configures a Standalone DB System with a HeatWave-compatible shape (MySQL.HeatWave.VM.Standard.E3) and 1TB of data storage, by default. The DB System and HeatWave cluster must use the same shape. For more information, see **[HeatWave](https://docs.oracle.com/en-us/iaas/mysql-database/doc/heatwave1.html#GUID-9401C69A-B379-48EB-B96C-56462C23E4FD)**. 
 
-## Key Objectives:
-- Learn how to launch a new DB System.
 
 ## Steps
 
@@ -34,40 +34,37 @@ password: Oracle.123
 ```
 - In the _**Configure Networking**_ section make sure you select the same subnet which you have used to create the Compute Instance (Public-Subnet-analytics_vcn_test).
 
-![](./images/HW20_mds.png)
+- Leave the default availability domain and proceed to the _**Configure Hardware**_ section.
+ 
+  ![](./images/HW20_mds.png)
 
 ### **Step 3.5:**
-- Leave the default availability domain and proceed to the _**Configure Hardware**_ section.
-  
-![](./images/HW21_mds.png)
-
-### **Step 3.6:**
 - Confirm that in the _**Configure Hardware**_ section, the selected shape is MySQL.HeatWave.VM.Standard.E3, CPU Core Count: 16, Memory Size: 512 GB, Data Storage Size: 1024.
 In the _**Configure Backup**_ section leave the default backup window of 7 days.
 
 ![](./images/HW22_mds.png)
 
-### **Step 3.7:**
+### **Step 3.6:**
 - Scroll down and click on _**Show Advanced Options**_ 
   
 ![](./images/HW23_mds.png)
 
-### **Step 3.8:**
+### **Step 3.7:**
 - In the Configuration tab click on _**Select Configuration**_ 
 
 ![](./images/HW24_mds.png)
 
-### **Step 3.9:**
+### **Step 3.8:**
 - In the _**Browse All Configurations**_ window, select MySQL.HeatWave.VM.Standard.E3.Standalone, and click the button _**Select a Configuration**_ 
 
 ![](./images/HW25_mds.png)
 
-### **Step 3.10:**
+### **Step 3.9:**
 - If everything is correct you should see something corresponding to the below
 
 ![](./images/HW26_mds.png)
 
-### **Step 3.11:**
+### **Step 3.10:**
 - Go to the Networking tab, and in the Hostname field enter _**mysql-analytics-test**_ (same as DB System Name). 
 Check that port configuration corresponds to the following:
 MySQL Port: 3306
@@ -76,7 +73,7 @@ Once done, click the _**Create**_ button.
 
 ![](./images/HW27_mds.png)
 
-### **Step 3.12:**
+### **Step 3.11:**
 - The MySQL DB System will enter _**CREATING**_ state (as per picture below). Meanwhile you can go ahead and proceed to the next excercise.
   
 ![](./images/HW28_mds.png)
@@ -88,4 +85,4 @@ All set? now we are ready to connect to the bastion host, and install MySQL Shel
 
 Learn more about **[DB Systems on Oracle Cloud](https://docs.oracle.com/en-us/iaas/Content/Database/Concepts/overview.htm)**
 
-**[<< Go to Lab2](Lab2.md)** | **[Home](Readme.md)** | **[Go to Lab 4 >>](Lab4.md)**
+**[<< Go to Lab 2](Lab2.md)** | **[Home](Readme.md)** | **[Go to Lab 4 >>](Lab4.md)**
