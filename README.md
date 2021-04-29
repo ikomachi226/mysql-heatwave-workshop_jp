@@ -92,6 +92,14 @@ The dataset useed for this workshop includes many attributes that we will use to
 
 **Key Objectives:**
 
-- We wanted to give and additional experience post workshop to learn how to Use Analytics Cloud on MySQL Database Service powered by Heatwawe
+- We wanted to give an additional experience post workshop to learn how to Use Analytics Cloud on MySQL Database Service powered by Heatwawe
   
 **[Click here for Lab 8](./Lab8_Bonus_OAC.md)**
+
+## Bonus Lab 9 – Use Data Integration to build your data pipeline with MySQL and HeatWave
+
+**Key Objectives:**
+
+- Want to consolidate data from other sources and build your own data pipeline? Even more, do you want to use MySQL and HeatWave for Data Science? This bonus track guide you step by step on how to do it.
+  
+**[Click here for Lab 9](./Lab9_Bonus_DI.md)**
