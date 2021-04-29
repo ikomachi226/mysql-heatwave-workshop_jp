@@ -59,22 +59,27 @@ If prompted to accept the finger print, enter _**yes**_ and hit enter.
 ```
 wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
 
+```
 ![](./images/cloud-shell-6.png)
-
+```
 sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
-
+```
 ![](./images/cloud-shell-7.png)
 
       /*when prompted a warning about the public key enter "y"*/
-sudo yum install mysql-shell  
 
+```
+sudo yum install mysql-shell  
+```
 ![](./images/cloud-shell-8.png)
 
+```
 sudo yum install mysql-community-client
+```
 
 ![](./images/cloud-shell-9.png)
 
-```
+
 
 ### **Step 4.9:**
 - Launch MySQL Shell executing the following command:
