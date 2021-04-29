@@ -1,4 +1,4 @@
-# Bonus Lab: Use Analytics Cloud on MySQL Database Service powered by Heatwawe
+# Bonus Lab: Use Analytics Cloud on MySQL Database Service powered by Heatwave
 
 ## prerequisites
 - To be able to execute the bonus lab you have to complete all the previous labs in this workshop
