@@ -57,39 +57,23 @@ If prompted to accept the finger print, enter _**yes**_ and hit enter.
 - From the established ssh connection, install MySQL Shell and MySQL client executing the following commands and the expected outputput should be as following:
   
 ```
-[opc@mysql-analytics-test-bridge ~]$ wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
---2021-04-28 19:37:44--  https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
-Resolving dev.mysql.com (dev.mysql.com)... 137.254.60.11
-Connecting to dev.mysql.com (dev.mysql.com)|137.254.60.11|:443... connected.
-HTTP request sent, awaiting response... 302 Found
--------------
----------
+wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
 
-[opc@mysql-analytics-test-bridge ~]$ sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
-Loaded plugins: langpacks, ulninfo
-Examining mysql80-community-release-el7-3.noarch.rpm: mysql80-community-release-el7-3.noarch
-Marking mysql80-community-release-el7-3.noarch.rpm to be installed
-Resolving Dependencies
---------------
---------
+![](./images/cloud-shell-6.png)
+
+sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
+
+![](./images/cloud-shell-7.png)
 
       /*when prompted a warning about the public key enter "y"*/
-[opc@mysql-analytics-test-bridge ~]$ sudo yum install mysql-shell  
-Loaded plugins: langpacks, ulninfo
-mysql-connectors-community                                                                                                                                                                                                                                                                         | 2.6 kB  00:00:00     
-mysql-tools-community                                                                                                                                                                                                                                                                              | 2.6 kB  00:00:00     
-mysql80-community                                                                                                                                                                                                                                                                                  | 2.6 kB  00:00:00     
-(1/3): mysql-tools-community/x86_64/primary_db   
------------------
---------
+sudo yum install mysql-shell  
 
-[opc@mysql-analytics-test-bridge ~]$ sudo yum install mysql-community-client
-Loaded plugins: langpacks, ulninfo
+![](./images/cloud-shell-8.png)
 
-Resolving Dependencies
---> Running transaction check
------------
--------
+sudo yum install mysql-community-client
+
+![](./images/cloud-shell-9.png)
+
 ```
 
 ### **Step 4.9:**
@@ -103,13 +87,15 @@ When you see the MySQL Shell colorful prompt, exit with the following command:
 ### **Step 4.10:**
 - Download and unzip the workshop material using the following commands:
 ```
-[opc@mysql-analytics-test-bridge ~]$ cd /home/opc
+cd /home/opc
 
-[opc@mysql-analytics-test-bridge ~]$ wget https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/wTJ02aU-A5C2RCfBn3ymwm9jaAI01uR23_je6ZnFXMZ3-z3KqZOxpMOMX1zDZvxn/n/odca/b/mysql_data/o/heatwave_workshop.zip
---2021-04-28 19:45:04--  https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/wTJ02aU-A5C2RCfBn3ymwm9jaAI01uR23_je6ZnFXMZ3-z3KqZOxpMOMX1zDZvxn/n/odca/b/mysql_data/o/heatwave_workshop.zip
-Resolving objectstorage.eu-frankfurt-1.oraclecloud.com (objectstorage.eu-frankfurt-1.oraclecloud.com)...
+wget https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/wTJ02aU-A5C2RCfBn3ymwm9jaAI01uR23_je6ZnFXMZ3-z3KqZOxpMOMX1zDZvxn/n/odca/b/mysql_data/o/heatwave_workshop.zip
 
-[opc@mysql-analytics-test-bridge ~]$ unzip heatwave_workshop.zip
+![](./images/cloud-shell-10.png)
+
+unzip heatwave_workshop.zip
+
+![](./images/cloud-shell-11.png)
 
 ```
 After it is done extracting the files you can move to the next step and test it
@@ -123,6 +109,8 @@ tpch_offload.sql
 tpch_queries_mysql.sql
 tpch_queries_rapid.sql
 ```
+![](./images/cloud-shell-12.png)
+
 
 ## Conclusion
 
