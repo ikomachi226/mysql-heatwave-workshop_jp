@@ -24,7 +24,9 @@ mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --p
 
 ![](./images/HW34_2_hw.png)
 
--Now your good to go to _**Step 7.3**_, **YOU DON'T NEED TO RUN THE BELOW commands** unless you want to load additional tables into the tpch_offload.sql file 
+ Now your good to go to _**Step 7.3**_.
+
+- **YOU DON'T NEED TO RUN THE BELOW commands** unless you want to load additional tables into the tpch_offload.sql file 
 
 The tpch_offload.sql scripts, apart from applying dictionary encoding to a some columns using _**'RAPID_COLUMN=ENCODING=SORTED'**_ (optional step), loads the tables into HeatWave setting the following values:
 ```
