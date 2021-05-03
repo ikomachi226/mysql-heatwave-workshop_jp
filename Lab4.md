@@ -1,10 +1,10 @@
-# Lab 4: Connect to bastion host, install MySQL Shell and download workshop data
+# Lab 4: Connect to the bastion host, install MySQL Shell and download the workshop dataset
 
 ## Key Objectives:
-- Learn how to connect to bastion host using cloud shell 
-- Learn how to  install MySQL Shell and MySQL client executing
-- Download dataset used in this workshop to run queries in the coming labs
-
+- Learn how to connect to the cloud shell and to the bastion host 
+- Learn how to launch MySQL shell
+- Download and setup workshop material
+  
 ## Introduction
 
 The Cloud Shell machine is a small virtual machine running a Bash shell which you access through the OCI Console. Cloud Shell comes with a pre-authenticated OCI CLI, set to the Console tenancy home page region, as well as up-to-date tools and utilities.Cloud Shell comes with 5GB of persistent storage for the home directory, so you can make local changes to your home directory, and then continue working on your project when you come back to Cloud Shell.Cloud Shell is free to use (within your tenancy's monthly limits) and doesn’t require any setup or prerequisites other than an IAM policy granting access to Cloud Shell. When you start Cloud Shell, the service configures your Cloud Shell session with the currently selected region in the Console so that the OCI CLI is interacting with the selected Console region.
@@ -125,7 +125,6 @@ tpch_queries_rapid.sql
 
 ## Conclusion
 
-Now that we opened the cloud shell we imported the private key and connected to the compute instance and  installed MySQL Shell and MySQL client. Finally we downloaded the dataset that will be used later in the workshop. 
-
+In this Lab we launched the cloud shell; imported the private keys to connect to the compute instance; we installed MySQL Shell and MySQL client; finally we downloaded and unzipped the dataset that will be used later on for benchmark analysis.
 
 **[<< Go to Lab 3](Lab3.md)** | **[Home](Readme.md)** | **[Go to Lab 5 >>](Lab5.md)**
