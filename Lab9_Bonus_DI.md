@@ -34,4 +34,4 @@ If you want to learn more about Data Integration, visit the official documentati
 - [Data Integration Documentation](https://docs.oracle.com/en-us/iaas/data-integration/using/preparing-for-connectivity.htm)
 - [Data Science Documentation](https://docs.oracle.com/en-us/iaas/data-science/using/data-science.htm)
 
-**[<< Go to Bonus Lab 8](./Lab8_Bonus_OAC.md)** | **[Home](Readme.md)** 
+**[<< Go to Bonus Lab 8](./Lab8_Bonus_OAC.md)** | **[Home](README.md)** 
