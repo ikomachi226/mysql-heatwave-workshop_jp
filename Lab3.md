@@ -1,17 +1,18 @@
-# Lab 3: Create MySQL DB System (MDS) for Heatwave
+# Lab 3: Create MySQL DB System (MDS) with Heatwave 
 
 ## Key Objectives:
-- Learn how to launch a new DB System.
+- Learn how to deploy and configure MySQL Database Service with Heatwave.
+- Learn how to create the Administrator user for the MDS
 
 ## Introduction
 
-HeatWave configures a Standalone DB System with a HeatWave-compatible shape (MySQL.HeatWave.VM.Standard.E3) and 1TB of data storage, by default. The DB System and HeatWave cluster must use the same shape. For more information, see **[HeatWave](https://docs.oracle.com/en-us/iaas/mysql-database/doc/heatwave1.html#GUID-9401C69A-B379-48EB-B96C-56462C23E4FD)**. 
+By enabling HeatWave you will deploy a standalone DB System characterized by a HeatWave-compatible shape (MySQL.HeatWave.VM.Standard.E3) and 1TB of data storage. The DB System and HeatWave cluster must use the same shape. For more information, see **[HeatWave](https://docs.oracle.com/en-us/iaas/mysql-database/doc/heatwave1.html#GUID-9401C69A-B379-48EB-B96C-56462C23E4FD)**. 
 
 
 ## Steps
 
 ### **Step 3.1:**
-- From the main menu on the left select _**MySQL >> DB System**_
+- From the main menu on the left select _**Databases >> DB Systems**_
   
 ![](./images/HW17_mds.png)
 
@@ -74,15 +75,14 @@ Once done, click the _**Create**_ button.
 ![](./images/HW27_mds.png)
 
 ### **Step 3.11:**
-- The MySQL DB System will enter _**CREATING**_ state (as per picture below). Meanwhile you can go ahead and proceed to the next excercise.
+- The MySQL DB System will enter _**CREATING**_ state (as per picture below). Meanwhile you can go ahead and proceed to the next Lab.
   
 ![](./images/HW28_mds.png)
 
 ## Conclusion
 
-In this lab we created a DB system configured with HeatWave service, and created an administrator user for database.
-All set? now we are ready to connect to the bastion host, and install MySQL Shell in the next lab!
-
+In this Lab you deployed MySQL Database Service with HeatWave engine and created the administration user for the database. All set? now we are ready to connect to the bastion host, and install MySQL Shell in the next lab!
+ 
 Learn more about **[DB Systems on Oracle Cloud](https://docs.oracle.com/en-us/iaas/Content/Database/Concepts/overview.htm)**
 
 **[<< Go to Lab 2](Lab2.md)** | **[Home](Readme.md)** | **[Go to Lab 4 >>](Lab4.md)**
