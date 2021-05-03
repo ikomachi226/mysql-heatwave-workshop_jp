@@ -1,11 +1,11 @@
-# Lab 7: Execute queries using Heatwave
+# Lab 7: Execute queries leveraging HeatWave
 
 ## Key Objectives:
-- Observing the accelerated execution time when Heatwave cluster is enabled.
+- Learn how to enable Heatwave and compare the query execution time with and without HeatWave enabled.
 
 ## Introduction
 
-HeatWave Cluster Node Count Estimates provide recommendations on how many HeatWave nodes are needed to run a workload. When the service is started, database tables on which HeatWave queries are run need to be loaded to HeatWave cluster memory. The size of the HeatWave cluster needed depends on tables and columns required to load, and the compression achieved in memory for this data. Under-provisioning the HeatWave cluster results in data load or query execution failure due to space limitations
+HeatWave Cluster Node Count Estimates provide recommendations on how many HeatWave nodes are needed to run a workload. When the service is started, database tables dedicated to OLAP workloads need to be loaded to HeatWave cluster memory. The size of the HeatWave cluster depends on loaded tables and columns, and on the compression achieved in memory for this data. Under-provisioning the HeatWave cluster results in data load or query execution failure due to space limitations.
 
 
 ## Steps
@@ -119,7 +119,8 @@ ORDER BY l_returnflag , l_linestatus;
 ```
 - Exit from MySQL Shell:
 ```
-\exit
+\q
+
 ```
 
 ### **Step 7.4:**
@@ -169,15 +170,6 @@ Query_ID	Duration	Query				Query_ID	Duration	Query
 
 Optional: inspect the tpch_queries_mysql.sql and the tpch_queries_rapid.sql scripts using vi.
 
-### **Step 7.5:**
-- For the proper execution of the bonus lab 8, it is recommended to execute the following SQL code at this stage 
-  
-```
-CREATE VIEW myAnalyticsView AS SELECT * 
-    FROM customer JOIN orders ON customer.C_CUSTKEY=orders.O_CUSTKEY
-    JOIN nation ON customer.C_NATIONKEY=nation.N_NATIONKEY;
-    
-```
 
 ## Conclusion
 
