@@ -1,7 +1,7 @@
-# Lab 5: Add Heatwave cluster to MySQL DB-System
+# Lab 5: Add HeatWave cluster to MySQL Database Service
 
 ## Key Objectives:
-- Learn how to provision Heatwave cluster
+- Learn how to enable the HeatWave cluster for MDS
 
 
 ## Introduction
@@ -14,7 +14,7 @@ After deploying a HeatWave cluster, refer to the **[HeatWave User's Guide](https
 ## Steps
 
 ### **Step 5.1:**
-- In the menu on the left, go to _**MySQL >> DB Systems**_
+- In the menu on the left, go to _**Databases >> DB Systems**_
 Click on the DB System which you have previously created and verify that status is _**Active**_.
 Take note of the _**Private IP Address**_ of the MySQL DB System.
 
@@ -37,12 +37,12 @@ Click the blue button _**Add HeatWave Cluster**_
 ![](./images/HW32_hw.png)
 
 ### **Step 5.5:**
-- You will be brought back to the main page and you can check for the creation status. After some seconds you should see the nodes in _**Creating**_ status.
+- 5 You will be brought back to the main page where you can check for the creation status. After some seconds you should see the nodes in _**Creating**_ status.
   
 ![](./images/HW33_hw.png)
 
 ### **Step 5.6:**
-- After completion the nodes will switch to _**Active**_ status. This will take some time complete. 
+- After completion, the node status will switch to _**Active**_ status. The process will take some time to be completed. 
   
 ![](./images/HW34_hw.png)
 
