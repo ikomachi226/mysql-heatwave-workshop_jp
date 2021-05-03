@@ -1,6 +1,11 @@
 # Bonus Lab: Use Data Integration to build your Data Pipeline with MySQL and HeatWave
 
-> To address your question you can send it on our **[Discord channel](https://discord.gg/73Gx9Ws7tM)**.
+## Key Objectives:
+-	Learn how to consolidate data from different sources into MDS and build your own data pipeline
+-	Learn how to use MDS powered by HeatWave for your Data Science project by connecting a Jupyter Notebook to MDS
+ 
+
+> To address your question you can send it on our **[Discord mysql-heatwave channel](https://discord.gg/73Gx9Ws7tM)**.
 
 ## Introduction
 
