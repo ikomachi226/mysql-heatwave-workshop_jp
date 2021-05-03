@@ -1,8 +1,8 @@
-# Lab 2: Create compute instance bastion host
+# Lab 2: Create a compute instance as a bastion host
 
 ## Key Objectives:
 
-- Learn how to create Compute instance on Oracle Cloud 
+- Learn how to create a compute instance in a specific compartment 
 
 
 ## Introduction
@@ -20,7 +20,7 @@ See the white paper Bastion Hosts: **[Protected Access for Virtual Cloud Network
 ![](./images/HW11_ci.png)
 
 ### **Step 2.2:** 
-- Check at the compartment selector on the buttom left corner and verify that you are using the same compartment used to create the VCN. To create the compute instance click on the _**Create Instance**_ blue button
+- In the compartment selector on the bottom left corner, select the same compartment where you created the VCN. Click on the _**Create Instance**_ blue button to create the compute instance.
 
 ![](./images/HW12_ci.png)
 
@@ -28,8 +28,8 @@ See the white paper Bastion Hosts: **[Protected Access for Virtual Cloud Network
 - In the _**Name**_ field, insert _**mysql-analytics-test-bridge**_ (or any other name at your convenience). This name will be used also as internal FQDN. 
 The _**Placement and Hardware section**_ is the section where you can change Availability Domain, Fault Domain, Image to be used, and Shape of resources. For the scope of this workshop leave everything as default.
 
-- In the Networking section, check that your previously created VCN is selected and in the Subnet section, select your PUBLIC subnet (_**Public Subnet - analytics_vcn_test**_) from the dropdown menu.
-- 
+- In the Networking section, check that your previously created VCN is selected, and select your PUBLIC subnet (_**Public Subnet - analytics_vcn_test**_) from the dropdown menu.
+  
 ![](./images/HW13_ci.png)
 
 
@@ -48,9 +48,8 @@ Once done, click _**Create**_
 
 ## Conclusion
 
-In this lab we created a compute instance with bastion host that serves as the public entry point, and select the VCN that we have created in the privous lab, and saved the private key on our local device that will be used later in this workshop
-Now let's go ahead and create MySQL DB System (MDS) for Heatwave in the next lab!
-
+In this lab we created a compute instance that serves as a bastion host that is a public entry point to the VCN created in the previous lab. You have then saved the private key on your local device to be able to connect to the Compute Instance. Now let's go ahead and deploy MySQL Database Service (MDS) with Heatwave in the next lab!
+ 
 Learn more about **[Compute Service on Oracle Cloud](https://docs.oracle.com/en-us/iaas/Content/Compute/Concepts/computeoverview.htm)** 
 
  **[<< Go to Lab 1](Lab1.md)** | **[Home](Readme.md)** | **[Go to Lab 3 >>](Lab3.md)**
