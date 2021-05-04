@@ -139,7 +139,7 @@ CREATE VIEW myAnalyticsView AS SELECT *
 We will run the script tpch_queries_mysql.sql to execute some queries without using HeatWave.
 Then, we will run the script tpch_queries_rapid.sql to execute the same queries using HeatWave.
 In the end, we will compare the results.
-Please note that the query that doesn't use the HeatWave might take along time to be completed.
+Please note that the query that doesn't use the HeatWave might take some minutes to be completed.
 
 For this excercise, instead of MySQL Shell, we will use MySQL client:
 Run the following commands:
