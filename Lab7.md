@@ -117,13 +117,23 @@ ORDER BY l_returnflag , l_linestatus;
 +--------------+--------------+-------------+-----------------+-------------------+---------------------+-----------+--------------+----------+-------------+
 4 rows in set (0.0820 sec)
 ```
+### **Step 7.4:**
+
+For proper execution of the **Bonus Lab 8** we suggest you to run the following query at this stage,
+
+```
+CREATE VIEW myAnalyticsView AS SELECT * 
+    FROM customer JOIN orders ON customer.C_CUSTKEY=orders.O_CUSTKEY
+    JOIN nation ON customer.C_NATIONKEY=nation.N_NATIONKEY;
+    
+```
 - Exit from MySQL Shell:
 ```
 \q
 
 ```
 
-### **Step 7.4:**
+### **Step 7.5:**
 - Now that you have understood how HeatWave offloading works and which performance gain it can give, it is time to run some batch execution.
 
 We will run the script tpch_queries_mysql.sql to execute some queries without using HeatWave.
