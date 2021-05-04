@@ -7,28 +7,17 @@
 
 Oracle Analytics Cloud gives you a complete, connected, collaborative platform that brings the power of data and analytics to every process, interaction, and decision in every environment – cloud, on-premises, desktop and data center. You can read more **[here!](https://www.oracle.com/middleware/technologies/oracle-analytics-cloud.html)**
 
-To be able to execute the bonus lab you have to complete all the previous labs in this workshop
+## Prerequisite
+
+- To be able to successfully test bonus lab please complete all the previous labs in this workshop.
+- Make sure you completed the _**Step 7.4**_ in Lab 7.
+  
 _**To address your question you can send it on**_ **[Discord mysql-heatwave channel.](https://discord.gg/73Gx9Ws7tM)** 
 
 ## Steps
 
 ### **Step 8.1:**
 
-Open **Cloud Shell** following the steps in Lab 4.
-
-Connect to MySQL DB System:
-```
-mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --database=tpch --sql
-
-```
-Run the following query:
-
-```
-CREATE VIEW myAnalyticsView AS SELECT * 
-    FROM customer JOIN orders ON customer.C_CUSTKEY=orders.O_CUSTKEY
-    JOIN nation ON customer.C_NATIONKEY=nation.N_NATIONKEY;
-    
-```
 Click the _**hamburger menu**_ in the upper left corner and click on _**Analytics -> Analytics Cloud**_.
 
 ![](./images/one.png)
