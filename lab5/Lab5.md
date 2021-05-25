@@ -52,4 +52,4 @@ Now we have created HeatWave cluster, that consists of a MySQL DB System node an
 Learn more about **[HeatWave service on Oracle Cloud](https://docs.oracle.com/en-us/iaas/mysql-database/doc/heatwave1.html)** 
 So let's connect to MySQL DB System and run some queries before we enable the HeatWave cluster in the next lab! 
 
-**[<< Go to Lab 4](Lab4.md)** | **[Home](Readme.md)** | **[Go to Lab 6 >>](Lab6.md)**
+**[<< Go to Lab 4](/Lab4/Lab4.md)** | **[Home](/workshop/Readme.md)** | **[Go to Lab 6 >>](/Lab6/Lab6.md)**
