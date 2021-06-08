@@ -111,4 +111,4 @@ ORDER BY l_returnflag , l_linestatus;
 As we can see the time consumed to run the query is relatively long, so let's enable Heatwave service and run the query again to compare the result in the next Lab!
 
 
-**[<< Go to Lab 5](/Lab5/README.md)** | **[Home](./README.md)** | **[Go to Lab 7 >>](/Lab7/README.md)**
+**[<< Go to Lab 5](/Lab5/README.md)** | **[Home](../README.md)** | **[Go to Lab 7 >>](/Lab7/README.md)**
