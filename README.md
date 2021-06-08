@@ -54,7 +54,7 @@ At the end of the workshop you will be able to run some queries on a sample data
 -  Learn how to create the Administrator user for the MDS
 
   
-**[Click here for Lab 3]/Lab3/README.md)**
+**[Click here for Lab 3](/Lab3/README.md)**
 
 ## Lab 4 – Connect to the bastion host, install MySQL Shell and download the workshop dataset
 
