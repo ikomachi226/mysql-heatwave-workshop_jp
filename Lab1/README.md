@@ -86,4 +86,4 @@ Now that you have created the VCN and added the additional Ingress rules to the 
 
 Learn more about **[VCN and Subnets](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingVCNs_topic-Overview_of_VCNs_and_Subnets.htm)**
 
-**[Home](/workshop/README.md)** | **[Go to Lab 2 >>](../Lab2/Lab2.md)**
+**[Home](./README.md)** | **[Go to Lab 2 >>](../Lab2/README.md)**

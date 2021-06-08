@@ -188,4 +188,4 @@ Observing the results, we got the query result back in less than a second when a
 
 ## Great Work - All Done!
 
-**[<< Go to Lab 6](Lab6.md)** | **[Home](Readme.md)** | **[Go to Bonus Lab 8 >>](Lab8_Bonus_OAC.md)**
+**[<< Go to Lab 6](/Lab6/README.md)** | **[Home](./README.md)** 

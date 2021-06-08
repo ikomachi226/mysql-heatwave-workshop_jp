@@ -35,7 +35,7 @@ At the end of the workshop you will be able to run some queries on a sample data
 -	Learn how to create a Virtual Cloud Network with internet connectivity
 -	Add ingress rules in the security list to allow traffic through MySQL Database Service ports
 
-**[Click here for Lab 1](/Lab1/Lab1.md)**
+**[Click here for Lab 1](/Lab1/README.md)**
 
 ## Lab 2 – Create a compute instance as a bastion host
 
@@ -44,7 +44,7 @@ At the end of the workshop you will be able to run some queries on a sample data
 
 -	Learn how to create a compute instance in a specific compartment
  
-**[Click here for Lab 2](/Lab2/Lab2.md)**
+**[Click here for Lab 2](/Lab2/README.md)**
 
 ## Lab 3 - Create MySQL DB System (MDS) with Heatwave 
 
@@ -54,7 +54,7 @@ At the end of the workshop you will be able to run some queries on a sample data
 -  Learn how to create the Administrator user for the MDS
 
   
-**[Click here for Lab 3]/Lab3/Lab3.md)**
+**[Click here for Lab 3]/Lab3/README.md)**
 
 ## Lab 4 – Connect to the bastion host, install MySQL Shell and download the workshop dataset
 
@@ -64,7 +64,7 @@ At the end of the workshop you will be able to run some queries on a sample data
 -  Learn how to launch MySQL shell
 -  Download and setup workshop material
 
-**[Click here for Lab 4](/Lab4/Lab4.md)**
+**[Click here for Lab 4](/Lab4/README.md)**
 
 ## Lab 5 – Add HeatWave cluster to MySQL Database Service
 
@@ -72,7 +72,7 @@ At the end of the workshop you will be able to run some queries on a sample data
 
 -  Learn how to enable the HeatWave cluster for MDS
   
-**[Click here for Lab 5](/Lab5/Lab5.md)**
+**[Click here for Lab 5](/Lab5/README.md)**
 
 ## Lab 6 – Import data into MDS and load tables to HeatWave
 
@@ -80,7 +80,7 @@ At the end of the workshop you will be able to run some queries on a sample data
 
 -  Learn how to connect to MDS and import a dataset 
   
-**[Click here for Lab 6](/Lab6/Lab6.md)**
+**[Click here for Lab 6](/Lab6/README.md)**
 
 ## Lab 7 – Execute queries leveraging HeatWave
 
@@ -88,24 +88,4 @@ At the end of the workshop you will be able to run some queries on a sample data
 
 -  Learn how to enable Heatwave and compare the query execution time with and without HeatWave enabled
   
-**[Click here for Lab 7](/Lab7/Lab7.md)**
-
-## Bonus Lab 8 – Use Analytics Cloud on MySQL Database Service powered by HeatWave
-
-- We wanted to give an additional experience post workshop to learn how to Use Analytics Cloud on MySQL Database Service powered by Heatwave
-  
-**Key Objectives:**
-
--  Learn how to use Oracle Analytics Cloud on MySQL Database Service powered by HeatWawe
-
-**[Click here for Lab 8](/Lab8/Lab8_Bonus_OAC.md)**
-
-## Bonus Lab 9 – Use Data Integration to build your data pipeline with MySQL and HeatWave
-
-- Want to consolidate data from other sources and build your own data pipeline? Even more, do you want to use MySQL and HeatWave for Data Science? This bonus track guide you step by step on how to do it.
-
-**Key Objectives:**
--	Learn how to consolidate data from different sources into MDS and build your own data pipeline
--	Learn how to use MDS powered by HeatWave for your Data Science project by connecting a Jupyter Notebook to MDS
-
-**[Click here for Lab 9](/Lab9/Lab9_Bonus_DI.md)**
+**[Click here for Lab 7](/Lab7/README.md)**

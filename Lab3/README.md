@@ -85,4 +85,4 @@ In this Lab you deployed MySQL Database Service with HeatWave engine and created
  
 Learn more about **[DB Systems on Oracle Cloud](https://docs.oracle.com/en-us/iaas/Content/Database/Concepts/overview.htm)**
 
-**[<< Go to Lab 2](/Lab2/Lab2.md)** | **[Home](/workshop/README.md)** | **[Go to Lab 4 >>](/Lab4/Lab4.md)**
+**[<< Go to Lab 2](/Lab2/README.md)** | **[Home](./README.md)** | **[Go to Lab 4 >>](/Lab4/README.md)**

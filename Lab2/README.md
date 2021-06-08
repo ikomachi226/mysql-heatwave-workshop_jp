@@ -52,4 +52,4 @@ In this lab we created a compute instance that serves as a bastion host that is 
  
 Learn more about **[Compute Service on Oracle Cloud](https://docs.oracle.com/en-us/iaas/Content/Compute/Concepts/computeoverview.htm)** 
 
- **[<< Go to Lab 1](/Lab1/Lab1.md)** | **[Home](/workshop/README.md)** | **[Go to Lab 3 >>](/Lab3/Lab3.md)**
+ **[<< Go to Lab 1](/Lab1/README.md)** | **[Home](./README.md)** | **[Go to Lab 3 >>](/Lab3/README.md)**
