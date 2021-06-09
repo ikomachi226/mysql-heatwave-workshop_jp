@@ -123,8 +123,11 @@ After it is done extracting the files you can move to the next step and test it
 Among the output, you should see the following file names:
 
 _**tpch_dump**_
+
 _**tpch_offload.sql**_
+
 _**tpch_queries_mysql.sql**_
+
 _**tpch_queries_rapid.sql**_
 
 ![](./images/cloud-shell-12.png)
