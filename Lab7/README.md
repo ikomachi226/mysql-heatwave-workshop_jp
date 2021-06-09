@@ -26,13 +26,13 @@ mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --p
 
  Now your good to go to _**Step 7.3**_.
 
+The tpch_offload.sql scripts, apart from applying dictionary encoding to a some columns using _**'RAPID_COLUMN=ENCODING=SORTED'**_ (optional step), loads the tables into HeatWave setting the following values:
+
 - **YOU DON'T NEED TO RUN THE BELOW commands** unless you want to load additional tables into the tpch_offload.sql file 
 
-The tpch_offload.sql scripts, apart from applying dictionary encoding to a some columns using _**'RAPID_COLUMN=ENCODING=SORTED'**_ (optional step), loads the tables into HeatWave setting the following values:
-```
 alter table <table_name> secondary_engine=rapid;
 alter table  <table_name> secondary_load;
-```
+
 Additionally you can inspect the full content of the file, executing, from the Linux shell:
 ```
 cat tpch_offload.sql
