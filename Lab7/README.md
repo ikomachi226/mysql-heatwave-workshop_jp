@@ -52,6 +52,7 @@ mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --p
 ```
 set @@use_secondary_engine=ON;
 ```
+![](./images/HW35_hw.png)
 
 - Check the explain plan of the previous query and confirm it will be using secondary engine:
 ```
@@ -120,29 +121,14 @@ ORDER BY l_returnflag , l_linestatus;
 ```
 ### **Step 7.4:**
 
-For proper execution of the **Bonus Lab 8** we suggest you to run the following query at this stage,
-
-```
-CREATE VIEW myAnalyticsView AS SELECT * 
-    FROM customer JOIN orders ON customer.C_CUSTKEY=orders.O_CUSTKEY
-    JOIN nation ON customer.C_NATIONKEY=nation.N_NATIONKEY;
-    
-```
-- Exit from MySQL Shell:
-```
-\q
-
-```
-
-### **Step 7.5:**
-- Now that you have understood how HeatWave offloading works and which performance gain it can give, it is time to run some batch execution.
+Now that you have understood how HeatWave offloading works and which performance gain it can give, it is time to run some batch execution.
 
 We will run the script tpch_queries_mysql.sql to execute some queries without using HeatWave.
 Then, we will run the script tpch_queries_rapid.sql to execute the same queries using HeatWave.
 In the end, we will compare the results.
 **Please note** that the query that doesn't use the HeatWave might take some minutes to be completed.
 
-For this excercise, instead of MySQL Shell, we will use MySQL client:
+For this exercise, instead of MySQL Shell, we will use MySQL client.
 Run the following commands:
 ```
 mysql -h<mysql ip addr> -uadmin -pOracle.123 -Dtpch < tpch_queries_rapid.sql
@@ -150,6 +136,7 @@ mysql -h<mysql ip addr> -uadmin -pOracle.123 -Dtpch < tpch_queries_rapid.sql
 ```
 mysql -h<mysql ip addr> -uadmin -pOracle.123 -Dtpch < tpch_queries_mysql.sql
 ```
+_**It might take some minutes to finish!**_
 ```
 diff -y rapid_rt_profiles.log mysql_rt_profiles.log
 ```
