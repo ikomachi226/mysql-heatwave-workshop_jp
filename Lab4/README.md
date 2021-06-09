@@ -51,7 +51,9 @@ chmod 600 <private-key-file-name>.key
 ssh -i <private-key-file-name>.key opc@<compute_instance_public_ip>
 ```
 
-If prompted to accept the finger print, enter _**yes**_ and hit enter, then you will get a Warning _**Warning: Permanently added '130.******' (ECDSA) to the list of known hosts.**_, now that you connected to the instance you can proceed to the next step.
+If prompted to accept the finger print, enter _**yes**_ and hit enter, then you will get a Warning _
+**Warning: Permanently added '130.******' (ECDSA) to the list of known hosts.**_
+Now that you connected to the instance you can proceed to the next step.
 
 ### **Step 4.8:**
 - From the established ssh connection, install MySQL Shell and MySQL client executing the following commands and the expected outputput should be as following:
