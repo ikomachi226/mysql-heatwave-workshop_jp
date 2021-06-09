@@ -66,7 +66,7 @@ sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
 ```
 ![](./images/cloud-shell-7.png)
 
-      /*when prompted a warning about the public key enter "y"*/
+_**when prompted a warning about the public key enter "y"**_
 
 ```
 sudo yum install mysql-shell  
