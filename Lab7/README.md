@@ -31,6 +31,7 @@ The tpch_offload.sql scripts, apart from applying dictionary encoding to a some 
 - **YOU DON'T NEED TO RUN THE BELOW commands** unless you want to load additional tables into the tpch_offload.sql file 
 
 alter table <table_name> secondary_engine=rapid;
+
 alter table  <table_name> secondary_load;
 
 Additionally you can inspect the full content of the file, executing, from the Linux shell:
