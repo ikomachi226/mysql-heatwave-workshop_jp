@@ -51,11 +51,11 @@ chmod 600 <private-key-file-name>.key
 ssh -i <private-key-file-name>.key opc@<compute_instance_public_ip>
 ```
 
-If prompted to accept the finger print, enter _**yes**_ and hit enter, then you will get a Warning
+If prompted to accept the finger print, enter _**yes**_ and hit enter, then you will get a Warning.
 
 _**Warning: Permanently added '130.******' (ECDSA) to the list of known hosts.**_
 
-Now that you connected to the instance you can proceed to the next step.
+Now that you have connected to the instance you can proceed to the next step.
 
 ### **Step 4.8:**
 - From the established ssh connection, install MySQL Shell and MySQL client executing the following commands and the expected outputput should be as following:
@@ -77,12 +77,15 @@ sudo yum install mysql-shell
 ```
 ![](./images/cloud-shell-8.png)
 
+_**when prompted a warning about the public key enter "y"**_
+
 ```
 sudo yum install mysql-community-client
 ```
 
 ![](./images/cloud-shell-9.png)
 
+_**when prompted a warning about the public key enter "y"**_
 
 
 ### **Step 4.9:**
@@ -118,12 +121,12 @@ After it is done extracting the files you can move to the next step and test it
 ### **Step 4.11:**
 - Verify the extracted material executing _**ll**_ command.
 Among the output, you should see the following file names:
-```
-tpch_dump
-tpch_offload.sql
-tpch_queries_mysql.sql
-tpch_queries_rapid.sql
-```
+
+_**tpch_dump**_
+_**tpch_offload.sql**_
+_**tpch_queries_mysql.sql**_
+_**tpch_queries_rapid.sql**_
+
 ![](./images/cloud-shell-12.png)
 
 
