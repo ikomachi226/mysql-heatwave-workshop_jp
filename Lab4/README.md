@@ -51,8 +51,8 @@ chmod 600 <private-key-file-name>.key
 ssh -i <private-key-file-name>.key opc@<compute_instance_public_ip>
 ```
 
-If prompted to accept the finger print, enter _**yes**_ and hit enter, then you will get a Warning _
-**Warning: Permanently added '130.******' (ECDSA) to the list of known hosts.**_
+If prompted to accept the finger print, enter _**yes**_ and hit enter, then you will get a Warning
+_**Warning: Permanently added '130.******' (ECDSA) to the list of known hosts.**_
 Now that you connected to the instance you can proceed to the next step.
 
 ### **Step 4.8:**
