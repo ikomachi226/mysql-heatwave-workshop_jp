@@ -20,20 +20,21 @@ mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --p
 ```
 util.loadDump("/home/opc/tpch_dump", {dryRun: true, resetProgress:true, ignoreVersion:true})
 ```
+![](./images/HW36_hw.png)
+
 This command will run a dry run of the import. If it terminates without errors, execute the followin to load the dump for real:
 ```
 util.loadDump("/home/opc/tpch_dump", {dryRun: false, resetProgress:true, ignoreVersion:true})
 ```
+![](./images/HW37_hw.png)
 
 ### **Step 6.3:**
 - Check the imported data. From MySQL Shell execute the commands:
 
 ```
-\sql
-
 SHOW DATABASES;
 ```
-(You shoul see the following output:)
+(You should see the following output:)
 ```
 +--------------------+
 | Database           |
