@@ -89,3 +89,13 @@ At the end of the workshop you will be able to run some queries on a sample data
 -  Learn how to enable Heatwave and compare the query execution time with and without HeatWave enabled
   
 **[Click here for Lab 7](/Lab7/README.md)**
+
+## Bonus Lab 8 – Use Analytics Cloud on MySQL Database Service powered by HeatWave
+
+- We wanted to give an additional experience post workshop to learn how to Use Analytics Cloud on MySQL Database Service powered by Heatwave
+  
+**Key Objectives:**
+
+-  Learn how to use Oracle Analytics Cloud on MySQL Database Service powered by HeatWawe
+
+**[Click here for Lab 8](/Lab8/Lab8_Bonus_OAC.md)**
