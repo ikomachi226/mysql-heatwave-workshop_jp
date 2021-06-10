@@ -32,6 +32,8 @@ util.loadDump("/home/opc/tpch_dump", {dryRun: false, resetProgress:true, ignoreV
 - Check the imported data. From MySQL Shell execute the commands:
 
 ```
+\sql
+
 SHOW DATABASES;
 ```
 (You should see the following output:)
