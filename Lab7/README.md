@@ -136,7 +136,7 @@ mysql -h<mysql ip addr> -uadmin -pOracle.123 -Dtpch < tpch_queries_rapid.sql
 ```
 mysql -h<mysql ip addr> -uadmin -pOracle.123 -Dtpch < tpch_queries_mysql.sql
 ```
-_**It might take some minutes to finish!**_
+_**It might take up to 10 minutes to finish!**_
 ```
 diff -y rapid_rt_profiles.log mysql_rt_profiles.log
 ```
