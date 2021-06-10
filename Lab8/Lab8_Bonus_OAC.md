@@ -17,7 +17,7 @@ _**To address your question you can send it on**_ **[Discord mysql-heatwave chan
 
 ### **Step 8.1:**
 
-- From the Cloud shell Connect to MySQL DB System:
+- From the Cloud shell connect to MySQL DB System:
   
 ```
 mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --database=tpch --sql
