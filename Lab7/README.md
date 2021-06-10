@@ -119,6 +119,11 @@ ORDER BY l_returnflag , l_linestatus;
 +--------------+--------------+-------------+-----------------+-------------------+---------------------+-----------+--------------+----------+-------------+
 4 rows in set (0.0820 sec)
 ```
+- Exit from MySQL Shell:
+  
+```
+ \exit
+```
 ### **Step 7.4:**
 
 Now that you have understood how HeatWave offloading works and which performance gain it can give, it is time to run some batch execution.
