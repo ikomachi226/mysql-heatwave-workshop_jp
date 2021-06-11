@@ -136,10 +136,10 @@ In the end, we will compare the results.
 For this exercise, instead of MySQL Shell, we will use MySQL client.
 Run the following commands:
 ```
-mysql -h<mysql ip addr> -uadmin -pOracle.123 -Dtpch < tpch_queries_rapid.sql
+mysql -h<mysql private ip address> -uadmin -pOracle.123 -Dtpch < tpch_queries_rapid.sql
 ```
 ```
-mysql -h<mysql ip addr> -uadmin -pOracle.123 -Dtpch < tpch_queries_mysql.sql
+mysql -h<mysql private ip address> -uadmin -pOracle.123 -Dtpch < tpch_queries_mysql.sql
 ```
 _**It might take up to 10 minutes to finish!**_
 ```
