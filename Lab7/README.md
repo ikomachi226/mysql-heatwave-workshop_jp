@@ -131,7 +131,6 @@ Now that you have understood how HeatWave offloading works and which performance
 We will run the script tpch_queries_mysql.sql to execute some queries without using HeatWave.
 Then, we will run the script tpch_queries_rapid.sql to execute the same queries using HeatWave.
 In the end, we will compare the results.
-**Please note** that the query that doesn't use the HeatWave might take some minutes to be completed.
 
 For this exercise, instead of MySQL Shell, we will use MySQL client.
 Run the following commands:
@@ -141,34 +140,14 @@ mysql -h<mysql private ip address> -uadmin -pOracle.123 -Dtpch < tpch_queries_ra
 ```
 mysql -h<mysql private ip address> -uadmin -pOracle.123 -Dtpch < tpch_queries_mysql.sql
 ```
-_**It might take up to 10 minutes to finish!**_
+The query that doesn't use the HeatWave took more time to be completed as we will see in the next command.
 ```
 diff -y rapid_rt_profiles.log mysql_rt_profiles.log
 ```
 
 - The output of the last command should look as follows:
 
-```
-Query_ID	Duration	Query				Query_ID	Duration	Query
-1	0.43741500	SELECT \n    l_returnflag,\n    l_lin |	1	13.34447075	SELECT \n    l_returnflag,\n    l_lin
-2	0.05510250	SELECT \n    l_orderkey,\n    SUM(l_e |	2	2.81767825	SELECT \n    l_orderkey,\n    SUM(l_e
-3	0.03569350	SELECT \n    O_ORDERPRIORITY, COUNT(* |	3	0.67656550	SELECT \n    O_ORDERPRIORITY, COUNT(*
-4	0.29090700	SELECT \n    n_name, SUM(l_extendedpr |	4	3.43357100	SELECT \n    n_name, SUM(l_extendedpr
-5	0.01475100	SELECT \n    SUM(l_extendedprice * l_ |	5	1.92334425	SELECT \n    SUM(l_extendedprice * l_
-6	0.12739250	SELECT \n    supp_nation, cust_nation |	6	2.91310275	SELECT \n    supp_nation, cust_nation
-7	0.05971975	SELECT \n    o_year,\n    SUM(CASE\n  |	7	2.32921225	SELECT \n    o_year,\n    SUM(CASE\n 
-8	0.09896975	SELECT \n    nation, o_year, SUM(amou |	8	6.26314100	SELECT \n    nation, o_year, SUM(amou
-9	0.04798775	SELECT \n    c_custkey,\n    c_name,\ |	9	1.26776875	SELECT \n    c_custkey,\n    c_name,\
-10	0.10815325	SELECT \n    PS_PARTKEY, SUM(PS_SUPPL |	10	0.43670475	SELECT \n    PS_PARTKEY, SUM(PS_SUPPL
-11	0.02604025	SELECT \n    l_shipmode,\n    SUM(CAS |	11	2.56930425	SELECT \n    l_shipmode,\n    SUM(CAS
-12	0.05837475	SELECT \n    c_count, COUNT(*) AS cus |	12	2.04714750	SELECT \n    c_count, COUNT(*) AS cus
-13	0.02064350	SELECT \n    100.00 * SUM(CASE\n      |	13	1.95272375	SELECT \n    100.00 * SUM(CASE\n     
-14	0.02863725	WITH REVENUE0 AS (\nSELECT \n    L_SU |	14	2.08620250	WITH REVENUE0 AS (\nSELECT \n    L_SU
-15	0.12952825	SELECT \n    P_BRAND,\n    P_TYPE,\n  |	15	0.31044925	SELECT \n    P_BRAND,\n    P_TYPE,\n 
-16	0.15458875	SELECT \n    C_NAME,\n    C_CUSTKEY,\ |	16	2.54871800	SELECT \n    C_NAME,\n    C_CUSTKEY,\
-17	0.02226300	SELECT \n    SUM(l_extendedprice * (1 |	17	773.58222775	SELECT \n    SUM(l_extendedprice * (1
-18	0.05721275	SELECT \n    CNTRYCODE, COUNT(*) AS N |	18	0.75508325	SELECT \n    CNTRYCODE, COUNT(*) AS N
-```
+![](./images/HW36_hw.png)
 
 - Now, you can compare the execution times obtained using HeatWave or only MySQL on InnoDB.
 
