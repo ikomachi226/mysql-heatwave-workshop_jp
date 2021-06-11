@@ -37,7 +37,7 @@ util.loadDump("/home/opc/tpch_dump", {dryRun: false, resetProgress:true, ignoreV
 SHOW DATABASES;
 ```
 (You should see the following output:)
-
+```
 +--------------------+
 | Database           |
 +--------------------+
@@ -47,7 +47,7 @@ SHOW DATABASES;
 | sys                |
 | tpch               |
 +--------------------+
-
+```
 Continue with commands:
 ```
 USE tpch;
