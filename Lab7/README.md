@@ -140,7 +140,7 @@ mysql -h<mysql private ip address> -uadmin -pOracle.123 -Dtpch < tpch_queries_ra
 ```
 mysql -h<mysql private ip address> -uadmin -pOracle.123 -Dtpch < tpch_queries_mysql.sql
 ```
-The query that doesn't use the HeatWave took more time to be completed as we will see in the next command.
+The query that doesn't use the HeatWave service took more time to be completed as we will see in the next command.
 ```
 diff -y rapid_rt_profiles.log mysql_rt_profiles.log
 ```
