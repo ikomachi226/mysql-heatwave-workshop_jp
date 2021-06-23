@@ -139,4 +139,4 @@ You now have all the tools to discover insights in your data!
 
 If you want to discover more on how to use Oracle Analytics Cloud check our **[Tutorials](https://docs.oracle.com/en/cloud/paas/analytics-cloud/tutorials.html)** and **[Live Labs!](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/livelabs-workshop-cards?p100_focus_area=28&me=117&clear=100&session=107258786260970)**
 
-**[<< Go to Lab 7](/Lab7/Lab7.md)** | **[Home](/workshop/Readme.md)** | **[Go to Bonus Lab 9 >>](/Lab9/Lab9_Bonus_DI.md)**
+**[<< Go to Lab 7](/Lab7/Lab7.md)** | **[Home](/workshop/Readme.md)** 
