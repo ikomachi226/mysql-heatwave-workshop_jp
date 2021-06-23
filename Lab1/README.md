@@ -39,7 +39,7 @@ A security list acts as a virtual firewall for an instance, with ingress and egr
 ![](./images/HW3_vcn.png)
 
 ### **Step 1.5:**
- Now you need to complete some infromation and set the configuration for the VCN. In the _**VCN NAME**_ field enter the value _**analytics_vcn_test**_ (or any name at your convenience), and make sure that the selected compartment is the right one. Leave all the rest as per default. Click next.
+ Now you need to complete some information and set the configuration for the VCN. In the _**VCN NAME**_ field enter the value _**analytics_vcn_test**_ (or any name at your convenience), and make sure that the selected compartment is the right one. Leave all the rest as per default. Click next.
 
 ![](./images/HW4_vcn.png)
 
