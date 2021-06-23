@@ -103,8 +103,9 @@ When you see the MySQL Shell colorful prompt, exit with the following command:
 ```
 cd /home/opc
 ```
+
 ```
-wget https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/wRGvQM7cJAXu6_YoMIfzLeWQnnw5zUXlSOynelMlADOFfQI3t1ugdRB7U8fFnFHG/n/odca/b/MySQL_Data/o/heatwave_workshop.zip
+wget https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/wRGvQM7cJAXu6_YoMIfzLeWQnnw5zUXlSOynelMlADOFfQI3t1ugdRB7U8fFnFHG/n/odca/b/MySQL_Data/o/heatwave_workshop.zip
 ```
 
 ![](./images/cloud-shell-10.png)
