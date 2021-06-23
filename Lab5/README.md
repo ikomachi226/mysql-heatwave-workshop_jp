@@ -37,7 +37,7 @@ Click the blue button _**Add HeatWave Cluster**_
 ![](./images/HW32_hw.png)
 
 ### **Step 5.5:**
-- 5 You will be brought back to the main page where you can check for the creation status. After some seconds you should see the nodes in _**Creating**_ status.
+- You will be brought back to the main page where you can check for the creation status. After some seconds you should see the nodes in _**Creating**_ status.
   
 ![](./images/HW33_hw.png)
 
