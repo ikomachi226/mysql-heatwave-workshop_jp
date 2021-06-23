@@ -51,7 +51,7 @@ chmod 600 <private-key-file-name>.key
 ssh -i <private-key-file-name>.key opc@<compute_instance_public_ip>
 ```
 
-If prompted to accept the finger print, enter _**yes**_ and hit enter, then you will get a Warning.
+If prompted to accept the finger print, type _**yes**_ and hit enter, then you will get a Warning.
 
 _**Warning: Permanently added '130.******' (ECDSA) to the list of known hosts.**_
 
@@ -70,14 +70,14 @@ sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
 ```
 ![](./images/cloud-shell-7.png)
 
-_**when prompted a warning about the public key enter "y"**_
+_**when prompted a warning about the public key type "y"**_
 
 ```
 sudo yum install mysql-shell  
 ```
 ![](./images/cloud-shell-8.png)
 
-_**when prompted a warning about the public key enter "y"**_
+_**when prompted a warning about the public key type "y"**_
 
 ```
 sudo yum install mysql-community-client
@@ -85,7 +85,7 @@ sudo yum install mysql-community-client
 
 ![](./images/cloud-shell-9.png)
 
-_**when prompted a warning about the public key enter "y"**_
+_**when prompted a warning about the public key type "y"**_
 
 
 ### **Step 4.9:**
