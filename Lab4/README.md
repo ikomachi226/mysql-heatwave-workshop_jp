@@ -62,7 +62,6 @@ Now that you have connected to the instance you can proceed to the next step.
   
 ```
 wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
-
 ```
 ![](./images/cloud-shell-6.png)
 ```
