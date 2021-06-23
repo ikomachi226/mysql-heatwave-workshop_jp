@@ -160,4 +160,6 @@ Observing the results, we got the query result back in less than a second when a
 
 ## Great Work - All Done!
 
-**[<< Go to Lab 6](/Lab6/README.md)** | **[Home](../README.md)** 
+Keep Learning offline, in the next lab you will learn how to use Oracle Analytics Cloud on MySQL Database Service powered by HeatWawe.
+
+**[<< Go to Lab 6](/Lab6/README.md)** | **[Home](../README.md)** | **[Go to Lab 7 >>](/Lab8/README.md)**
