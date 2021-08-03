@@ -90,6 +90,22 @@ At the end of the workshop you will be able to run some queries on a sample data
   
 **[Click here for Lab 7](/Lab7/README.md)**
 
+## Bonus Lab 8a - Use OCI Bastion Service to manage MDS
+
+**Key Objectives:**
+
+- Learn how to use the free OCI Bastion Service to manage MDS remotely
+
+**[Click here for Lab 8a](/Lab8a/README.md)**
+
+## Bonus Lab 8b - Deploy your mission critical application on MDS High Availability
+
+**Key Objectives:**
+
+- Learn how to provision MDS with High Availability enabled for your mission-critical application
+
+**[Click here for Lab 8b](/Lab8b/README.md)**
+
 ## Bonus Lab 8 – Use Analytics Cloud on MySQL Database Service powered by HeatWave
 
 - We wanted to give an additional experience post workshop to learn how to Use Analytics Cloud on MySQL Database Service powered by Heatwave
