@@ -15,12 +15,12 @@ For an overview of OCI Bastion Service, check **[OCI Bastion Service](https://do
 ### **Step 1.1:**
   Log-in to your OCI tenancy. Once you have logged-in, select _**Database >> MySQL >> DB Systems**_ from the _**menu icon**_ on the top left corner
   
-![](./images/Bas-1.png)
+![](./images/bas-1.png)
 
 ### **Step 1.2:**
  Click on _**Create MySQL DB Systems**_
 
-![](./images/Bas-2.png)
+![](./images/bas-2.png)
 
 ### **Step 1.3:** 
  To create a virtual cloud network, click on _**Start VCN Wizard**_ , 
