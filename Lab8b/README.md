@@ -33,12 +33,14 @@ For an overview of MDS High Availability, check **[MDS High Availability](https:
 
 ### **Step 1.3:** 
  Select _**Virtual Cloud Network**_ (by default, the private subnet in your Virtual Cloud Network will be selected)
- Click on _**Create**_ to create the MDS High Availabilty configuration
  
  ![](./images/ha-4.png)
 
-## MDS HA Swith-over Test
+### **Step 1.4:**
+ Click on _**Create**_ to create the MDS High Availabilty configuration, you should be able to use MDS HA in a few minutes once it is provisioned. Enjoy!
+ 
+ ![](./images/ha-5.png)
+ 
 
-### Steps
 
 
