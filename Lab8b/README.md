@@ -37,4 +37,8 @@ For an overview of MDS High Availability, check **[MDS High Availability](https:
  
  ![](./images/ha-4.png)
 
+## MDS HA Swith-over Test
+
+### Steps
+
 
