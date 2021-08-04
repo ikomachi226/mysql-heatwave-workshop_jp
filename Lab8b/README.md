@@ -1,8 +1,8 @@
-# Lab 8b: Create MDS instance with High Availability
+# Lab 8b: Deploy your mission critical application on MDS High Availability
 
 ## Key Objectives:
 
-- Learn how to create MDS instance with High Availability
+- Learn how to create MDS instance with High Availability configuration
 
 ## Introduction
 
