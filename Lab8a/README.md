@@ -23,9 +23,12 @@ For an overview of OCI Bastion Service, check **[OCI Bastion Service](https://do
 ![](./images/bas-2.png)
 
 ### **Step 1.3:** 
- To create a virtual cloud network, click on _**Start VCN Wizard**_ , 
+ Select _**High Availability**_ configuration, and fill up the details of the following fields:
+ * _**Create in compartment**_: your compartment
+ * _**Name**_: name of MDS intance (eg MDS_HA)
+ * _**Description**_: description of the usage of MDS instance
   
-![](./images/HW2_vcn.png)
+![](./images/.png)
 
 ### **Step 1.4:** 
  Select _**VCN with Internet Connectivity**_ and click _**Start VCN Wizard**_
