@@ -106,12 +106,3 @@ At the end of the workshop you will be able to run some queries on a sample data
 
 **[Click here for Lab 8b](/Lab8b/README.md)**
 
-## Bonus Lab 8 – Use Analytics Cloud on MySQL Database Service powered by HeatWave
-
-- We wanted to give an additional experience post workshop to learn how to Use Analytics Cloud on MySQL Database Service powered by Heatwave
-  
-**Key Objectives:**
-
--  Learn how to use Oracle Analytics Cloud on MySQL Database Service powered by HeatWawe
-
-**[Click here for Lab 8](/Lab8/Lab8_Bonus_OAC.md)**
