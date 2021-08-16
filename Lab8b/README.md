@@ -41,6 +41,10 @@ For an overview of MDS High Availability, check **[MDS High Availability](https:
  
  ![](./images/ha-5.png)
  
+## Conclusion
 
+Congratulations! You have completed the 2 bonus labs. 
+
+**[<< Go to Lab 8a](/Lab6/README.md)** | **[Home](../README.md)** 
 
 
