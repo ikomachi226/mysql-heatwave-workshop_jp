@@ -160,6 +160,6 @@ Observing the results, we got the query result back in less than a second when a
 
 ## Great Work - All Done!
 
-Keep Learning offline, we have 2 bonus labs for you to learn about creating MySQL Database Service High Availability configuration and to use Oracle Bastion Service
+Keep Learning offline, we have 2 bonus labs for you to learn about using Oracle Bastion Service and to provision MySQL Database Service High Availability configuration
 
 **[<< Go to Lab 6](/Lab6/README.md)** | **[Home](../README.md)** | **[Go to Lab 8a >>](/Lab8a/README.md)**
