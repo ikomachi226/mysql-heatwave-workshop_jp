@@ -90,6 +90,6 @@ mysql -uadmin -h127.0.0.1 -P3306 -pPassword
 
 ## Conclusion
 
-In this bonus lab, you have learnt how to create a Bastion Service to connect to your MDS instance without the need of a Bastion compute 
+In this bonus lab, you have learnt how to create a Bastion Service to connect to your MDS instance without the need of a Bastion compute. You can now go to the next lab to try to create MySQL Database Service High Availability configuration
 
-**[Home](../README.md)** | 
+**[<< Go to Lab 8a](/Lab8a/README.md)** | **[Home](../README.md)** | **[Go to Lab 8b >>](/Lab8b/README.md)**
