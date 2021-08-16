@@ -82,7 +82,7 @@ Upload the downloaded Private Key to Cloud Shell and save the Private Key at you
 Paste the SSH Command to Cloud Shell, specify the correct location of the private key and the port number of 3306, and start connecting to MDS using mysql client
 
 ```
-ssh -i ~/private-key.pem -N -L 3306:10.0.0.1:3306 -p 22 ocid.blah.blah &
+ssh -i ~/private-key.pem -N -L 3306:10.0.1.109:3306 -p 22 ocid.really.long.id &
 mysql -uadmin -h127.0.0.1 -P3306 -pPassword
 ```
 
