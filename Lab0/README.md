@@ -21,55 +21,62 @@ You can sign a Trial account on Oracle Cloud Infrastructure to try out our cloud
 ### **Step 2:**
 On Create Account, enter Email Address and Country/Territory, read Terms of Use, and click on **Next** 
 ![Image of picture2](https://github.com/tripplea-sg/Cloud_Administration_Workshop/blob/main/Lab-1/Picture2.png)
+![](./images/Picture2.png)
 </br>
 
 ### **Step 3:**
 On Enter Account Details, select the Account Type, enter Cloud Account Name, First Name, Last Name, Address, City, State, Zip/Postal Code, Country/Territory, and Mobile Number, select the Home Region, and click on **Next: Verify Mobile Number**. </br>
    **Note: You must have an OCI tenancy subscribed to the Tokyo (East)** </br>
 ![Image of picture3](https://github.com/tripplea-sg/Cloud_Administration_Workshop/blob/main/Lab-1/Picture3.png)
+![](./images/Picture3.png)
 </br>
-
+![](./images/Picture4.png)
 ![Image of picture3](https://github.com/tripplea-sg/Cloud_Administration_Workshop/blob/main/Lab-1/Picture4.png)
 </br>
 
 ### **Step 4:**
 On Verify Your Mobile Number, enter Code and click on **Verify Code**. 
 ![Image of picture4](https://github.com/tripplea-sg/Cloud_Administration_Workshop/blob/main/Lab-1/Picture5.png)
+![](./images/Picture5.png)
 </br>
 
 ### **Step 5:**
 On Enter Password, create a Password to be used on the Account.
 ![Image of picture5](https://github.com/tripplea-sg/Cloud_Administration_Workshop/blob/main/Lab-1/Picture6.png)
+![](./images/Picture6.png)
 </br>
 
 ### **Step 6:**
 On Payment Information, click on Add Credit Card Details. 
 ![Image of picture6](https://github.com/tripplea-sg/Cloud_Administration_Workshop/blob/main/Lab-1/Picture7.png)
+![](./images/Picture7.png)
 </br>
 
 ### **Step 7:**
 On Payment Method, enter First Name, Last Name, Address, City, Country/Region, State/Province, Zip/Postal Code, Phone Number, Email, Payment Details (including Card Type, Card Number, Expiration Date, CVN), and click on **Finish**.
 ![Image of picture7](https://github.com/tripplea-sg/Cloud_Administration_Workshop/blob/main/Lab-1/Picture8.png)
+![](./images/Picture8.png)
 </br>
 
 ![Image of picture7](https://github.com/tripplea-sg/Cloud_Administration_Workshop/blob/main/Lab-1/Picture9.png)
+![](./images/Picture9.png)
 </br>
 
 ### **Step 8:**
 On Payment Information, it will show a message saying **“You won’t be charged unless you elect to upgrade the account.”**. 
 **Check the Checkbox to agree to the terms and conditions and click on Complete Sign-Up** 
 ![Image of picture8](https://github.com/tripplea-sg/Cloud_Administration_Workshop/blob/main/Lab-1/Picture10.png)
+![](./images/Picture10.png)
 </br>
 
 ### **Step 9**
 The Account will be created </br>
 ![Image of picture1](https://github.com/tripplea-sg/Cloud_Administration_Workshop/blob/main/Lab-1/Picture11.png)
+![](./images/Picture11.png)
 
 
 ## Conclusion
 
 Now that you have created a Trial account on Oracle Cloud, you can proceed to the next lab!
-
-Learn more about **[VCN and Subnets](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingVCNs_topic-Overview_of_VCNs_and_Subnets.htm)**
 
 **[Home](../README.md)** | **[Go to Lab 1 >>](../Lab2/README.md)**
