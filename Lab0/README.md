@@ -24,7 +24,7 @@ On Create Account, enter Email Address and Country/Territory, read Terms of Use,
 
 ### **Step 3:**
 On Enter Account Details, select the Account Type, enter Cloud Account Name, First Name, Last Name, Address, City, State, Zip/Postal Code, Country/Territory, and Mobile Number, select the Home Region, and click on **Next: Verify Mobile Number**. </br>
-Note: You can choose a Cloud Region as your **Home Region** that is closer to where you will be accessing from, for example, choose Tokyo if you are in Japan, or Mumbai if you are in India
+Note: You can choose a Cloud Region as your **Home Region** that is closer to where you will be accessing from, for example, choose Tokyo if you are in Japan East, or Mumbai if you are in India West
 ![](./images/Picture3.png)
 </br>
 ![](./images/Picture4.png)
