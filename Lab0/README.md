@@ -68,4 +68,4 @@ The Account will be created </br>
 
 Now that you have created a Trial account on Oracle Cloud, you can proceed to the next lab!
 
-**[Home](../README.md)** | **[Go to Lab 1 >>](../Lab2/README.md)**
+**[Home](../README.md)** | **[Go to Lab 1 >>](../Lab1/README.md)**
