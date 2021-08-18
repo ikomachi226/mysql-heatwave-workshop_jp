@@ -27,6 +27,15 @@ At the end of the workshop you will be able to run some queries on a sample data
 # Workshop Overview
  
  **All set? Let's start**
+ 
+## Lab 0 - Create a Trial account on Oracle Cloud Infrastructure
+
+**Key Objectives:**
+
+- Learn how to create a Trial account on Oracle Cloud Infrastructure
+- Choose an appropriate Cloud Region
+
+**[Click here for Lab 0](/Lab0/README.md)**
 
 ## Lab 1 - Create a Virtual Cloud Network and allow traffic through MySQL Database Service port
 
