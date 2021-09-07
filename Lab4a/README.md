@@ -147,7 +147,7 @@ echo "routing_strategy = first-available" >> /etc/mysqlrouter/mysqlrouter.conf
 
 ### **Step 4.15:**
 - Once provisioning is finished, the instance will enter the _**Running**_ state. It should take about a minute or so.
-Once the instance is _**Running**_, take note of the _**Public IP Address**_ for ssh connection and of the _**Internal FQDN**_ for setting up the _**Replication Channel**_ later on.
+Once the instance is _**Running**_, take note of the _**Public IP Address**_ for ssh connection and of the _**Internal FQDN**_ for setting up the _**mysqlrouter**_ later on.
 
 ![](images/Lab4-16.png)
 
