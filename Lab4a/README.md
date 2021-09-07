@@ -182,9 +182,9 @@ c - If prompted to accept fingerprints, enter _**yes**_
 sudo sed -i 's/destinations =.*/destinations = <put-here-private-ip-address-of-mds-heatwave>/g' /etc/mysqlrouter/mysqlrouter.conf
 ```
 _**Where do I get the MDS HeatWave IP Private address?**_
-Go to: _**Main Menu >> Databases >> DB Systems >>**_ Click on _**mysql-replication-source >>**_ Check for _**Private IP**_ (as per picture below).
+Go to: _**Main Menu >> Databases >> DB Systems >>**_ Click on _**mysql-analytics-test >>**_ Check for _**Private IP**_ (as per picture below).
 
-![](images/Lab4-18b.png)
+![](../Lab3/images/HW-28.png)
 
 _**PLEASE NOTE**_: After you modify the command above inserting the _**MDS HeatWave Priate IP Address**_, your command will look as per following example:
 _**sudo sed -i s/SOURCE_PUBLIC_IP/10.0.1.100/g /etc/mysqlrouter/mysqlrouter.conf**_
@@ -209,7 +209,7 @@ sudo systemctl enable mysqlrouter
 sudo systemctl start mysqlrouter
 ```
 
-b - Access the mysqlrouter and test the router to the _**MySQL Replication Source**_
+b - Access the mysqlrouter and test the router to the _**mysql_analytics_test**_
 ```
 mysqlsh --uri root:Oracle.123@127.0.0.1:3306 --sql
 select @@hostname;
