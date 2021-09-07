@@ -75,6 +75,15 @@ At the end of the workshop you will be able to run some queries on a sample data
 
 **[Click here for Lab 4](/Lab4/README.md)**
 
+## Lab 4a – [Optional] Create a compute instance, install mysqlrouter for Oracle Analytics Cloud
+
+**Key Objectives:**
+
+-  Learn how to install mysqlrouter 
+-  Learn how to configure mysqlrouter to allow Oracle Analytics Cloud to connect to MDS/HeatWave
+
+**[Click here for Lab 4a](/Lab4a/README.md)**
+
 ## Lab 5 – Add HeatWave cluster to MySQL Database Service
 
 **Key Objectives:**
