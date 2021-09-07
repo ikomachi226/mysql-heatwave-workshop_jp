@@ -184,7 +184,7 @@ sudo sed -i 's/destinations =.*/destinations = <put-here-private-ip-address-of-m
 _**Where do I get the MDS HeatWave IP Private address?**_
 Go to: _**Main Menu >> Databases >> DB Systems >>**_ Click on _**mysql-analytics-test >>**_ Check for _**Private IP**_ (as per picture below).
 
-![](../Lab3/images/HW-28.png)
+![](../Lab3/images/HW28_mds.png)
 
 _**PLEASE NOTE**_: After you modify the command above inserting the _**MDS HeatWave Priate IP Address**_, your command will look as per following example:
 _**sudo sed -i s/SOURCE_PUBLIC_IP/10.0.1.100/g /etc/mysqlrouter/mysqlrouter.conf**_
