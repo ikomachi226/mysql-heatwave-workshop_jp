@@ -70,10 +70,10 @@ The steps you will execute will allow you to deploy and configure MySQL Router a
 ### **Step 4.9:**
 - Go the _**Networking**_ section.
 - If the section is collapsed, click _**Edit**_ to expand it.
-- Make sure you select the _**mds-replication-hol-vcn**_ in the VCN drop down selector and the _**Public Subnet-mds-replication-hol-vcn (Regional)**_ in the subnet drop down selector.
+- Make sure you select the _**analytics_vcn_test**_ in the VCN drop down selector and the _**Public Subnet-analytics_vcn_test (Regional)**_ in the subnet drop down selector.
 - Make sure that the _**Assign a public IPv4 address**_ radio button is selected.
 
-![](images/Lab4-9.png)
+![](images/Lab4-9a.png)
 
 ### **Step 4.10:**
 - In the _**Add SSH keys**_ section, make sure you select _**Generate a key pair for me**_ and then click on _**Save Private Key**_
@@ -181,17 +181,17 @@ c - If prompted to accept fingerprints, enter _**yes**_
 ```
 sudo sed -i 's/destinations =.*/destinations = <put-here-public-ip-of-mysql-replication-source>/g' /etc/mysqlrouter/mysqlrouter.conf
 ```
-_**Where do I get the MySQL Replication Source Public IP?**_
-Go to: _**Main Menu >> Compute >> Instances >>**_ Click on _**mysql-replication-source >>**_ Check for _**Public IP**_ (as per picture below).
+_**Where do I get the MDS HeatWave IP Private address?**_
+Go to: _**Main Menu >> Databases >> DB System >>**_ Click on _**mysql-replication-source >>**_ Check for _**Private IP**_ (as per picture below).
 
 ![](images/Lab4-18b.png)
 
-_**PLEASE NOTE**_: After you modify the command above inserting the _**MySQL Replication Source Public IP Address**_, your command will look as per following example:
+_**PLEASE NOTE**_: After you modify the command above inserting the _**MDS HeatWave Priate IP Address**_, your command will look as per following example:
 _**sudo sed -i s/SOURCE_PUBLIC_IP/140.238.220.163/g /etc/mysqlrouter/mysqlrouter.conf**_
 
 
 
-- Once done, check the content of the configuration file to verify that the variable _**destinations**_ is equal to the _**Public IP Address of the Replication Source**_.
+- Once done, check the content of the configuration file to verify that the variable _**destinations**_ is equal to the _**Private IP Address of the MDS HeatWave**_.
 To do it, execute:
 ```
 cat /etc/mysqlrouter/mysqlrouter.conf
