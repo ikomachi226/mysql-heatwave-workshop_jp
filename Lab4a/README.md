@@ -1,11 +1,11 @@
-# Lab 4: Create a MySQL Router Instance to connect MySQL Database Service with the Replication Source
+# Lab 4a: [Optional] Create a MySQL Router Instance for Oracle Analytics Cloud to connect to MDS/HeatWave
 
 ![](images/Lab4-0.png)
 
 ## Key Objectives:
 - Learn how to create a compute instance in a specific compartment
 - Learn how to use Cloud Shell to connect to a compute instance via ssh
-- Modify the MySQL Router configuration to point to Replication Source and test the connection
+- Modify the MySQL Router configuration to point to MDS HeatWave and test the connection
 
 ## Introduction
 In this lab we will deploy a compute instance which will host MySQL Router.
@@ -112,7 +112,7 @@ runcmd:
 
 final_message: "The system is finally up, after $UPTIME seconds"
 ```
-This is a cloud init script which will install MySQL Shell and MySQL Router, configuring it to require minimal effort to point it to Replication Source MySQL Instance.
+This is a cloud init script which will install MySQL Shell and MySQL Router, configuring it to require minimal effort to point it to MDS HeatWave instance.
 
 _**MAKE SURE TO COPY AND PASTE THE SCRIPT CORRECTLY!!**_
 
@@ -175,7 +175,7 @@ c - If prompted to accept fingerprints, enter _**yes**_
 ![](images/Lab4-18.png)
 
 ### **Step 4.18:**
-- Once successfully connected to the instance where the MySQL Router is installed, we need to change the MySQL router configuration to point to the _**Replication Source**_, using the _**MDS HeatWave Private IP Address**_. In a normal scenario, you should modify the MySQL router configuration file, located under _**/etc/mysqlrouter/mysqlrouter.conf**_
+- Once successfully connected to the instance where the MySQL Router is installed, we need to change the MySQL router configuration to point to the _**mysql-analytics-test**_, using the _**MDS HeatWave Private IP Address**_. In a normal scenario, you should modify the MySQL router configuration file, located under _**/etc/mysqlrouter/mysqlrouter.conf**_
 
 - To speed things up, the MySQL Router installed on this instance has been pre-configured, and you need just to update the place holder already present in the configuration for the _**MDS HeatWave Private IP Address**_, running the following command:
 ```
@@ -200,7 +200,7 @@ cat /etc/mysqlrouter/mysqlrouter.conf
 ![](images/Lab4-19a.png)
 
 ### **Step 4.19:**
-- It is now time to start the MySQL Router and to check the connection to the MySQL Replication Source.
+- It is now time to start the MySQL Router and to check the connection to the MDS HeatWave instance.
 To do so execute the following steps:
 
 a - Enable the mysqlrouter service to start on boot and start the mysqlrouter service
@@ -214,7 +214,7 @@ b - Access the mysqlrouter and test the router to the _**mysql_analytics_test**_
 mysqlsh --uri root:Oracle.123@127.0.0.1:3306 --sql
 select @@hostname;
 ```
-- Confirm that the hostname matches the Replication Source Hostname, as per picture below.
+- Confirm that the hostname matches the MDS HeatWave Hostname, as per picture below.
 
 ![](images/Lab4-20.png)
 
