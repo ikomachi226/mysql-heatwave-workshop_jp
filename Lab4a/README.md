@@ -9,10 +9,10 @@
 
 ## Introduction
 In this lab we will deploy a compute instance which will host MySQL Router.
-As you have noticed, MySQL Database Service DB System is exposing a Private IP address only, therefore cannot natively communicate via the public internet.
+As you have noticed, both MySQL Database Service DB System and HeatWave are exposing a Private IP address only, therefore cannot natively communicate via the public internet.
 Communication with the public internet can be achieved in two ways:
 - Setting up an IPSec VPN connection between your OCI tenancy and your on premise data center: **[IPSec Overview](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingIPsec.htm)**
-- Using a MySQL Router running on a Compute Instance, with access to the Public Internet, to act as a reverse proxy, routing the database traffic, received over the OCI internal network, to the source on-premise MySQL instance. Even if the MySQL Router it is originally intended to provide a transparent routing layer for an on-premise high-availability setup, if configured to do so, can provide also simple routing towards a single instance.
+- Using a MySQL Router running on a Compute Instance, with access to the Public Internet, to act as a reverse proxy, routing the database traffic, received over the OCI internal network, to the source on-premise MySQL instance. Even if the MySQL Router it is originally intended to provide a transparent routing layer for an on-premise high-availability setup, if configured to do so, can provide also simple routing towards a single instance. 
 **[MySQL Router Overview](https://www.mysql.com/it/products/enterprise/router.html)**
 
 IPSec connectivity it is **the most secure** approach to be used in order to connect your on-premise environment with OCI. In this hands-on lab, for simplicity, we expose the database traffic via the public internet using MySQL Router.
