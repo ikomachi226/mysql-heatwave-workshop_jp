@@ -229,7 +229,7 @@ select @@hostname;
 
 ## Conclusion
 
-In this lab you have deployed and configured MySQL Router on a Compute Instance with public internet connectivity, and pointed it to the MySQL source instance. 
+In this lab you have deployed and configured MySQL Router on a Compute Instance with public internet connectivity, and pointed it to the MDS HeatWave instance. 
 You can now proceed to the next and last lab.
 
 Learn more about **[MySQL Router](https://www.mysql.com/it/products/enterprise/router.html)**
