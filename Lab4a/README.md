@@ -17,7 +17,7 @@ Communication with the public internet can be achieved in two ways:
 
 IPSec connectivity it is **the most secure** approach to be used in order to connect your on-premise environment with OCI. In this hands-on lab, for simplicity, we expose the database traffic via the public internet using MySQL Router.
 
-The steps you will execute will allow you to deploy and configure MySQL Router automatically, using a cloud-init script. After the deployment, you will set the IP Address for the MySQL Source instance in the router configuration.
+The steps you will execute will allow you to deploy and configure MySQL Router automatically, using a cloud-init script. After the deployment, you will set the IP Address for the MDS HeatWave instance in the router configuration.
 
 ## Steps
 
