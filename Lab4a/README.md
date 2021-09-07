@@ -197,7 +197,7 @@ To do it, execute:
 cat /etc/mysqlrouter/mysqlrouter.conf
 ```
 
-![](images/Lab4-19.png)
+![](images/Lab4-19a.png)
 
 ### **Step 4.19:**
 - It is now time to start the MySQL Router and to check the connection to the MySQL Replication Source.
