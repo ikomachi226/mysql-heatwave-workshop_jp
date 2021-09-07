@@ -182,7 +182,7 @@ c - If prompted to accept fingerprints, enter _**yes**_
 sudo sed -i 's/destinations =.*/destinations = <put-here-private-ip-address-of-mds-heatwave>/g' /etc/mysqlrouter/mysqlrouter.conf
 ```
 _**Where do I get the MDS HeatWave IP Private address?**_
-Go to: _**Main Menu >> Databases >> DB System >>**_ Click on _**mysql-replication-source >>**_ Check for _**Private IP**_ (as per picture below).
+Go to: _**Main Menu >> Databases >> DB Systems >>**_ Click on _**mysql-replication-source >>**_ Check for _**Private IP**_ (as per picture below).
 
 ![](images/Lab4-18b.png)
 
