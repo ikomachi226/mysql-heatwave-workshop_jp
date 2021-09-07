@@ -216,7 +216,7 @@ select @@hostname;
 ```
 - Confirm that the hostname matches the MDS HeatWave Hostname, as per picture below.
 
-![](images/Lab4-20.png)
+![](images/Lab4-20a.png)
 
 ### **Step 4.20:**
 - Exit the MySQL Shell, executing the following command:
