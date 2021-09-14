@@ -112,6 +112,23 @@ runcmd:
 
 final_message: "The system is finally up, after $UPTIME seconds"
 ```
+
+```
+#cloud-config
+# Source: https://cloudinit.readthedocs.io/en/latest/topics/examples.html#yaml-examples
+# check the yaml syntax with https://yaml-online-parser.appspot.com/
+
+output: {all: '| tee -a /var/log/cloud-init-output.log'}
+
+# Run these commands only at first boot
+runcmd:
+- 'echo "c2VkIC1pIHMvU0VMSU5VWD1lbmZvcmNpbmcvU0VMSU5VWD1wZXJtaXNzaXZlL2cgL2V0Yy9zeXNjb25maWcvc2VsaW51eApzZWQgLWkgcy9TRUxJTlVYPWVuZm9yY2luZy9TRUxJTlVYPXBlcm1pc3NpdmUvZyAvZXRjL3NlbGludXgvY29uZmlnCnN5c3RlbWN0bCBzdG9wIGZpcmV3YWxsZApzeXN0ZW1jdGwgZGlzYWJsZSBmaXJld2FsbGQKd2dldCBodHRwczovL2Rldi5teXNxbC5jb20vZ2V0L215c3FsODAtY29tbXVuaXR5LXJlbGVhc2UtZWw4LTEubm9hcmNoLnJwbQp3Z2V0IGh0dHBzOi8vZG93bmxvYWRzLm15c3FsLmNvbS9hcmNoaXZlcy9nZXQvcC80MS9maWxlL215c3FsLXJvdXRlci1jb21tdW5pdHktOC4wLjIyLTEuZWw4Lng4Nl82NC5ycG0KeXVtIGxvY2FsaW5zdGFsbCAteSAtLW5vZ3BnY2hlY2sgbXlzcWw4MC1jb21tdW5pdHktcmVsZWFzZS1lbDgtMS5ub2FyY2gucnBtCnl1bSBtb2R1bGUgLXkgLS1ub2dwZ2NoZWNrIGRpc2FibGUgbXlzcWwKeXVtIGluc3RhbGwgLXkgLS1ub2dwZ2NoZWNrIG15c3FsLXNoZWxsCnl1bSBsb2NhbGluc3RhbGwgLXkgLS1ub2dwZ2NoZWNrIG15c3FsLXJvdXRlci1jb21tdW5pdHktOC4wLjIyLTEuZWw4Lng4Nl82NC5ycG0KZWNobyAiIiA+PiAvZXRjL215c3Fscm91dGVyL215c3Fscm91dGVyLmNvbmYKZWNobyAiW3JvdXRpbmc6cHJpbWFyeV0iID4+IC9ldGMvbXlzcWxyb3V0ZXIvbXlzcWxyb3V0ZXIuY29uZgplY2hvICJiaW5kX2FkZHJlc3MgPSAwLjAuMC4wIiA+PiAvZXRjL215c3Fscm91dGVyL215c3Fscm91dGVyLmNvbmYKZWNobyAiYmluZF9wb3J0ID0gMzMwNiIgPj4gL2V0Yy9teXNxbHJvdXRlci9teXNxbHJvdXRlci5jb25mCmVjaG8gImRlc3RpbmF0aW9ucyA9IFNPVVJDRV9QVUJMSUNfSVA6MzMwNiIgPj4gL2V0Yy9teXNxbHJvdXRlci9teXNxbHJvdXRlci5jb25mCmVjaG8gInJvdXRpbmdfc3RyYXRlZ3kgPSBmaXJzdC1hdmFpbGFibGUiID4+IC9ldGMvbXlzcWxyb3V0ZXIvbXlzcWxyb3V0ZXIuY29uZgo=" | base64 -d >> setup.sh'
+- 'chmod +x setup.sh'
+- './setup.sh'
+
+final_message: "The system is finally up, after $UPTIME seconds"
+```
+
 This is a cloud init script which will install MySQL Shell and MySQL Router, configuring it to require minimal effort to point it to MDS HeatWave instance.
 
 _**MAKE SURE TO COPY AND PASTE THE SCRIPT CORRECTLY!!**_
@@ -182,9 +199,9 @@ sudo yum install -y --nogpgcheck mysql-router-community-8.0.22
 ``` 
 - Once this is done, we need to change the MySQL router configuration to point to the _**mysql-analytics-test**_, using the _**MDS HeatWave Private IP Address**_. In a normal scenario, you should modify the MySQL router configuration file, located under _**/etc/mysqlrouter/mysqlrouter.conf**_
 
-- To speed things up, the MySQL Router installed on this instance has been pre-configured, and you need just to update the place holder already present in the configuration for the _**MDS HeatWave Private IP Address**_, running the following command:
+- To speed things up, the MySQL Router installed on this instance has been pre-configured, and you need just to update the place holder already present in the configuration for the _**MDS HeatWave Private IP Address**_ (for example, 10.0.1.100), running the following command:
 ```
-sudo sed -i 's/destinations =.*/destinations = <put-here-private-ip-address-of-mds-heatwave>/g' /etc/mysqlrouter/mysqlrouter.conf
+sudo sed -i 's/destinations =.*/destinations = 10.0.1.100:3306/g' /etc/mysqlrouter/mysqlrouter.conf
 ```
 _**Where do I get the MDS HeatWave IP Private address?**_
 Go to: _**Main Menu >> Databases >> DB Systems >>**_ Click on _**mysql-analytics-test >>**_ Check for _**Private IP**_ (as per picture below).
