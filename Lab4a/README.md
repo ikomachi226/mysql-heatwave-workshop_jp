@@ -178,7 +178,7 @@ c - If prompted to accept fingerprints, enter _**yes**_
 
 - Once successfully connected to the instance where the MySQL Router is installed, we need to change the mysqlrouter to an older version (v8.0.22)
 ```
-sudo yum install -y mysql-router-community-8.0.22
+sudo yum install -y --nogpgcheck mysql-router-community-8.0.22
 ``` 
 - Once this is done, we need to change the MySQL router configuration to point to the _**mysql-analytics-test**_, using the _**MDS HeatWave Private IP Address**_. In a normal scenario, you should modify the MySQL router configuration file, located under _**/etc/mysqlrouter/mysqlrouter.conf**_
 
