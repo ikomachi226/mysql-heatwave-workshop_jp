@@ -75,7 +75,7 @@ At the end of the workshop you will be able to run some queries on a sample data
 
 **[Click here for Lab 4](/Lab4/README.md)**
 
-## Lab 4a – [Optional] Create a compute instance, install mysqlrouter for Oracle Analytics Cloud
+## Lab 4a – Create a compute instance, install mysqlrouter for Oracle Analytics Cloud
 
 **Key Objectives:**
 
