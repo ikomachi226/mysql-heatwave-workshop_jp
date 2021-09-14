@@ -209,11 +209,9 @@ sudo systemctl start mysqlrouter
 b - Access the mysqlrouter and test the router to the _**mysql_analytics_test**_
 ```
 mysqlsh --uri root:Oracle.123@127.0.0.1:3306 --sql
-select @@hostname;
+select @@version;
+show databases;
 ```
-- Confirm that the hostname matches the MDS HeatWave Hostname, as per picture below.
-
-![](images/Lab4-20b.png)
 
 ### **Step 4.20:**
 - Exit the MySQL Shell, executing the following command:
