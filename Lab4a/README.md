@@ -1,4 +1,4 @@
-# Lab 4a: [Optional] Create a MySQL Router Instance for Oracle Analytics Cloud to connect to MDS/HeatWave
+# Lab 4a: Create a MySQL Router Instance for Oracle Analytics Cloud to connect to MDS/HeatWave
 
 ![](images/Lab4-0.png)
 
