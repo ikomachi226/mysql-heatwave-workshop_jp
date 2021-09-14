@@ -175,7 +175,12 @@ c - If prompted to accept fingerprints, enter _**yes**_
 ![](images/Lab4-18.png)
 
 ### **Step 4.18:**
-- Once successfully connected to the instance where the MySQL Router is installed, we need to change the MySQL router configuration to point to the _**mysql-analytics-test**_, using the _**MDS HeatWave Private IP Address**_. In a normal scenario, you should modify the MySQL router configuration file, located under _**/etc/mysqlrouter/mysqlrouter.conf**_
+
+- Once successfully connected to the instance where the MySQL Router is installed, we need to change the mysqlrouter to an older version (v8.0.22)
+```
+sudo yum install -y mysql-router-community-8.0.22
+``` 
+- Once this is done, we need to change the MySQL router configuration to point to the _**mysql-analytics-test**_, using the _**MDS HeatWave Private IP Address**_. In a normal scenario, you should modify the MySQL router configuration file, located under _**/etc/mysqlrouter/mysqlrouter.conf**_
 
 - To speed things up, the MySQL Router installed on this instance has been pre-configured, and you need just to update the place holder already present in the configuration for the _**MDS HeatWave Private IP Address**_, running the following command:
 ```
@@ -188,8 +193,6 @@ Go to: _**Main Menu >> Databases >> DB Systems >>**_ Click on _**mysql-analytics
 
 _**PLEASE NOTE**_: After you modify the command above inserting the _**MDS HeatWave Priate IP Address**_, your command will look as per following example:
 _**sudo sed -i s/SOURCE_PUBLIC_IP/10.0.1.100/g /etc/mysqlrouter/mysqlrouter.conf**_
-
-
 
 - Once done, check the content of the configuration file to verify that the variable _**destinations**_ is equal to the _**Private IP Address of the MDS HeatWave**_.
 To do it, execute:
