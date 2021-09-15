@@ -234,4 +234,4 @@ In this lab you have deployed and configured MySQL Router on a Compute Instance 
 You can now proceed to the next and last lab.
 
 Learn more about **[MySQL Router](https://www.mysql.com/it/products/enterprise/router.html)**
-
+**[<< Go to Lab 4](/Lab4/README.md)** | **[Home](../README.md)** | **[Go to Lab 5 >>](/Lab5/README.md)**
