@@ -137,4 +137,4 @@ _**tpch_queries_rapid.sql**_
 
 In this Lab we launched the cloud shell; imported the private keys to connect to the compute instance; we installed MySQL Shell and MySQL client; finally we downloaded and unzipped the dataset that will be used later on for benchmark analysis.
 
-**[<< Go to Lab 3](/Lab3/README.md)** | **[Home](../README.md)** | **[Go to Lab 5 >>](/Lab5/README.md)**
+**[<< Go to Lab 3](/Lab3/README.md)** | **[Home](../README.md)** | **[Go to Lab 4a >>](/Lab4a/README.md)**
