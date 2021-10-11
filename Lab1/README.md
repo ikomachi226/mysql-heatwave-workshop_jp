@@ -1,25 +1,25 @@
-# Lab 1: Create a Virtual Cloud Network and allow traffic through MySQL Database Service port
+# Lab 1: 仮想ネットワークを作成し、MySQL Database Serviceポートへの接続を確立する
 
-## Key Objectives:
+## 実施すること:
 
-- Learn how to create a Virtual Cloud Network with internet connectivity
-- Add ingress rules in the security list to allow traffic through MySQL Database Service ports
+- インターネット接続を持つ仮想ネットワーク(VCN)の作り方を学ぶ
+- セキュリティリストにイングレスルールを追加してMySQL Database Serviceポートへの接続を確立する
 
 
-## Introduction
+## 概要
 
-Virtual Cloud Network helps you define your own data centre network topology inside the Oracle Cloud by defining some of the following components (Subnets, Route Tables, Security Lists, Gateways, etc.). Some of these components are set by default automatically within every VCN and can't be deleted:
-•	Default route table, with no route rules
-•	Default security list, with default security rules
-•	Default set of DHCP options, with default values
-For an overview of VCNs, allowed size, default VCN components, and scenarios for using a VCN, check **[Networking Overview](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm#network_landing)**.
+VCNは、サブネット、ルートテーブル、セキュリティリスト、ゲートウェイなどを定義することにより、OracleCloud内で独自のデータセンターネットワークトポロジを設定することができます。これらのコンポーネントの一部は、すべてのVCN内でデフォルトで自動的に設定され削除することはできません。
+•	ルート・ルールのないデフォルトのルート表
+•	デフォルトのセキュリティ・ルールが設定されたデフォルトのセキュリティリスト
+•	デフォルト値のあるDHCPオプションのデフォルト・セット
+VCNの概要、許容サイズ、デフォルトのVCN、およびVCNを使用するためのシナリオについては **[ネットワークの概要](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm#network_landing)** を確認してください。
 
-A security list acts as a virtual firewall for an instance, with ingress and egress rules that specify the types of traffic allowed in and out. Each subnet can have multiple security lists associated with it, and each list can have multiple rules. The default security list comes with an initial set of stateful rules, which should in most cases be changed to only allow inbound traffic from authorized subnets relevant to the region that hosts that VCN or subnet. A list of authorized subnet ranges relevant to each region can be found **[here](https://docs.cloud.oracle.com/iaas/tools/public_ip_ranges.json)**.
+セキュリティリストは、インスタンスの仮想ファイアウォールとして機能し、出入りを許可するトラフィックのタイプを指定するイングレスルールとエグレスルールを備えています。各サブネットには複数のセキュリティリストを関連付けることができ、各リストには複数のルールを含めることができます。デフォルトのセキュリティリストには、ステートフル・ルールの初期セットが付属しています。ほとんどの場合、そのVCNまたはサブネットをホストするリージョンに関連する許可されたサブネットからのインバウンドトラフィックのみを許可するように変更する必要があります。各リージョンに関連する許可されたサブネット範囲のリストは、**[こちら](https://docs.cloud.oracle.com/iaas/tools/public_ip_ranges.json)** にあります。
 
-## Steps
+## 手順
 
 ### **Step 1.1:**
-  Log-in to your OCI tenancy. Once you have logged-in, select _**Networking >> Virtual Cloud Networks**_ from the _**menu icon**_ on the top left corner
+  OCIテナンシにログインし、_**Networking >> Virtual Cloud Networks**_ from the _**menu icon**_ on the top left corner
 
 ![](./images/HW1_vcn.png)
 
