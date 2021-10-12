@@ -1,88 +1,88 @@
-# Lab 3: Create MySQL DB System (MDS) with Heatwave 
+# Lab 3: MySQL DB System (MDS) および Heatwaveをデプロイする 
 
-## Key Objectives:
-- Learn how to deploy and configure MySQL Database Service with Heatwave.
-- Learn how to create the Administrator user for the MDS
+## ここで実施すること:
+- MySQL Database Service および Heatwaveをデプロイし、設定する方法を学ぶ.
+- 管理者の作成方法を学ぶ
 
-## Introduction
+## 概要
 
-By enabling HeatWave you will deploy a standalone DB System characterized by a HeatWave-compatible shape (MySQL.HeatWave.VM.Standard.E3) and 1TB of data storage. The DB System and HeatWave cluster must use the same shape. For more information, see **[HeatWave](https://docs.oracle.com/en-us/iaas/mysql-database/doc/heatwave1.html#GUID-9401C69A-B379-48EB-B96C-56462C23E4FD)**. 
+HeatWaveを有効にすると、HeatWaveのシェイプ（MySQL.HeatWave.VM.Standard.E3）と1TBのデータストレージを特徴とするスタンドアロンDBシステムをデプロイします。 DBシステムとHeatWaveクラスターは同じシェイプを使用する必要があります。詳細は **[HeatWave](https://docs.oracle.com/ja-jp/iaas/mysql-database/doc/heatwave1.html#GUID-9401C69A-B379-48EB-B96C-56462C23E4FD)** を参照してください。
 
 
-## Steps
+## 手順
 
 ### **Step 3.1:**
-- From the main menu on the left select _**Databases >> DB Systems**_
+- 画面左上のメニューから _**データベース >> DBシステム**_ を選択します。
   
 ![](./images/HW17_mds.png)
 
 ### **Step 3.2:**
-- The previous step will bring you to the DB System creation page. 
-Look at the compartment selector on the left and check that you are using the same compartment used to create the VCN and the Compute Instance. Once done, click on _**Create MySQL DB System**_.
+- 前の手順で、DBシステムの作成画面に移動します。
+　左側のコンパートメントが、VCNとコンピュート・インスタンスの作成時に選択したものと同じコンパートメントを選択していることを確認します。確認できたら _**DBシステムの作成**_ をクリックします。
 
 ![](./images/HW18_mds.png)
 
 ### **Step 3.3:**
-- Start creating the DB System. Cross check again the compartment and assign to the DB System the name _**mysql-analytics-test**_ and select the HeatWave box. This will allow to create a MySQL DB System which will be HeatWave-ready. Ignore other boxes.
+- DBシステムの作成を開始します。 コンパートメントを再度チェックし、DBシステムに_ ** mysql-analytics-test ** _ という名前を入力し、[HeatWave]を選択します。 これにより、HeatWave対応のMySQLDBシステムを作成できます。 今回は他のチェックボックスは無視してください。
   
 ![](./images/HW19_mds.png)
 
 ### **Step 3.4:**
-- In the _**Create Administrator Credential**_ section enter the following:
+-  _**管理者資格証明の作成**_ セクションでは以下を入力します:
 ```
-username: admin
-password: Oracle.123
+ユーザー名: admin
+パスワード: Oracle.123
 ```
-- In the _**Configure Networking**_ section make sure you select the same subnet which you have used to create the Compute Instance (Public-Subnet-analytics_vcn_test).
+- In the _**ネットワーキングの構成**_ セクションでは、コンピュート・インスタンス作成時に指定したサブネットと同じになっているか確認します(Public-Subnet-analytics_vcn_test)。
 
-- Leave the default availability domain and proceed to the _**Configure Hardware**_ section.
+- アベイラビリティ・ドメインはデフォルトのままとし、_**ハードウェアの構成**_ セクションに進みます。
  
   ![](./images/HW20_mds.png)
 
 ### **Step 3.5:**
-- Confirm that in the _**Configure Hardware**_ section, the selected shape is MySQL.HeatWave.VM.Standard.E3, CPU Core Count: 16, Memory Size: 512 GB, Data Storage Size: 1024.
-In the _**Configure Backup**_ section leave the default backup window of 7 days.
+- _**ハードウェアの構成**_ セクションで、シェイプ: MySQL.HeatWave.VM.Standard.E3, CPUコア数: 16, メモリー・サイズ: 512 GB, データ・ストレージ・サイズ: 1024と設定されていることを確認します。
+In the _**バックアップ・プランの構成**_ セクションはデフォルトのままバックアップ保持期間を7日間としておきます。
 
 ![](./images/HW22_mds.png)
 
 ### **Step 3.6:**
-- Scroll down and click on _**Show Advanced Options**_ 
+- 画面下部にスクロールし、_**拡張オプションの表示**_ リンクをクリックします。
   
 ![](./images/HW23_mds.png)
 
 ### **Step 3.7:**
-- In the Configuration tab click on _**Select Configuration**_ 
+- 構成タブで _**構成の選択**_ をクリックします。 
 
 ![](./images/HW24_mds.png)
 
 ### **Step 3.8:**
-- In the _**Browse All Configurations**_ window, select MySQL.HeatWave.VM.Standard.E3.Standalone, and click the button _**Select a Configuration**_ 
+- In the _**構成の参照**_ 画面で、MySQL.HeatWave.VM.Standard.E3.Standaloneを選択し、_**構成の選択**_ をクリックします。 
 
 ![](./images/HW25_mds.png)
 
 ### **Step 3.9:**
-- If everything is correct you should see something corresponding to the below
+- 正しく選択できていれば、以下のような画面表示になります。
 
 ![](./images/HW26_mds.png)
 
 ### **Step 3.10:**
-- Go to the Networking tab, and in the Hostname field enter _**mysql-analytics-test**_ (same as DB System Name). 
-Check that port configuration corresponds to the following:
-MySQL Port: 3306
-MySQL X Protocol Port: 33060
-Once done, click the _**Create**_ button.
+- ネットワーキングタブに移動し、ホスト名に _**mysql-analytics-test**_ (DBシステム名と同じ名前)を入力します。 
+ポートの設定が以下となっていることを確認します。
+MySQLポート: 3306
+MySQL X プロトコル・ポート: 33060
+確認できたら _**作成**_ をクリックします。
 
 ![](./images/HW27_mds.png)
 
 ### **Step 3.11:**
-- The MySQL DB System will enter _**CREATING**_ state (as per picture below). Meanwhile you can go ahead and proceed to the next Lab.
+- MDSは _**作成中**_ の状態になります(下記画面例)。 起動まで少し時間がかかるので、次の演習に進んでいただいて大丈夫です。
   
 ![](./images/HW28_mds.png)
 
-## Conclusion
+## まとめ
 
-In this Lab you deployed MySQL Database Service with HeatWave engine and created the administration user for the database. All set? now we are ready to connect to the bastion host, and install MySQL Shell in the next lab!
+ここまでの操作でMySQL Database Service および HeatWave をデプロイし、データベース管理者を作成しました。 次に、MySQL Shellをインストールしましょう!
  
-Learn more about **[DB Systems on Oracle Cloud](https://docs.oracle.com/en-us/iaas/Content/Database/Concepts/overview.htm)**
+詳細は **[DBシステムの作成](https://docs.oracle.com/ja-jp/iaas/mysql-database/doc/creating-db-system1.html)** を参照してください。
 
 **[<< Go to Lab 2](/Lab2/README.md)** | **[Home](../README.md)** | **[Go to Lab 4 >>](/Lab4/README.md)**
