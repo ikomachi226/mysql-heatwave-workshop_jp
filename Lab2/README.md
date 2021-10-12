@@ -1,55 +1,55 @@
-# Lab 2: Create a compute instance as a bastion host
+# Lab 2: bastionホストとしてコンピュートインスタンスを作成する
 
-## Key Objectives:
+## 実施すること
 
-- Learn how to create a compute instance in a specific compartment 
-
-
-## Introduction
-
-A bastion host is a compute instance that serves as the public entry point for accessing a private network from external networks like the internet. Traffic must flow through the bastion host to access the private network, and you can set up security mechanisms on the bastion to handle that traffic.
-
-See the white paper Bastion Hosts: **[Protected Access for Virtual Cloud Networks](https://www.oracle.com/a/ocom/docs/bastion-hosts.pdf)**. 
+- 特定のコンパートメントにコンピュートインスタンスを作成する方法を学びます 
 
 
-## Steps
+## 概要
+
+Bastionは、インターネットなどの外部ネットワークからプライベートネットワークにアクセスするためのパブリック・エントリポイントとして機能するコンピュートインスタンスです。 プライベートネットワークにアクセスするには、トラフィックがbastionホストを通過する必要があります。bastionのセキュリティ設定を行うことで、トラフィックを処理できます。
+
+Bastionについてはホワイトペーパーをご参照ください: **[仮想クラウド・ネットワークのための保護アクセス](https://docs.oracle.com/cd/F34086_01/bastion-hosts_jp.pdf)**. 
+
+
+## 手順
 
 ### **Step 2.1:**
-- From the main menu on the top left corner select _**Compute >> Instances**_
+- 画面左上のメニューから _**コンピュート >> インスタンス**_ を選択します。
   
 ![](./images/HW11_ci.png)
 
 ### **Step 2.2:** 
-- In the compartment selector on the bottom left corner, select the same compartment where you created the VCN. Click on the _**Create Instance**_ blue button to create the compute instance.
+- 画面左下のコンパートメント一覧からVCNを作成した際に選択コンパートメントと同じコンパートメントを選択します。_**インスタンスの作成**_ をクリックします。
 
 ![](./images/HW12_ci.png)
 
 ### **Step 2.3:** 
-- In the _**Name**_ field, insert _**mysql-analytics-test-bridge**_ (or any other name at your convenience). This name will be used also as internal FQDN. 
-The _**Placement and Hardware section**_ is the section where you can change Availability Domain, Fault Domain, Image to be used, and Shape of resources. For the scope of this workshop leave everything as default.
+- _**名前**_ に _**mysql-analytics-test-bridge**_ (もしくは任意の名前)を入力します。 この名前は内部のFQDNとして使用されます。
+  _**配置**_ および _**イメージとシェイプ**_ セクションではアベイラビリティ・ドメイン、フォルト・ドメイン、使用するイメージ、シェイプを設定することができます。ここでは、デフォルトの設定で進めます。
 
-- In the Networking section, check that your previously created VCN is selected, and select your PUBLIC subnet (_**Public Subnet - analytics_vcn_test**_) from the dropdown menu.
+- ネットワーキングでは、 作成したVCNが選択されていることを確認し、パブリック・サブネット(_**パブリック・サブネット - analytics_vcn_test**_) をドロップダウンメニューから選択します。
   
 ![](./images/HW13_ci.png)
 
 
 ### **Step 2.4:** 
-- Scroll down and MAKE SURE TO DOWNLOAD the proposed private key. 
-You will use it to connect to the compute instance later on.
-Once done, click _**Create**_
+- 画面下にスクロールすると秘密キーを保存するか確認するセクションがあります。 
+この秘密キーは後でコンピュート・インスタンスに接続する際に必要になります。
+秘密キーを保存し、_**作成**_ をクリックします。
 
 ![](./images/HW15_ci.png)
 
 ### **Step 2.5:** 
-- Once the compute instance will be up and running, you will see the square icon on the left turning green.
- However, you can proceed to the next lab until the provisioning is done.
+- コンピュート・インスタンスが起動すると、アイコンが緑色に変わります。
+ インスタンスが起動するまで、次のLabを実施することができます。
   
 ![](./images/HW16_ci.png)
 
-## Conclusion
+## まとめ
 
-In this lab we created a compute instance that serves as a bastion host that is a public entry point to the VCN created in the previous lab. You have then saved the private key on your local device to be able to connect to the Compute Instance. Now let's go ahead and deploy MySQL Database Service (MDS) with Heatwave in the next lab!
+このLabでは、前のLabで作成したVCNへのパブリック・エントリポイントであるBastionホストとして機能するコンピュート・インスタンスを作成しました。 次に、ローカルデバイスに秘密鍵を保存して、コンピューティングインスタンスに接続できるようにしました。 次のLabでは、Heatwaveを使用してMySQLデータベースサービス（MDS）をデプロイしましょう！
  
-Learn more about **[Compute Service on Oracle Cloud](https://docs.oracle.com/en-us/iaas/Content/Compute/Concepts/computeoverview.htm)** 
+コンピュート・インスタンスについては **[Computeサービスの概要](https://docs.oracle.com/ja-jp/iaas/Content/Compute/Concepts/computeoverview.htm)** を参照ください。
 
- **[<< Go to Lab 1](/Lab1/README.md)** | **[Home](../README.md)** | **[Go to Lab 3 >>](/Lab3/README.md)**
+ **[<< Lab 1](/Lab1/README.md)** | **[Home](../README.md)** | **[Lab 3 >>](/Lab3/README.md)**
