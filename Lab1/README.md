@@ -84,6 +84,6 @@ VCNの概要、許容サイズ、デフォルトのVCN、およびVCNを使用�
 
 ここまでの操作でVCNを作成し、セキュリティ・リストにイングレス・ルールが追加できました。次のトピックに進みましょう！
 
-詳細は **[VCNとサブネットの概要](https://docs.oracle.com/ja-jp/iaas/Content/Network/Tasks/managingVCNs_topic-Overview_of_VCNs_and_Subnets.htm)**
+VCNとサブネットについては **[VCNとサブネットの概要](https://docs.oracle.com/ja-jp/iaas/Content/Network/Tasks/managingVCNs_topic-Overview_of_VCNs_and_Subnets.htm)**　を参照してください。
 
 **[Home](../README.md)** | **[Lab 2へ >>](../Lab2/README.md)**
