@@ -19,71 +19,71 @@ VCNの概要、許容サイズ、デフォルトのVCN、およびVCNを使用�
 ## 手順
 
 ### **Step 1.1:**
-  OCIテナンシにログインし、_**Networking >> Virtual Cloud Networks**_ from the _**menu icon**_ on the top left corner
+  OCIテナンシにログインし、画面左上の　_**メニュー**_　から　_**ネットワーキング >> 仮想クラウド・ネットワーク**_ を選択します。
 
 ![](./images/HW1_vcn.png)
 
 ### **Step 1.2:**
- From the Compartment picker on the bottom left side, select your compartment from the list
+ 画面左下のコンパートメント一覧から利用するコンパートメントを選択します。
 
 ![](./images/HW1b_vcn.png)
 
 ### **Step 1.3:** 
- To create a virtual cloud network, click on _**Start VCN Wizard**_ , 
+ 仮想クラウド・ネットワークを作成するために _**VCNウィザードの起動**_ をクリックします。 
   
 ![](./images/HW2_vcn.png)
 
 ### **Step 1.4:** 
- Select _**VCN with Internet Connectivity**_ and click _**Start VCN Wizard**_
+ _**インターネット接続性を持つVCNの作成**_ を選択して _**VCNウィザードの起動**_　をクリックします。
 
 ![](./images/HW3_vcn.png)
 
 ### **Step 1.5:**
- Now you need to complete some information and set the configuration for the VCN. In the _**VCN NAME**_ field enter the value _**analytics_vcn_test**_ (or any name at your convenience), and make sure that the selected compartment is the right one. Leave all the rest as per default. Click next.
+ VCNに必要な情報をいくつか設定します。_**VCN名**_ には _**analytics_vcn_test**_ (もしくは任意の名前)を入力し、正しいコンパートメントが選択されていることを確認します。その他の項目はデフォルトのまま設定し、_**次**_ をクリックします。
 
 ![](./images/HW4_vcn.png)
 
 ### **Step 1.6:** 
- Review and click _**Create**_
+ 入力内容を確認し、_**作成**_　をクリックします。
 
 ![](./images/HW5_vcn.png)
 
 ### **Step 1.7:** 
- Once the VCN will be created click _**View Virtual Cloud Network**_
+ VCNの作成が完了したら _**仮想クラウド・ネットワークの表示**_　をクリックします。
 
 ![](./images/HW6_vcn.png)
 
 ### **Step 1.8:** 
- Click on the _**Public_Subnet-analytics_vcn_test**_ link. 
+ _**パブリック・サブネット-analytics_vcn_test**_ のリンクをクリックします。
 
 ![](./images/HW7_vcn.png)
 
 ### **Step 1.9:** 
- Earlier we set up the subnet to use the VCN's default security list, that has default rules, which are designed to make it easy to get started with Oracle Cloud Infrastructure. 
- Now we will customize the default security list of the VCN to allow traffic through MySQL Database Service ports by clicking on  _**Default_Security_List_for_analytics_vcn_test**_
+ VCNウィザードでデフォルトのセキュリティリストを使用するようにサブネットを設定しました。このリストには、Oracle Cloudの使用を簡単に開始できるようにデフォルトのルールが設計されています。
+ 次に、VCNのデフォルトのセキュリティリストをカスタマイズして、_**Default_Security_List_for_analytics_vcn_test**_　をクリックしてMySQLデータベースのポートを通過するトラフィックを許可します。  
 
 ![](./images/HW8_vcn.png)
 
 ### **Step 1.10:** 
-  Click on _**Add Ingress Rules**_
+  _**イングレス・ルールの追加**_　をクリックします。
 
 ![](./images/HW9_vcn.png)
 
 ### **Step 1.11:**
- Add the necessary rule to the default security list to enable traffic through MySQL Database Service port. 
+ 必要なルールをデフォルトのセキュリティリストに追加して、MySQLデータベースサービスポートを介したトラフィックを有効にします。
 
-Insert the details as below:
-Source CIDR  _**0.0.0.0/0**_,  port _**3306**_, description  _**MySQL Port**_.
+設定する値は以下の通りです:
+ソースCIDR  _**0.0.0.0/0**_,  宛先ポート範囲 _**3306**_, 説明  _**MySQL Port**_.
 
-At the end click the blue button _**Add Ingress Rules**_
+入力したら _**イングレス・ルールの追加**_　をクリックします。
 
 ![](./images/HW10_vcn.png)
 
 
 ## Conclusion
 
-Now that you have created the VCN and added the additional Ingress rules to the Security list, you can proceed to the next lab!
+ここまでの操作でVCNを作成し、セキュリティ・リストにイングレス・ルールが追加できました。次のトピックに進みましょう！
 
-Learn more about **[VCN and Subnets](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingVCNs_topic-Overview_of_VCNs_and_Subnets.htm)**
+詳細は **[VCNとサブネットの概要](https://docs.oracle.com/ja-jp/iaas/Content/Network/Tasks/managingVCNs_topic-Overview_of_VCNs_and_Subnets.htm)**
 
-**[Home](../README.md)** | **[Go to Lab 2 >>](../Lab2/README.md)**
+**[Home](../README.md)** | **[Lab 2へ >>](../Lab2/README.md)**
