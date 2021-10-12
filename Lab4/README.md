@@ -74,7 +74,7 @@ sudo yum install mysql-shell
 ```
 ![](./images/cloud-shell-8.png)
 
-_**公開キーについて警告が表示された場合は "y"を入力します
+_**公開キーについて警告が表示された場合は "y"を入力します**_
 
 ```
 sudo yum install mysql-community-client
@@ -117,8 +117,7 @@ unzip heatwave_workshop.zip
 解凍できたら次の手順に進みます。
 
 ### **Step 4.11:**
-- _**ll**_ コマンドを実行して展開された資材を確認します。
-以下のファイルが含まれています。
+- _**ll**_ コマンドを実行して展開された資材に以下のファイルが含まれていることを確認します。
 
 _**tpch_dump**_
 
