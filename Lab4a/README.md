@@ -1,89 +1,88 @@
-# Lab 4a: Create a MySQL Router Instance for Oracle Analytics Cloud to connect to MDS/HeatWave
+# Lab 4a: Oracle Analytics Cloud用のMySQL Routerインスタンスを作成し、MDS/HeatWaveに接続する
 
-![](images/Lab4-0.png)
+## 実施すること
+- 特定のコンパートメントにコンピュート・インスタンスを作成する
+- SSH経由でCloud Shellを利用してコンピュート・インスタンスに接続する
+- Modify the MySQL Routerの接続先をMDS/HeatWaveに変更し接続する
 
-## Key Objectives:
-- Learn how to create a compute instance in a specific compartment
-- Learn how to use Cloud Shell to connect to a compute instance via ssh
-- Modify the MySQL Router configuration to point to MDS HeatWave and test the connection
+## 概要
+このでは、MySQLルーターをホストするコンピュート・インスタンスをデプロイします。MDS/HeatWaveはプライベートIPアドレスのみを公開しているため、インターネットを介してネイティブに通信することはできません。インターネットとの通信は、次の2つの方法で実現できます。
 
-## Introduction
-In this lab we will deploy a compute instance which will host MySQL Router.
-As you have noticed, both MySQL Database Service DB System and HeatWave are exposing a Private IP address only, therefore cannot natively communicate via the public internet.
-Communication with the public internet can be achieved in two ways:
-- Setting up an IPSec VPN connection between your OCI tenancy and your on premise data center: **[IPSec Overview](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingIPsec.htm)**
-- Using a MySQL Router running on a Compute Instance, with access to the Public Internet, to act as a reverse proxy, routing the database traffic, received over the OCI internal network, to the source on-premise MySQL instance. Even if the MySQL Router it is originally intended to provide a transparent routing layer for an on-premise high-availability setup, if configured to do so, can provide also simple routing towards a single instance. 
-**[MySQL Router Overview](https://www.mysql.com/it/products/enterprise/router.html)**
+- OCIテナンシーとオンプレミス・データセンタ間のIPSecVPN接続のセットアップ：IPSecの概要**[サイト間VPN](https://docs.oracle.com/ja-jp/iaas/Content/Network/Tasks/managingIPsec.htm)**
+- パブリックインターネットにアクセスできるコンピュート・インスタンス上のMySQL Routerを使用して、リバースプロキシとして機能し、OCI内部ネットワークを介して受信したトラフィックをオンプレミスのMySQLインスタンスにルーティングします。 MySQL Routerは、元々、オンプレミスの高可用性セットアップに透過的なルーティングレイヤーを提供することを目的としていますが、構成によってはひとつのインスタンスへの単純なルーティングも提供できます。 **[MySQL Routerの概要](https://www.mysql.com/jp/products/enterprise/router.html)**
 
-IPSec connectivity it is **the most secure** approach to be used in order to connect your on-premise environment with OCI. In this hands-on lab, for simplicity, we expose the database traffic via the public internet using MySQL Router.
+IPSec接続は、オンプレミス環境をOCIに接続するために使用する **最も安全な** アプローチです。このハンズオンでは、MySQL Routerを使用してインターネット経由でデータベーストラフィックを実行します。
 
-The steps you will execute will allow you to deploy and configure MySQL Router automatically, using a cloud-init script. After the deployment, you will set the IP Address for the MDS HeatWave instance in the router configuration.
+以下の手順では、cloud-initスクリプトを使用して、MySQLルーターを自動的にデプロイ・設定します。デプロイ後、ルーター設定でMDS/HeatWaveインスタンスのIPアドレスを設定します。
 
-## Steps
+## 手順
 
 ### **Step 4.1:**
-- From the main menu on the top left corner select _**Compute >> Instances**_
+- 画面左上のメニューから _**コンピュート >> インスタンス**_ を選択します。
 
 ![](images/Lab4-1.png)
 
 ### **Step 4.2:**
-- In the compartment selector, make sure that the right Compartment is selected.
+- 正しいコンパートメントが選択されていることを確認します。
 
-- Click on the _**Create Instance**_ button.
+- _**インスタンスの作成**_ をクリックします。
 
 ![](images/Lab4-2.png)
 
 ### **Step 4.3:**
-- In the _**Name**_ field, insert _**mysql-replication-router**_ (or any other name at your convenience).
+- _**名前**_ に、_**mysql-replication-router**_ (or any other name at your convenience)を入力します。
 
-- The _**Placement**_ section is the section where you can change Availability Domain and Fault Domain. For the scope of this workshop leave everything as default.
+- _**配置**_ セクションではアベリラビリティ・ドメインもしくはフォルト・ドメインを変更できます。このハンズオンでは、デフォルトの設定を利用します。
 
 ![](images/Lab4-3.png)
 
 ### **Step 4.4:**
-- In the _**Image and shape**_ section, you can define the operating system image to be used and the resources to be assigned.
-- If the section is collapsed, click on _**Edit**_ to expand it.
-- In the _**Image**_ subsection click on the _**Change Image**_ button.
+- _**イメージとシェイプ**_ セクションでは、OSイメージと割り当てるシェイプを設定することができます。
+- このセクションが縮小されている場合は、_**編集**_ をクリックして表示します。
+- 割り当てるシェイプは _**イメージの変更**_ をクリックして変更することができます。
 
 ![](images/Lab4-4.png)
 
 ### **Step 4.5:**
-- In the _**Browse All Images**_ window, select _**Oracle Linux**_, expand the drop down _**OS version**_ box, and select _**8**_
+- _**すべてのイメージの参照**_ 画面で_**Oracle Linux**_ を選択し、 _**OSバージョン**_ のドロップダウンから _**8**_ を選択します。
 
 ![](images/Lab4-5.png)
 
 ### **Step 4.6:**
-- Click on the _**Select Image**_ button
+- _**イメージの選択**_ をクリックします。
 
 ![](images/Lab4-6.png)
 
 ### **Step 4.7:**
-- In the _**Shape**_ subsection click on _**Change Shape**_
+- _**Change Shape**_ をクリックします。
 
 ![](images/Lab4-7.png)
 
 ### **Step 4.8:**
-- In the _**Browse All Shapes**_ window, click on the _**AMD**_ box. Then, under _**VM.Standard.E4.Flex**_,  in the _**Number of CPU**_ input box enter _**2**_ and wait until the _**Amount of memory (GB)**_ input box gets automatically populated with the value _**32**_. Afterwards click on _**Select Shape**_
+- _**すべてのシェイプの参照**_ 画面で_**AMD**_ をクリックします。 Then, under _**VM.Standard.E4.Flex**_, _**OCPUの数**_ に _**2**_ を入力すると
+ _**メモリー量 (GB)**_ が自動的に _**32**_　になります。その後_**シェイプの選択**_ をクリックします。
 
 ![](images/Lab4-8.png)
 
 ### **Step 4.9:**
-- Go the _**Networking**_ section.
-- If the section is collapsed, click _**Edit**_ to expand it.
-- Make sure you select the _**analytics_vcn_test**_ in the VCN drop down selector and the _**Public Subnet-analytics_vcn_test (Regional)**_ in the subnet drop down selector.
-- Make sure that the _**Assign a public IPv4 address**_ radio button is selected.
+- _**ネットワーキング**_ セクションに移ります。
+- このセクションが縮小されている場合は、_**編集**_ をクリックして表示します。
+- VCNとして _**analytics_vcn_test**_ が選択されていることを確認し、サブネットとして _**パブリック・サブネット-analytics_vcn_test (Regional)**_ が選択されていることを確認します。
+- _**パブリックIPv4アドレスの割当て**_ ラジオボタンが選択されていることを確認します。
 
 ![](images/Lab4-9a.png)
 
 ### **Step 4.10:**
-- In the _**Add SSH keys**_ section, make sure you select _**Generate a key pair for me**_ and then click on _**Save Private Key**_
+- In the _**SSHキーの追加**_ セクションでは、_**キー・ペアを自動で生成**_ を選択し、_**秘密キーの保存**_ をクリックします。
 
 ![](images/Lab4-10.png)
 
-- Once the private key gets saved to your local machine, take note of the download location and of the file name.
+- ローカルマシンに秘密キーを保存したら、ダウンロードしたパスとファイル名を控えておきます。
 
-_**PLEASE NOTE:**_ OCI generates for your private keys naming it after the date of creation (example: ssh-key-YYYY-MM-DD.key). If you generate two or more private keys in the same day, your operating system might modify the file name upon saving. For example, the current private key which you are saving might follow a naming convention of this kind: ssh-key-YYYY-MM-DD (1).key
-Therefore be careful and pay attention to the correct file name.
+_**PLEASE NOTE:**_ OCIが生成する秘密キーは、名前に作成日を使用します（例：ssh-key-YYYY-MM-DD.key）。 同じ日に2つ以上の秘密鍵を生成すると、オペレーティングシステムが保存時にファイル名を変更する場合があります。 たとえば、保存している現在の秘密鍵は、次のような命名規則に従う場合がありま。
+ssh-key-YYYY-MM-DD（1）.key
+
+したがって、注意して正しいファイル名に注意してください。
 
 ### **Step 4.11:**
 - Scroll down and after the _**Boot Volume**_ section, click on _**Show advanced options**_
