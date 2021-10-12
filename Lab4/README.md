@@ -1,64 +1,62 @@
-# Lab 4: Connect to the bastion host, install MySQL Shell and download the workshop dataset
+# Lab 4: Bastionへの接続、MySQL Shellのインストールとサンプルデータのダウンロード
 
-## Key Objectives:
-- Learn how to connect to the cloud shell and to the bastion host 
-- Learn how to launch MySQL shell
-- Download and setup workshop material
+## 実施すること
+- Oracle Cloud Infrastructure (OCI) Cloud ShellとBastionホストへの接続方法を学ぶ
+- MySQL shellの起動方法を学ぶ
+- サンプルデータのダウンロード、およびセットアップ
   
-## Introduction
+## 概要
 
-The Cloud Shell machine is a small virtual machine running a Bash shell which you access through the OCI Console. Cloud Shell comes with a pre-authenticated OCI CLI, set to the Console tenancy home page region, as well as up-to-date tools and utilities.Cloud Shell comes with 5GB of persistent storage for the home directory, so you can make local changes to your home directory, and then continue working on your project when you come back to Cloud Shell.Cloud Shell is free to use (within your tenancy's monthly limits) and doesn’t require any setup or prerequisites other than an IAM policy granting access to Cloud Shell. When you start Cloud Shell, the service configures your Cloud Shell session with the currently selected region in the Console so that the OCI CLI is interacting with the selected Console region.
+Oracle Cloud Infrastructure (OCI) Cloud Shellは、OCIコンソールからアクセスしBashシェルを実行する小さな仮想マシンです。 Cloud Shellには、テナンシーのホームリージョンに設定された事前認証済みのOCI CLIと、最新のツールおよびユーティリティが付属しています。Cloud Shellには、ホームディレクトリ用に5GBの永続ストレージが付属しているため、ホーム・ディレクトリにローカルで変更を加えた後、クラウド・シェルに戻ったときにプロジェクトで作業を続行できます。クラウド・シェルは(月次テナンシ制限内で)無償で使用でき、クラウド・シェルへのアクセス権を付与するIAMポリシー以外の設定または前提条件が必要ありません。クラウド・シェルには、それ自体のテナンシで実行されるVMがプロビジョニングされています(テナンシのリソースが使用されないため)。
 
-
-## Steps
+## 手順
 
 ### **Step 4.1:**
-- From the main menu on the left go to _**Compute >> Instances**_
- Click on the instance you have previously created and take note of the _**Public IP Address**_.
+- 画面左上のメニューから _**コンピュート >> インスタンス**_ を選択します。
+ 作成済のインスタンスをクリックして _**パブリックIPアドレス**_ をコピーします。
 
 ![](./images/HW16_ci4.png)
 
 ### **Step 4.2:**
-- In order to connect to the bastion host, we will use the cloud shell, a small linux terminal embedded in the OCI interface.
-To access cloud shell, click on the shell icon next to the name of the OCI region, on the top right corner of the page
-
+- Bastionホストに接続するためにOCIコンソールに付属しているLinuxターミナルであるCloud Shellを利用します。
+　Cloud Shellにアクセスするために, 画面右上に表示されているOCIリージョンの右側に表示されているCloud Shellアイコンをクリックします。
 ![](./images/cloud-shell-1.png)
 
 ### **Step 4.3:**
-- Once the cloud shell is opened, you will see the command line as per picture below:
+- Cloud Shellを起動すると、下記画面例のようなターミナルが表示されます。
   
 ![](./images/cloud-shell-2.png)
 
 ### **Step 4.4**
-- We suggest to increase the font size, as per picture below:
+- 操作しやすくする為に、ここでフォントサイズを変更することを推奨します。
   
 ![](./images/cloud-shell-3.png)
 
 ### **Step 4.5:**
-- On the top left corner of the cloud shell there are Minimize, Maximize and Close buttons. If you Maximize the cloud shell it will take the size of the entire page. Remember to Restore the size or Minimize prior of changing page in the OCI interface.
+- Cloud Shellウィンドウの右上隅には、[最小化]、[最大化]、[終了]ボタンがあります。 クラウドシェルを最大化すると、ページ全体のサイズになります。 OCIコンソールのページを移動する前に、サイズを元に戻すか最小化することを忘れないでください。
 
 ![](./images/cloud-shell-4.png)
 
 ### **Step 4.6:**
-- Drag and drop the previously saved private key into the cloud shell. Get the file name with the command _**ll**_ 
+- 保存してある秘密キーをCloud Shellウィンドウにドラッグ・アンド・ドロップします。_**ll**_ コマンドでファイル名を取得します。
   
 ![](./images/cloud-shell-5.png)
 
 ### **Step 4.7:**
-- In order to establish an ssh connection with the bastion host using the Public IP, execute the following commands:
+- パブリックIPアドレスを用いてBastionホストとSSH接続を確立させるため、以下のコマンドを実行します。
 ```
 chmod 600 <private-key-file-name>.key
 ssh -i <private-key-file-name>.key opc@<compute_instance_public_ip>
 ```
 
-If prompted to accept the finger print, type _**yes**_ and hit enter, then you will get a Warning.
+フィンガープリントを受け入れるかどうか確認されたら、 _**yes**_ と入力し、Enterキーを押すと以下の様な警告が表示されます。
 
 _**Warning: Permanently added '130.******' (ECDSA) to the list of known hosts.**_
 
-Now that you have connected to the instance you can proceed to the next step.
+ここまでの操作でインスタンスに接続できるようになりました。
 
 ### **Step 4.8:**
-- From the established ssh connection, install MySQL Shell and MySQL client executing the following commands and the expected outputput should be as following:
+- 次のコマンドを実行してMySQL ShellとMySQLクライアントをインストールします。 
   
 ```
 wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
@@ -69,14 +67,14 @@ sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
 ```
 ![](./images/cloud-shell-7.png)
 
-_**when prompted a warning about the public key type "y"**_
+_**公開キーについて警告が表示された場合は "y"を入力します**_ 
 
 ```
 sudo yum install mysql-shell  
 ```
 ![](./images/cloud-shell-8.png)
 
-_**when prompted a warning about the public key type "y"**_
+_**公開キーについて警告が表示された場合は "y"を入力します
 
 ```
 sudo yum install mysql-community-client
@@ -84,21 +82,21 @@ sudo yum install mysql-community-client
 
 ![](./images/cloud-shell-9.png)
 
-_**when prompted a warning about the public key type "y"**_
+_**公開キーについて警告が表示された場合は "y"を入力します**_
 
 
 ### **Step 4.9:**
-- Launch MySQL Shell executing the following command:
+- 以下のコマンドを実行し、MySQL Shellを起動します。
 ```
 mysqlsh
 ```
-When you see the MySQL Shell colorful prompt, exit with the following command:
+MySQL Shellプロンプトが表示されたら、以下のコマンドを実行して終了します。
 ```
 \q
 ```
 
 ### **Step 4.10:**
-- Download and unzip the workshop material using the following commands:
+- 以下のコマンドを実行して、演習用資材をダウンロード、解凍します。
 ```
 cd /home/opc
 ```
@@ -116,11 +114,11 @@ unzip heatwave_workshop.zip
 ![](./images/cloud-shell-11.png)
 
 
-After it is done extracting the files you can move to the next step and test it
+解凍できたら次の手順に進みます。
 
 ### **Step 4.11:**
-- Verify the extracted material executing _**ll**_ command.
-Among the output, you should see the following file names:
+- _**ll**_ コマンドを実行して展開された資材を確認します。
+以下のファイルが含まれています。
 
 _**tpch_dump**_
 
@@ -133,8 +131,8 @@ _**tpch_queries_rapid.sql**_
 ![](./images/cloud-shell-12.png)
 
 
-## Conclusion
+## まとめ
 
-In this Lab we launched the cloud shell; imported the private keys to connect to the compute instance; we installed MySQL Shell and MySQL client; finally we downloaded and unzipped the dataset that will be used later on for benchmark analysis.
+ここまでの操作で、Cloud Shellの起動、コンピュート・インスタンスに接続するための秘密キーをインポートしました。 更に、MySQL ShellとMySQLクライアントをインストールし、最後に後でベンチマークに使用する資材をダウンロードして解凍しました。
 
-**[<< Go to Lab 3](/Lab3/README.md)** | **[Home](../README.md)** | **[Go to Lab 4a >>](/Lab4a/README.md)**
+**[<< Lab 3](/Lab3/README.md)** | **[Home](../README.md)** | **[Lab 4a >>](/Lab4a/README.md)**
