@@ -77,7 +77,7 @@ VCNの概要、許容サイズ、デフォルトのVCN、およびVCNを使用�
 
 入力したら _**イングレス・ルールの追加**_　をクリックします。
 
-![](./images/HW10_vcn_jp.png)
+![](./images/HW11_vcn_jp.png)
 
 
 ## Conclusion
