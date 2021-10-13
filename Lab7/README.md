@@ -1,60 +1,58 @@
-# Lab 7: Execute queries leveraging HeatWave
+# Lab 7: HeatWaveを有効にしてクエリを実行する
 
-## Key Objectives:
-- Learn how to enable Heatwave and compare the query execution time with and without HeatWave enabled.
+## 実施すること
+- HeatWaveを有効にする方法を学び、HeatWaveが無効になっている場合とクエリ実行時間を比較する
 
 ## Introduction
 
-HeatWave Cluster Node Count Estimates provide recommendations on how many HeatWave nodes are needed to run a workload. When the service is started, database tables dedicated to OLAP workloads need to be loaded to HeatWave cluster memory. The size of the HeatWave cluster depends on loaded tables and columns, and on the compression achieved in memory for this data. Under-provisioning the HeatWave cluster results in data load or query execution failure due to space limitations.
-
+HeatWaveクラスターノード数の見積もりを行うと、ワークロードを実行するために推奨されるHeatWaveノード数を提供します。 サービスの開始時に、OLAPワークロード専用のデータベーステーブルをHeatWaveクラスターメモリにロードする必要があります。 HeatWaveクラスターのサイズは、ロードされたテーブルと列、およびこのデータのメモリで達成された圧縮によって異なります。HeatWaveクラスターのプロビジョニングが不十分な場合、スペースの制限により、データのロードまたはクエリの実行が失敗します。
 
 ## Steps
 
 ### **Step 7.1:**
-- On the OCI console, check that HeatWave nodes are in _**Active**_ status.
+- OCIコンソールでHeatWaveノードが _**アクティブ**_ の状態になっていることを確認します。
   
 ![](./images/HW34_hw.png)
 
 
 ### **Step 7.2:**
-- If HeatWave nodes are in _**Active**_ status, you can load the tpch database tables into HeatWave, from your bastion host ssh connection, using the following command:
+- HeatWaveノードが _**アクティブ**_ となっている場合は、以下のコマンドを使用してBastionホストのSSH接続からtpchテーブルをHeatWaveにロードします。
+
 ```
 mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --sql < tpch_offload.sql
 ```
 
 ![](./images/HW34_2_hw.png)
 
- Now your good to go to _**Step 7.3**_.
+ 実行できたら _**Step 7.3**_ に進みます。
 
-The tpch_offload.sql scripts, apart from applying dictionary encoding to a some columns using _**'RAPID_COLUMN=ENCODING=SORTED'**_ (optional step), loads the tables into HeatWave setting the following values:
+tpch_offload.sqlは、「RAPID_COLUMN = ENCODING = SORTED」（オプションの手順）を使用して一部の列に辞書エンコーディングを適用する以外に、次の値を設定してテーブルをHeatWaveにロードします。
 
-- **YOU DON'T NEED TO RUN THE BELOW commands** unless you want to load additional tables into the tpch_offload.sql file 
+- **以下のコマンドを実行する必要はありません** (tpch_offload.sqlファイルに追加のテーブルをロードする場合を除く)
 
 alter table <table_name> secondary_engine=rapid;
 
 alter table  <table_name> secondary_load;
 
-Additionally you can inspect the full content of the file, executing, from the Linux shell:
+スクリプト全体を参照するには、以下のLinuxコマンドを実行します。
 ```
 cat tpch_offload.sql
 ```
 
-
-
 ### **Step 7.3:**
-- Let's come back to the previous query and execute it this time using HeatWave.
+- それでは、HeatWaveを使ってクエリを実行してみましょう。
 
-Connect to MySQL DB System:
+MySQL Shellを利用してMDSに接続します。
 ```
 mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --database=tpch --sql
 ```
-- Now let's enable _**HeatWave**_  and let the Magic begin:
+- _**HeatWave**_ を有効にします。
 ```
 set @@use_secondary_engine=ON;
 ```
 ![](./images/HW35_hw.png)
 
-- Check the explain plan of the previous query and confirm it will be using secondary engine:
+- 実行計画(EXPLAIN)を確認し、セカンダリエンジンが有効になっていることを確認します。
 ```
 EXPLAIN SELECT
     l_returnflag,
@@ -74,7 +72,7 @@ WHERE
 GROUP BY l_returnflag , l_linestatus
 ORDER BY l_returnflag , l_linestatus;
 ```
-(Look for the message "Using secondary engine RAPID" in the output)
+("Using secondary engine RAPID" というメッセージが出力されます)
 
 ```
 +----+-------------+----------+------------+------+---------------+------+---------+------+---------+----------+----------------------------------------------------------------------------+
@@ -85,7 +83,7 @@ ORDER BY l_returnflag , l_linestatus;
 1 row in set, 1 warning (0.0123 sec)
 ```
 
-- Re-run the previous query and check the execution time again:
+- もう一度先ほどのSQLを実行して実行結果を確認してみましょう。
 ```
 SELECT
     l_returnflag,
@@ -106,7 +104,7 @@ GROUP BY l_returnflag , l_linestatus
 ORDER BY l_returnflag , l_linestatus;
 ```
 
-- This time execution time should be about 0.2-0.05s!!
+- 今回の実行時間は0.2-0.05秒程度になると思います。
 
 ```
 +--------------+--------------+-------------+-----------------+-------------------+---------------------+-----------+--------------+----------+-------------+
@@ -119,47 +117,49 @@ ORDER BY l_returnflag , l_linestatus;
 +--------------+--------------+-------------+-----------------+-------------------+---------------------+-----------+--------------+----------+-------------+
 4 rows in set (0.0820 sec)
 ```
-- Exit from MySQL Shell:
+- 以下のコマンドを実行してMySQL Shellを終了します。
   
 ```
  \exit
 ```
 ### **Step 7.4:**
 
-Now that you have understood how HeatWave offloading works and which performance gain it can give, it is time to run some batch execution.
+HeatWaveがどのように機能し、パフォーマンスが向上するかを見てきました。次はバッチを利用してクエリ実行を試してみます。
 
-We will run the script tpch_queries_mysql.sql to execute some queries without using HeatWave.
-Then, we will run the script tpch_queries_rapid.sql to execute the same queries using HeatWave.
-In the end, we will compare the results.
+スクリプトtpch_queries_mysql.sqlを実行して、HeatWaveを使用せずにいくつかのクエリを実行します。
+次に、スクリプトtpch_queries_rapid.sqlを実行して、HeatWaveを使用して同じクエリを実行します。
+最後に、結果を比較します。
 
-For this exercise, instead of MySQL Shell, we will use MySQL client.
-Run the following commands:
+Fこの演習では、MySQL Shellの代わりに、MySQLクライアントを使用します。
+次のコマンドを実行します。
 ```
 mysql -h<mysql private ip address> -uadmin -pOracle.123 -Dtpch < tpch_queries_rapid.sql
 ```
 ```
 mysql -h<mysql private ip address> -uadmin -pOracle.123 -Dtpch < tpch_queries_mysql.sql
 ```
-The query that doesn't use the HeatWave service took more time to be completed as we will see in the next command.
+以下のコマンドを実行して、HeatWaveを使用しない場合は完了までに時間がかかっていることが分かると思います。
 ```
 diff -y rapid_rt_profiles.log mysql_rt_profiles.log
 ```
 
-- The output of the last command should look as follows:
+- 以下は出力結果のサンプルです。
 
 ![](./images/HW36_hw.png)
 
-- Now, you can compare the execution times obtained using HeatWave or only MySQL on InnoDB.
+- ここまで、HeatWave(RAPIDエンジン)、MDS(InnoDBエンジン)単体それぞれを使用した場合の実行時間を比較しました。
 
-Optional: inspect the tpch_queries_mysql.sql and the tpch_queries_rapid.sql scripts using vi.
+補足: inspect tpch_queries_mysql.sql と tpch_queries_rapid.sql の違いについてはviを利用して確認してみてください。
 
 
 ## Conclusion
 
-Observing the results, we got the query result back in less than a second when a HeatWave cluster is enabled, queries that meet certain prerequisites are automatically offloaded from the MySQL DB System to the HeatWave cluster for accelerated execution. Queries are issued from a MySQL client or application that interacts with the HeatWave cluster by connecting to the MySQL DB System node. Results are returned to the MySQL DB System node and to the MySQL client or application that issued the query. 
+結果を見てみると、HeatWaveクラスタが有効になっている場合、1秒以内にクエリ結果が返却されました。特定の条件を満たすクエリは、実行を加速するためにMySQL DBシステムからHeatWaveクラスタに自動的にオフロードされます。 クエリは、HeatWaveクラスタが有効になっているMDS経由でMySQLクライアントまたはアプリケーションから発行されます。 結果は、経由でクエリを発行したMySQLクライアントまたはアプリケーションに返却されます。
 
-## Great Work - All Done!
 
-Keep Learning offline, we have 2 bonus labs for you to learn about using Oracle Bastion Service and to provision MySQL Database Service High Availability configuration
+## 全て完了です！All Done!
+
+Oracle Bastion Serviceの使用方法を学び、MySQL Database Serviceの高可用性構成をプロビジョニングするための2つのボーナストラックがあります！
+引き続き学習を続けましょう。
 
 **[<< Go to Lab 6](/Lab6/README.md)** | **[Home](../README.md)** | **[Go to Lab 8a >>](/Lab8a/README.md)**
