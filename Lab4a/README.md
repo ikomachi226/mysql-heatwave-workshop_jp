@@ -79,23 +79,22 @@ IPSec接続は、オンプレミス環境をOCIに接続するために使用す
 
 - ローカルマシンに秘密キーを保存したら、ダウンロードしたパスとファイル名を控えておきます。
 
-_**PLEASE NOTE:**_ OCIが生成する秘密キーは、名前に作成日を使用します（例：ssh-key-YYYY-MM-DD.key）。 同じ日に2つ以上の秘密鍵を生成すると、オペレーティングシステムが保存時にファイル名を変更する場合があります。 たとえば、保存している現在の秘密鍵は、次のような命名規則に従う場合がありま。
+_**PLEASE NOTE:**_ OCIが生成する秘密キーは、名前に作成日を使用します（例：ssh-key-YYYY-MM-DD.key）。 同じ日に2つ以上の秘密キーを生成すると、オペレーティングシステムが保存時にファイル名を変更する場合があります。 たとえば、保存している現在の秘密キーは、次のような命名規則に従う場合があります。
 ssh-key-YYYY-MM-DD（1）.key
-
-したがって、注意して正しいファイル名に注意してください。
+正しいファイルか注意してください。
 
 ### **Step 4.11:**
-- Scroll down and after the _**Boot Volume**_ section, click on _**Show advanced options**_
+- 画面下部の _**ブート・ボリューム**_ セクションの下に表示されている _**拡張オプションの表示**_　をクリックします。
 
 ![](images/Lab4-12.png)
 
 ### **Step 4.12:**
-- In the _**Management**_ tab, select the _**Paste cloud-init script**_ radio button. The _**Cloud-init script**_ input box will appear as per below image.
+- In the _**管理**_ タブで _**Cloud-initスクリプトの貼付け**_ ラジオボタンを選択すると、下記画面例のように _**Cloud-initスクリプト**_ テキストボックスが表示されます。
 
 ![](images/Lab4-13.png)
 
 ### **Step 4.13:**
-- Paste-in the following script:
+- テキストボックスに以下のスクリプトをペーストします。
 
 ```
 #cloud-config
@@ -113,16 +112,15 @@ runcmd:
 final_message: "The system is finally up, after $UPTIME seconds"
 ```
 
-This is a cloud init script which will install MySQL Shell and MySQL Router, configuring it to require minimal effort to point it to MDS HeatWave instance.
+このスクリプトは、MySQLシェルとMySQLルーターをインストールし、MDS/HeatWaveインスタンスを利用する最小限の設定を行います。
+_**スクリプトを正しくコピーして貼り付けてください。**_
 
-_**MAKE SURE TO COPY AND PASTE THE SCRIPT CORRECTLY!!**_
-
-- Once done, click _**Create**_
+- ここまでできたら _**作成**_ をクリックします。
 
 ![](images/Lab4-14.png)
 
-_**Additional extra information (NOT needed for the scopes of this lab)**_ :
-As you might have realized, the cloud-init script which we are using, generates and runs a script from a base64 encoded string. This has been done in order to avoid issues which may occur when cloud-init processes special characters. For your reference, you can find the content of the script below:
+_**補足 (今回のハンズオンでは不要です)**_ :
+使用しているCloud-initスクリプトは、base64でエンコードされた文字列からスクリプトを生成して実行します。 これは、Cloud-initが特殊文字を処理するときに発生する可能性のある問題を回避するために行なっています。 参考までに、スクリプトの内容を以下に示します。
 ```
 sed -i s/SELINUX=enforcing/SELINUX=permissive/g /etc/sysconfig/selinux
 sed -i s/SELINUX=enforcing/SELINUX=permissive/g /etc/selinux/config
@@ -141,60 +139,59 @@ echo "bind_port = 3306" >> /etc/mysqlrouter/mysqlrouter.conf
 echo "destinations = SOURCE_PUBLIC_IP:3306" >> /etc/mysqlrouter/mysqlrouter.conf
 echo "routing_strategy = first-available" >> /etc/mysqlrouter/mysqlrouter.conf
 ```
-**PLEASE NOTE:** This is a lab environment! We are showing you how to disable firewalld and selinux JUST for simplicity!! You are not intended ever to deploy this kind of configuration on a production environment since it may lead to serious security issues!!
+**注意事項:** ハンズオンをスムーズに進めていただくため、firewalldとselinuxを無効にする方法を紹介します。 深刻なセキュリティ問題につながる可能性があるため、この構成を稼働環境に適用することはお控えください。
 
 ### **Step 4.14:**
-- The instance will enter _**Provisioning**_ state.
+- インスタンスは _**作成中**_ の状態になります。
 
 ![](images/Lab4-15.png)
 
 ### **Step 4.15:**
-- Once provisioning is finished, the instance will enter the _**Running**_ state. It should take about a minute or so.
-Once the instance is _**Running**_, take note of the _**Public IP Address**_ for ssh connection and of the _**Internal FQDN**_ for setting up the _**mysqlrouter**_ later on.
+- インスタンスが起動したら _**実行中**_ の状態になります。 この状態になるまで数分間かかります。
+インスタンスの状態が _**実行中**_ になったら、 後で _**mysqlrouter**_ の設定、SSH接続に必要な _**パブリックIPアドレス**_ と _**内部FQDN**_ を控えておきます。
 
 ![](images/Lab4-16.png)
 
 ### **Step 4.16:**
-- Go back to the _**Cloud Shell**_, take the previously saved private key file from your local machine, drag and drop it into the cloud shell, as shown in the picture below.
+- 次の図に示すように、_**Cloud Shell**_ に戻り、保存した秘密キーファイルをローカルマシンから Cloud Shellにドラッグアンドドロップします。
 
 ![](images/Lab4-17.png)
 
 ### **Step 4.17:**
-_**PLEASE NOTE**_: In this step we will connect  to the MySQL Router instance. Prior to executing this step, allow it an extra couple of minutes  for the cloud-init script to complete its execution and for the instance to reboot.
+_**注意事項**_: この操作では、MySQL Routerインスタンスへの接続を行います。 この手順を実行する前に、Cloud-initスクリプトが実行を完了し、インスタンスが再起動するまで数分待ちます。
 
-- In order to connect to the MySQL Router Instance using the previously noted _**Public IP Address**_, execute the following steps:
+-前述の_ **パブリックIPアドレス** _ を使用してMySQL Routerインスタンスに接続するには、次の手順を実行します。
 
-a - Rename the recently transferred private key file and assign the privileges required by OCI
+a -秘密キーファイルの名前を変更し、OCIに必要な権限を割り当てます。
 ```
 mv ssh-*.key router.key
 chmod 600 router.key
 ```
-b - Connect to the newly created _**MySQL Router**_ instance over ssh, replacing the  _**Public IP Address**_ after the "@":
+b - @以降を _**パブリックIPアドレス**_ に置き換え、作成した _**MySQL Router**_ インスタンスにSSH経由で接続します。
 ```
 ssh -i router.key opc@<router-instance-public-ip>
 ```
-c - If prompted to accept fingerprints, enter _**yes**_
+c - フィンガープリントを受け入れるかどうか確認メッセージが表示された場合は _**yes**_ を入力します。
 
 ![](images/Lab4-18.png)
 
 ### **Step 4.18:**
 
-- Once successfully connected to the instance where the MySQL Router is installed, we need to change the MySQL router configuration to point to the _**mysql-analytics-test**_, using the _**MDS HeatWave Private IP Address**_. In a normal scenario, you should modify the MySQL router configuration file, located under _**/etc/mysqlrouter/mysqlrouter.conf**_
+- MySQL Routerがインストールされているインスタンスに接続できたら、_**MDS/HeatWaveプライベートIPアドレス**_ を使用して _**mysql-analytics-test**_ を指すようにMySQLRouterの設定を変更する必要があります。通常は、_**/etc/mysqlrouter/mysqlrouter.conf**_ のMySQL Router設定ファイルを変更する必要があります。
 
-- To speed things up, the MySQL Router installed on this instance has been pre-configured, and you need just to update the place holder already present in the configuration for the _**MDS HeatWave Private IP Address**_ (for example, 10.0.1.100), running the following command:
+- ハンズオンをスムーズに進めていただくために、このインスタンスにインストールされているMySQL Routerは事前に設定を行っていますが、_**MDS/HeatWaveプライベートIPアドレス**_ （たとえば、 10.0.1.100）を設定する必要があります。設定には次のコマンドを実行します。
 ```
 sudo sed -i 's/destinations =.*/destinations = 10.0.1.100:3306/g' /etc/mysqlrouter/mysqlrouter.conf
 ```
-_**Where do I get the MDS HeatWave IP Private address?**_
-Go to: _**Main Menu >> Databases >> DB Systems >>**_ Click on _**mysql-analytics-test >>**_ Check for _**Private IP**_ (as per picture below).
+_**MDS/HeatWaveのプライベートIPアドレスは以下で確認できます**_
+ _**メインメニュー >> データベース >> DBシステム>>**_ から _**mysql-analytics-test >>**_ をクリックして _**プライベートIPアドレス**_ を確認します。(下図参照)
 
 ![](../Lab3/images/HW28_mds.png)
 
-_**PLEASE NOTE**_: After you modify the command above inserting the _**MDS HeatWave Priate IP Address**_, your command will look as per following example:
+_**注意事項**_: _**MDS/HeatWaveプライベートIPアドレス**_ を指定したコマンド例は以下の通りです。
 _**sudo sed -i s/SOURCE_PUBLIC_IP/10.0.1.100/g /etc/mysqlrouter/mysqlrouter.conf**_
 
-- Once done, check the content of the configuration file to verify that the variable _**destinations**_ is equal to the _**Private IP Address of the MDS HeatWave**_.
-To do it, execute:
+- 完了したら、下記のコマンドを実行して設定ファイルのパラメタ_**destinations**_ の値が _**MDS/HeatWave**_ のプライベートIPアドレスと等しいことを確認します。
 ```
 cat /etc/mysqlrouter/mysqlrouter.conf
 ```
@@ -202,16 +199,15 @@ cat /etc/mysqlrouter/mysqlrouter.conf
 ![](images/Lab4-19b.png)
 
 ### **Step 4.19:**
-- It is now time to start the MySQL Router and to check the connection to the MDS HeatWave instance.
-To do so execute the following steps:
-
-a - Enable the mysqlrouter service to start on boot and start the mysqlrouter service
+- MySQL Routerを起動し、MDS/HeatWaveインスタンスへの接続を確認します。
+これを行うには、次の手順を実行します。
+a - mysqlrouterサービスを有効にしてサービスを開始します。
 ```
 sudo systemctl enable mysqlrouter
 sudo systemctl start mysqlrouter
 ```
 
-b - Access the mysqlrouter and test the router to the _**mysql_analytics_test**_
+b - MySQL Shellを利用して、mysqlrouter経由で _**mysql_analytics_test**_ にルーティング(接続)できるか確認します。
 ```
 mysqlsh --uri root:Oracle.123@127.0.0.1:3306 --sql
 select @@version;
@@ -219,18 +215,18 @@ show databases;
 ```
 
 ### **Step 4.20:**
-- Exit the MySQL Shell, executing the following command:
+- 以下のコマンドを実行し、MySQL Shellを終了します。
 ```
 \exit
 ```
-- _**DO NOT**_ close the ssh connection to the MySQL Router Instance.
-- Reduce the Cloud Shell to icon and proceed to the following lab.
+- MySQL Routerインスタンスへの接続は_**切断しないでください**_。
+- Cloud Shellウィンドウを最小化し、次の演習に進みます。
 
 
 ## Conclusion
 
-In this lab you have deployed and configured MySQL Router on a Compute Instance with public internet connectivity, and pointed it to the MDS HeatWave instance. 
-You can now proceed to the next and last lab.
+このラボでは、インターネット接続を備えたコンピューティングインスタンスにMySQL Routerルーターをデプロイして設定し、MDS/HeatWaveインスタンスをポイントしました。
+これで、次のLabに進むことができます!
 
-Learn more about **[MySQL Router](https://www.mysql.com/it/products/enterprise/router.html)**
-**[<< Go to Lab 4](/Lab4/README.md)** | **[Home](../README.md)** | **[Go to Lab 5 >>](/Lab5/README.md)**
+**[MySQL Router](https://www.mysql.com/jp/products/enterprise/router.html)**
+**[<< Lab 4](/Lab4/README.md)** | **[Home](../README.md)** | **[Lab 5 >>](/Lab5/README.md)**
