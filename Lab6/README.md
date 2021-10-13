@@ -1,9 +1,9 @@
 # Lab 6: MDSへのデータインポートとHeatWaveへのデータロード
 
-## 実施すること
-- MDSに接続し、データを格納する方法を学ぶ 
+## 学べること
+- MDSに接続し、データを格納する方法を
 
-## Steps
+## 手順
 
 ### **Step 6.1:**
 - Cloud ShellのSSH接続に戻ります。
@@ -109,7 +109,7 @@ ORDER BY l_returnflag , l_linestatus;
  \exit
 ```
 
-## Conclusion
+## まとめ
 次の演習でHeatwaveサービスを有効にしてクエリを再度実行し、結果を比較してみましょう！
 
 
