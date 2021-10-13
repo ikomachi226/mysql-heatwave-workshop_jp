@@ -18,9 +18,7 @@ Oracle Cloud Infrastructure(OCI)のトライアルアカウントにサインア
 </br>
 
 ### **Step 2:**
-アカウント作成時には、名前、メールアドレス、国を入力後に使用条件を確認し、**電子メールの検証** をクリックします。</br>
-検証後、入力したメールアドレスにOracleよりアカウント確認メールが送信されますので、メールに記載されているURLにアクセスして登録を続けます。</br>
-なお、既にOCIに登録されているアカウントに関連づけられたメールアドレスは登録できない可能性があります。
+アカウント作成時には、名前、メールアドレス、国を入力後に使用条件を確認し、**Verify my email** をクリックします。</br>
 </br>
 ![](./images/account1.png)
 </br>
@@ -28,7 +26,11 @@ Oracle Cloud Infrastructure(OCI)のトライアルアカウントにサインア
 </br>
 ![](./images/account3.png)
 </br>
+検証後、入力したメールアドレスにOracleよりアカウント確認メールが送信されますので、メールに記載されているURLにアクセスして登録を続けます。</br>
+なお、既にOCIに登録されているアカウントに関連づけられたメールアドレスは登録できない可能性があります。
+</br>
 ![](./images/account4.png)
+</br>
 
 ### **Step 3:**
 以下の情報を入力して、Oracle Cloud FreeTierアカウントを作成します。
@@ -40,50 +42,53 @@ Oracle Cloud Infrastructure(OCI)のトライアルアカウントにサインア
 ![](./images/account5.png)
 </br>
 
+引き続き、Address information(住所情報)を入力し、_**[Continue]**_ をクリックします。
+</br>
+![](./images/account6.png)
+</br>
+
 入力できたら _**[Continue]**_ をクリックし、引き続き国の選択と携帯電話番号を入力します。</br>
 入力できたら _**[Text me a code]**_ をクリックします。</br>
-![](./images/account6.png)
+![](./images/account7.png)
 </br>
 コードを受け取ったらコードを入力して_**[Verify My Code]**_ をクリックします。
 </br>
-![](./images/account7.png)
+![](./images/account8.png)
 </br>
 
 ### **Step 4:**
 _**[Add payment verification method(支払い確認方法の追加)]**_ ボタンをクリックします。</br>
 _**これは無料のアカウントです。アカウントのアップグレードを選択しない限り、請求は発生しません。**_</br>
-![](./images/account8.png)
-</br>
 ![](./images/account9.png)
+</br>
+![](./images/account10.png)
 </br>
 お支払い方法の設定が完了したらチェックボックスをクリックして、契約を確認して同意します。</br>
 _**[Start my free trial]**_ボタンをクリックします。</br>
-![](./images/account10.png)
+![](./images/account11.png)
 </br>
 
 ### **Step 5:**
 アカウントが利用できるようになると、自動的にサインインページに移動します。また、Oracleから2通の電子メールを送信されます。</br>
 1通の電子メールがプロビジョニングが進行中であることの最初の通知になります。もう1つの電子メールは、プロビジョニングが完了したことを通知するものです。</br>
-![](./images/account11.png)
+![](./images/account12.png)
 </br>
 
 ### **Step 6:**
 クラウドアカウント名を入力し、_**[Next]**_ をクリックします。これは、前のセクションでアカウントを作成するときに選択した名前です。</br>
 メールアドレスではありません。名前を忘れた場合は、確認メールをご覧ください。</br>
-![](./images/account12.png)
+![](./images/account14.png)
 </br>
 
 ### **Step 7:**
 クラウドアカウントの資格情報を入力し、_**[Sign In]**_ をクリックします。ユーザー名はメールアドレスになります。パスワードは、アカウントにサインアップしたときに設定したものです。</br>
-![](./images/account13.png)
-</br>
-![](./images/account14.png)
-</br>
 ![](./images/account15.png)
 </br>
 
 ### **Step 8:**
 これで、Oracle Cloudにサインインできました！
+</br>
+![](./images/account16.png)
 </br>
 
 ### **Step 9**
