@@ -1,15 +1,15 @@
-# Lab 5: HeatWaveクラスターをMySQL Database Serviceに追加する
+# Lab 5: HeatWaveクラスタをMySQL Database Serviceに追加する
 
-## 実施すること
-- HeatWaveクラスターを有効にする方法を学ぶ
+## 学べること
+- HeatWaveクラスタを有効にする方法
 
 
 ## 概要
 
-HeatWaveを選択すると、分析クエリの処理を高速化するためのHeatWaveクラスターのプロビジョニングが可能になります。 HeatWaveクラスターは、MySQL DBシステムノードと2つ以上のHeatWaveノードで構成されます。 MySQL DBシステムノードには、クラスター管理、クエリスケジューリング、およびクエリ結果のMySQL DBシステムへの応答を担当するHeatWaveプラグインが含まれています。 HeatWaveノードはデータをメモリに保存し、クエリを処理します。
+HeatWaveを選択すると、分析クエリの処理を高速化するためのHeatWaveクラスターのプロビジョニングが可能になります。 HeatWaveクラスターは、MySQL DBシステムノードと2つ以上のHeatWaveノードで構成されます。 MySQL DBシステムノードには、クラスタ管理、クエリスケジューリング、およびクエリ結果のMySQL DBシステムへの応答を担当するHeatWaveプラグインが含まれています。 HeatWaveノードはデータをメモリに保存し、クエリを処理します。
 
 HeatWaveクラスターを有効にすると、特定の条件を満たすクエリがMySQL DBシステムからHeatWaveクラスターに自動的にオフロードされ、クエリ処理が高速化されます。クエリは、MySQL　DBシステムノードに接続することでHeatWaveクラスターと対話するMySQLクライアントまたはアプリケーションから発行されます。結果は、MySQL DBシステムノードと、クエリを発行したMySQLクライアントまたはアプリケーションに返却されます。
-HeatWaveクラスターをデプロイした後、データをロードしてクエリを実行する方法については、_**[HeatWaveユーザーガイド]（https://dev.mysql.com/doc/heatwave/en/）**_ を参照してください。
+HeatWaveクラスターをデプロイした後、データをロードしてクエリを実行する方法については、**[HeatWaveユーザーガイド]（https://dev.mysql.com/doc/heatwave/en/）** を参照してください。
 
 ## 手順
 
@@ -48,8 +48,8 @@ _**HeatWaveクラスタの追加**_ ボタンをクリックします。
 
 ## Conclusion
 
-これで、MySQL DBシステムノードと2つのHeatWaveノードで構成されるHeatWaveクラスターが作成できました!MySQL DBシステムノードには、クラスター管理、クエリスケジューリング、およびクエリ結果のMySQLDBシステムへの返送を担当するHeatWaveプラグインが含まれています。HeatWaveノードはデータをメモリに保存し、クエリを処理します。
+これで、MySQL DBシステムノードと2つのHeatWaveノードで構成されるHeatWaveクラスタを追加できました!MySQL DBシステムノードには、クラスタ管理、クエリスケジューリング、およびクエリ結果をMySQL DBシステムへ返却するHeatWaveプラグインが含まれています。HeatWaveノードはデータをメモリに保存し、クエリを処理します。
 **[Oracle Cloud上のHeatWaveサービス](https://docs.oracle.com/ja-jp/iaas/mysql-database/doc/heatwave.html)**
-それでは、次の演習でHeatWaveクラスターを有効にする前に、MySQL DBシステムに接続して、いくつかのクエリを実行してみましょう。
+それではHeatWaveクラスタを有効にする前に、次の演習ではMySQL DBシステムでクエリを実行してみましょう。
 
 **[<< Lab 4](/Lab4/README.md)** | **[Home](../Readme.md)** | **[Lab 6 >>](/Lab6/README.md)**
