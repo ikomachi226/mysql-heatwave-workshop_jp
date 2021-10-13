@@ -1,85 +1,86 @@
-# Lab 8a: Use OCI Bastion Service to work with MDS remotely
+# Lab 8a: OCI Bastion Serviceを利用してMDSをリモートで使う
 
 ## Key Objectives:
 
-- Learn how to create OCI Bastion Service to manage MDS remotely
+- リモートでMDSを管理するためのOCI Bastion Serviceの構築方法を学ぶ 
 
-## Introduction
+## 概要
 
-Oracle Cloud Infrastructure (OCI) Bastion provides restricted and time-limited access to target resources that don't have public endpoints. With OCI Bastion Service, you can
-manage MDS instance via secured connection remotely using OCI Bastion Service without a Bastion compute instance to connect to MDS
-For an overview of OCI Bastion Service, check **[OCI Bastion Service](https://docs.oracle.com/en-us/iaas/Content/Bastion/Concepts/bastionoverview.htm)**.
+Oracle Cloud Infrastructure（OCI）Bastion Serviceは、パブリックエンドポイントを持たないターゲットリソースへの制限付きアクセスを提供します。 OCI Bastion Srviceを使用すると、次のことができます
+Bastionコンピュート・インスタンスを使用せずに、安全な接続を介してMDSインスタンスをリモートで管理、および接続する。
+
+OCI Bastion Serviceについては、**[OCI Bastion Service](https://docs.oracle.com/ja-jp/iaas/Content/Bastion/Concepts/bastionoverview.htm)** をご参照ください。
 
 ## Steps
 
 ### **Step 1.1:**
-  Log-in to your OCI tenancy. Once you have logged-in, select _**Identity & Security >> Bastion Service**_ from the _**menu icon**_ on the top left corner
+  OCIコンソール画面左上のメニュー_**Identity & Security >> 要塞**_ を選択します。
   
 ![](./images/bas-1.png)
 
 ### **Step 1.2:**
- Click on _**Create Bastion**_ (make sure you have selected the right compartment on the left panel)
+ 左側のコンパートメントが正しく選択されていることを確認し、_**要塞の作成**_ をクリックします。
 
 ![](./images/bas-2.png)
 
 ### **Step 1.3:** 
 Fill in the details of the following fields:
- * _**Bastion Name**_: name of your Bastion service
- * _**Target Virtual Cloud Network**_: select your Virtual Cloud Network
- * _**Target Subnet**_: select the subnet where you created MDS
- * _**CIDR Block Allowlist**_: specify the IP where you will be connecting from (if unsure, you can use 0.0.0.0/0 for testing purpose)
+ * _**要塞名**_: Bastionサービス名を入力します。
+ * _**ターゲット仮想クラウド・ネットワーク**_: 仮想クラウド・ネットワークを選択します。
+ * _**ターゲット・サブネット**_: MDSインスタンスを作成したサブネットを選択します。
+ * _**CIDRブロック許可リスト**_: 接続元のIPアドレスを指定します。(もし不明であれば、0.0.0.0/0をテスト用に指定します)
 
-Click on _**Create Bastion**_ to create the bastion service
+_**要塞の作成**_ をクリックしてBastion Serviceを開始します。
   
 ![](./images/bas-3.png)
 
 ### **Step 1.4:** 
-Once the Bastion service is creted, click on  _**Create Session**_ 
+Bastion Serviceが開始されたら_**セッションの作成**_ をクリックします。
  
  ![](./images/bas-4.png)
  
 ### **Step 1.5:**
 Fill in the details of the following fields:
- * _**Session Type**_: select _**SSH port forwarding session**_ from the dropdown list
- * _**Session Name**_: specify a name for the bastion session
- * _**Connect to the target host by using**_: select _**IP Address**_
- * _**IP Address**_: specify the IP address of MDS instance
- * _**Port**_: 3306 (default port number of MDS)
- * _**Add SSH Key**_: select _**generate SSH Key pair**_ and click on _**Save Private Key**_ (save the public key as well if required)
+ * _**セッション・タイプ**_: _**SSHポート転送セッション**_ をドロップダウンリストから選択します。
+ * _**セッション名**_: Bastionセッションに対する名前を入力します。
+ * _**ターゲット・ホストへの接続方法**_: select _**IPアドレス**_　を選択します。
+ * _**IPアドレス**_: MDSインスタンスのIPアドレスを指定します。
+ * _**ポート**_: 3306 (MDSのデフォルトのポート番号)を指定します。
+ * _**SSHキーの追加**_: _**SSHキー・ペアの作成**_ を選択し、and click on _**秘密キーの保存**_ をクリックします。(必要に応じて公開キーも保存してください)
  
-Click on _**Create Session**_
+_**セッションの作成**_ をクリックします。
  
 ![](./images/bas-5.png)
 
-## Connect to MDS via Bastion service
+## Bastion service経由でMDSに接続する
 
 ### Step 1.1: 
 
-Click on the menu on the far right of your newly created Bastion Service, select _**View SSH Command**_
+作成したBastion Serviceの一番右のメニューから_**SSHコマンドの参照**_ を選択します。
 
 ![](./images/bas-6.png)
 
 ## Step 1.2:
 
-Copy the SSH command by clicking on _**Copy**_
+_**コピー**_ をクリックしてSSHコマンドをコピーします。
 
 ![](./images/bas-7.png)
 
 ## Step 1.3:
 
-Click on Cloud Shell to connect to MDS via Bastion service
+ Cloud Shell上で、Bastion serviceを経由してMDSへの接続を行います。
 
 ![](./images/bas-8.png)
 
 ## Step 1.4:
 
-Upload the downloaded Private Key to Cloud Shell and save the Private Key at your home directory in the Cloud Shell, for example, private-key.pem
+ダウンロードした秘密キー(例えば、private-key.pem)をCloud Shellにアップロードしてホームディレクトリに保存します。
 
 ![](./images/bas-9.png)
 
 ## Step 1.5:
 
-Paste the SSH Command to Cloud Shell, specify the correct location of the private key and the port number of 3306, and start connecting to MDS using mysql client
+SSHコマンドをCloud Shellにペーストし, 秘密キーのファイルパス、ポート番号(3306)を指定します。次に、MySQLクライアントを使用してMDSに接続します。
 
 ```
 ssh -i ~/private-key.pem -N -L 3306:10.0.1.109:3306 -p 22 ocid.really.long.id &
@@ -88,8 +89,7 @@ mysql -uadmin -h127.0.0.1 -P3306 -pPassword
 
 ![](./images/bas-10.png)
 
-## Conclusion
+## まとめ
 
-In this bonus lab, you have learnt how to create a Bastion Service to connect to your MDS instance without the need of a Bastion compute. You can now go to the next lab to try to create MySQL Database Service High Availability configuration
-
-**[<< Go to Lab 8a](/Lab8a/README.md)** | **[Home](../README.md)** | **[Go to Lab 8b >>](/Lab8b/README.md)**
+Bastion用のコンピュート・インスタンスを作成せずに、MDSインスタンスに接続するOCI Bastion Serviceを作成する方法を学習しました。 次の演習では、MDSの高可用性構成を作成してみます。
+**[<< Lab 7](/Lab7/README.md)** | **[Home](../README.md)** | **[8b >>](/Lab8b/README.md)**
