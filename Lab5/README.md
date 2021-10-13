@@ -1,20 +1,20 @@
-# Lab 5: Add HeatWave cluster to MySQL Database Service
+# Lab 5: HeatWaveクラスターをMySQL Database Serviceに追加する
 
-## Key Objectives:
-- Learn how to enable the HeatWave cluster for MDS
+## 実施すること
+- HeatWaveクラスターを有効にする方法を学ぶ
 
 
-## Introduction
+## 概要
 
-HeatWave enables provisioning of HeatWave clusters for accelerated processing of analytic queries. A HeatWave cluster consists of a MySQL DB System node and two or more HeatWave nodes. The MySQL DB System node includes a HeatWave plugin that is responsible for cluster management, query scheduling, and returning query results to the MySQL DB System. HeatWave nodes store data in memory and process queries.
+HeatWaveを選択すると、分析クエリの処理を高速化するためのHeatWaveクラスターのプロビジョニングが可能になります。 HeatWaveクラスターは、MySQL DBシステムノードと2つ以上のHeatWaveノードで構成されます。 MySQL DBシステムノードには、クラスター管理、クエリスケジューリング、およびクエリ結果のMySQL DBシステムへの応答を担当するHeatWaveプラグインが含まれています。 HeatWaveノードはデータをメモリに保存し、クエリを処理します。
 
-When a HeatWave cluster is enabled, queries that meet certain prerequisites are automatically offloaded from the MySQL DB System to the HeatWave cluster for accelerated execution. Queries are issued from a MySQL client or application that interacts with the HeatWave cluster by connecting to the MySQL DB System node. Results are returned to the MySQL DB System node and to the MySQL client or application that issued the query. 
-After deploying a HeatWave cluster, refer to the **[HeatWave User's Guide](https://dev.mysql.com/doc/heatwave/en/)** for information about how to load data and run queries. 
+HeatWaveクラスターを有効にすると、特定の条件を満たすクエリがMySQL DBシステムからHeatWaveクラスターに自動的にオフロードされ、クエリ処理が高速化されます。クエリは、MySQL　DBシステムノードに接続することでHeatWaveクラスターと対話するMySQLクライアントまたはアプリケーションから発行されます。結果は、MySQL DBシステムノードと、クエリを発行したMySQLクライアントまたはアプリケーションに返却されます。
+HeatWaveクラスターをデプロイした後、データをロードしてクエリを実行する方法については、_**[HeatWaveユーザーガイド]（https://dev.mysql.com/doc/heatwave/en/）**_ を参照してください。
 
-## Steps
+## 手順
 
 ### **Step 5.1:**
-- In the menu on the left, go to _**Databases >> DB Systems**_
+- 画面左上のメニューからIn the menu on the left, go to _**Databases >> DB Systems**_
 Click on the DB System which you have previously created and verify that status is _**Active**_.
 Take note of the _**Private IP Address**_ of the MySQL DB System.
 
