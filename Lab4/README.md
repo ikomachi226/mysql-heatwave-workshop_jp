@@ -1,8 +1,8 @@
 # Lab 4: Bastionへの接続、MySQL Shellのインストールとサンプルデータのダウンロード
 
-## 実施すること
-- Oracle Cloud Infrastructure (OCI) Cloud ShellとBastionホストへの接続方法を学ぶ
-- MySQL shellの起動方法を学ぶ
+## 学べること
+- Oracle Cloud Infrastructure (OCI) Cloud ShellとBastionホストへの接続方法
+- MySQL shellの起動方法
 - サンプルデータのダウンロード、およびセットアップ
   
 ## 概要
