@@ -2,7 +2,8 @@
 
 このワークショップでは、Oracle Cloud Infrastructureで分析ワークロードを実行する、もしくはクエリ処理を高速化するためにMySQL Database ServiceとHeatwaveをデプロイするプロセスについて説明します。
  
-HeatWaveは、MySQL Database Service(MDS)用に新しく統合された高性能クエリ実行エンジンです。 HeatWaveは、分析クエリ実行のパフォーマンスを400倍高速化し、数千コアにスケールアウトし、Amazon Redshiftの3分の1のコストで2.7倍処理が高速になります。 HeatWaveを備えたMDSは、データベース管理者とアプリ開発者がMySQLデータベースから直接OLTPおよびOLAPワークロードを実行できるようにする唯一のサービスであり、複雑で時間と費用のかかるデータ移動や分析ワークロードと分離する必要性を排除します。このサービスは、Oracle Cloud Infrastructure（OCI）向けに最適化されています。
+HeatWaveは、MySQL Database Service(MDS)用に新しく統合された高性能クエリ実行エンジンです。 HeatWaveは、分析クエリ実行のパフォーマンスを400倍高速化し、数千コアにスケールアウトし、Amazon Redshiftの3分の1のコストで2.7倍処理が高速になります。 HeatWaveを備えたMDSは、データベース管理者とアプリ開発者がMySQLデータベースから直接OLTPおよびOLAPワークロードを実行できるようにする唯一のサービスであり、複雑で時間と費用のかかるデータ移動や分析ワークロードと分離する必要性を排除します。</br>
+このサービスは、Oracle Cloud Infrastructure（OCI）向けに最適化されています。
  
 ハンズオンを進めるとMDSにロードされたサンプルデータに対してクエリを実行し、Heatwaveを利用する場合と利用しない場合の実行時間の比較ができるようになります。HeatWaveの性能を体感してください！
 
@@ -32,7 +33,7 @@ HeatWaveは、MySQL Database Service(MDS)用に新しく統合された高性能
 **学べること**
 
 - トライアルアカウントの作成方法
-- 適切なリージョンの選択
+- OCIコンソールの基本操作、およびコンパートメントの作成方法
 
 **[Click here for Lab 0](/Lab0/README.md)**
 
@@ -40,17 +41,16 @@ HeatWaveは、MySQL Database Service(MDS)用に新しく統合された高性能
 
 **学べること**
  
--	インターネット接続を持つ仮想クラウド・ネットワークの作成方法
--	MySQL Database Serviceポート　セキュリティリストにイングレス・ルールの追加方法Add ingress rules in the security list to allow traffic through 
+-	仮想クラウド・ネットワークの作成方法
+-	セキュリティリストにイングレスルールを追加してMySQL Database Serviceポートへの接続を確立する
 
 **[Click here for Lab 1](/Lab1/README.md)**
 
 ## Lab 2 – Bastionホストとして機能するコンピュートインスタンスを作成する
 
-
 **学べること**
 
--	Learn how to create a compute instance in a specific compartment
+-	特定のコンパートメントにコンピュート・インスタンスを作成する方法
  
 **[Click here for Lab 2](/Lab2/README.md)**
 
@@ -58,8 +58,8 @@ HeatWaveは、MySQL Database Service(MDS)用に新しく統合された高性能
 
 **学べること**
 
--  Learn how to deploy and configure MySQL Database Service with Heatwave
--  Learn how to create the Administrator user for the MDS
+-  MySQL Database Service および Heatwaveをデプロイし、設定する方法
+-  管理者の作成方法
 
   
 **[Click here for Lab 3](/Lab3/README.md)**
@@ -68,26 +68,26 @@ HeatWaveは、MySQL Database Service(MDS)用に新しく統合された高性能
 
 **学べること**
 
--  Learn how to connect to the cloud shell and to the bastion host
--  Learn how to launch MySQL shell
--  Download and setup workshop material
+-  Oracle Cloud Infrastructure (OCI) Cloud ShellとBastionホストへの接続方法
+-  MySQL shellの起動方法
+-  サンプルデータのダウンロード、およびセットアップ
 
 **[Click here for Lab 4](/Lab4/README.md)**
 
-## Lab 4a – Oracle Analytics Cloud用のMySQL Routerインスタンスを作成し、MDS/HeatWaveに接続する
+## Lab 4a – MySQL Routerインスタンスを作成し、MDS/HeatWaveに接続する
 
 **学べること**
 
--  Learn how to install mysqlrouter 
--  Learn how to configure mysqlrouter to allow Oracle Analytics Cloud to connect to MDS/HeatWave
+-  MySQL Routerのインストール方法
+-  Cloud Shellを利用してSSH経由でコンピュート・インスタンスに接続する方法
 
 **[Click here for Lab 4a](/Lab4a/README.md)**
 
-## Lab 5 – HeatWaveクラスターをMySQL Database Serviceに追加する
+## Lab 5 – HeatWaveクラスタをMySQL Database Serviceに追加する
 
 **学べること**
 
--  Learn how to enable the HeatWave cluster for MDS
+-  HeatWaveクラスタを有効にする方法
   
 **[Click here for Lab 5](/Lab5/README.md)**
 
@@ -95,7 +95,7 @@ HeatWaveは、MySQL Database Service(MDS)用に新しく統合された高性能
 
 **学べること**
 
--  Learn how to connect to MDS and import a dataset 
+-  MDSにデータを格納する方法 
   
 **[Click here for Lab 6](/Lab6/README.md)**
 
@@ -103,7 +103,7 @@ HeatWaveは、MySQL Database Service(MDS)用に新しく統合された高性能
 
 **学べること**
 
--  Learn how to enable Heatwave and compare the query execution time with and without HeatWave enabled
+-  HeatWaveを有効にし、HeatWaveが無効になっている場合とクエリ実行時間を比較する
   
 **[Click here for Lab 7](/Lab7/README.md)**
 
@@ -111,7 +111,7 @@ HeatWaveは、MySQL Database Service(MDS)用に新しく統合された高性能
 
 **学べること**
 
-- Learn how to use the free OCI Bastion Service to manage MDS remotely
+- リモートでMDSを管理するためのOCI Bastion Serviceの構築方法
 
 **[Click here for Lab 8a](/Lab8a/README.md)**
 
@@ -119,7 +119,7 @@ HeatWaveは、MySQL Database Service(MDS)用に新しく統合された高性能
 
 **学べること**
 
-- Learn how to provision MDS with High Availability enabled for your mission-critical application
+- MDS高可用性構成を作成する方法
 
 **[Click here for Lab 8b](/Lab8b/README.md)**
 
