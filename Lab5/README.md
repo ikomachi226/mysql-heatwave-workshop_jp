@@ -14,42 +14,42 @@ HeatWaveクラスターをデプロイした後、データをロードしてク
 ## 手順
 
 ### **Step 5.1:**
-- 画面左上のメニューからIn the menu on the left, go to _**Databases >> DB Systems**_
-Click on the DB System which you have previously created and verify that status is _**Active**_.
-Take note of the _**Private IP Address**_ of the MySQL DB System.
+- 画面左上のメニューから _**データベース >> DBシステム**_ を選択します。
+DBシステム一覧から先に作成したインスタンスをクリックして _**アクティブ**_ の状態となっていることを確認します。
+表示されている _**プライベートIPアドレス**_ を控えておきます。
 
 ![](./images/HW29_mds.png)
 
 ### **Step 5.2:**
-- Scroll down and select _**HeatWave**_ from the menu on the left.
+- 画面下部にスクロールして左側に表示されているメニューから _**HeatWave**_ を選択します。
   
 ![](./images/HW30_hw.png)
 
 ### **Step 5.3:**
-- Click on the button _**Add HeatWave Cluster**_ located on the right.
+- _**HeatWaveクラスタの追加**_ ボタンをクリックします。
   
 ![](./images/HW31_hw.png)
 
 ### **Step 5.4:**
-- Check that Shape looks as per picture below and that Node Count is set to 2.
-Click the blue button _**Add HeatWave Cluster**_
+- 下図のようにシェイプが選択され、ノード数が２に設定されていることを確認します。
+_**HeatWaveクラスタの追加**_ ボタンをクリックします。
 
 ![](./images/HW32_hw.png)
 
 ### **Step 5.5:**
-- You will be brought back to the main page where you can check for the creation status. After some seconds you should see the nodes in _**Creating**_ status.
+- メインページに戻り、作成状況を確認できます。 数秒後にノードが _**作成中**_ のステータスになっているはずです。
   
 ![](./images/HW33_hw.png)
 
 ### **Step 5.6:**
-- After completion, the node status will switch to _**Active**_ status. The process will take some time to be completed. 
+- 完了すると _**アクティブ**_ のステータスになります。 この処理には少し時間がかかります。 
   
 ![](./images/HW34_hw.png)
 
 ## Conclusion
 
-Now we have created HeatWave cluster, that consists of a MySQL DB System node and two or more HeatWave nodes.The MySQL DB System node includes a HeatWave plugin that is responsible for cluster management, query scheduling, and returning query results to the MySQL DB System. HeatWave nodes store data in memory and process queries. 
-Learn more about **[HeatWave service on Oracle Cloud](https://docs.oracle.com/en-us/iaas/mysql-database/doc/heatwave1.html)** 
-So let's connect to MySQL DB System and run some queries before we enable the HeatWave cluster in the next lab! 
+これで、MySQL DBシステムノードと2つのHeatWaveノードで構成されるHeatWaveクラスターが作成できました!MySQL DBシステムノードには、クラスター管理、クエリスケジューリング、およびクエリ結果のMySQLDBシステムへの返送を担当するHeatWaveプラグインが含まれています。HeatWaveノードはデータをメモリに保存し、クエリを処理します。
+_**[Oracle Cloud上のHeatWaveサービス]（https://docs.oracle.com/ja-jp/iaas/mysql-database/doc/heatwave.html）**_ の詳細
+それでは、次の演習でHeatWaveクラスターを有効にする前に、MySQL DBシステムに接続して、いくつかのクエリを実行してみましょう。
 
-**[<< Go to Lab 4](/Lab4/README.md)** | **[Home](../Readme.md)** | **[Go to Lab 6 >>](/Lab6/README.md)**
+**[<< Lab 4](/Lab4/README.md)** | **[Home](./Readme.md)** | **[Lab 6 >>](/Lab6/README.md)**
