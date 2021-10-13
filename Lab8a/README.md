@@ -92,4 +92,5 @@ mysql -uadmin -h127.0.0.1 -P3306 -pPassword
 ## まとめ
 
 Bastion用のコンピュート・インスタンスを作成せずに、MDSインスタンスに接続するOCI Bastion Serviceを作成する方法を学習しました。 次の演習では、MDSの高可用性構成を作成してみます。
-**[<< Lab 7](/Lab7/README.md)** | **[Home](../README.md)** | **[8b >>](/Lab8b/README.md)**
+
+**[<< Lab 7](/Lab7/README.md)** | **[Home](../README.md)** | **[Lab 8b >>](/Lab8b/README.md)**
