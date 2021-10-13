@@ -49,7 +49,7 @@ _**HeatWaveクラスタの追加**_ ボタンをクリックします。
 ## Conclusion
 
 これで、MySQL DBシステムノードと2つのHeatWaveノードで構成されるHeatWaveクラスターが作成できました!MySQL DBシステムノードには、クラスター管理、クエリスケジューリング、およびクエリ結果のMySQLDBシステムへの返送を担当するHeatWaveプラグインが含まれています。HeatWaveノードはデータをメモリに保存し、クエリを処理します。
-**[Oracle Cloud上のHeatWaveサービス]（https://docs.oracle.com/ja-jp/iaas/mysql-database/doc/heatwave.html)**
+**[Oracle Cloud上のHeatWaveサービス](https://docs.oracle.com/ja-jp/iaas/mysql-database/doc/heatwave.html)**
 それでは、次の演習でHeatWaveクラスターを有効にする前に、MySQL DBシステムに接続して、いくつかのクエリを実行してみましょう。
 
-**[<< Lab 4](/Lab4/README.md)** | **[Home](/Readme.md)** | **[Lab 6 >>](/Lab6/README.md)**
+**[<< Lab 4](/Lab4/README.md)** | **[Home](../Readme.md)** | **[Lab 6 >>](/Lab6/README.md)**
