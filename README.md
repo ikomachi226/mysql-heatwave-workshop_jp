@@ -34,29 +34,29 @@ HeatWaveは、MySQL Database Service(MDS)用に新しく統合された高性能
 - トライアルアカウントの作成方法
 - 適切なリージョンの選択
 
-**[Go to Lab 0](/Lab0/README.md)**
+**[Click here for Lab 0](/Lab0/README.md)**
 
-## Lab 1 - Create a Virtual Cloud Network and allow traffic through MySQL Database Service port
+## Lab 1 - 仮想ネットワークを作成し、MySQL Database Serviceポートへの接続を確立する
 
-**Key Objectives:**
+**学べること**
  
--	Learn how to create a Virtual Cloud Network with internet connectivity
--	Add ingress rules in the security list to allow traffic through MySQL Database Service ports
+-	インターネット接続を持つ仮想クラウド・ネットワークの作成方法
+-	MySQL Database Serviceポート　セキュリティリストにイングレス・ルールの追加方法Add ingress rules in the security list to allow traffic through 
 
 **[Click here for Lab 1](/Lab1/README.md)**
 
-## Lab 2 – Create a compute instance as a bastion host
+## Lab 2 – Bastionホストとして機能するコンピュートインスタンスを作成する
 
 
-**Key Objectives:**
+**学べること**
 
 -	Learn how to create a compute instance in a specific compartment
  
 **[Click here for Lab 2](/Lab2/README.md)**
 
-## Lab 3 - Create MySQL DB System (MDS) with Heatwave 
+## Lab 3 - MySQL DB System (MDS) および Heatwaveをデプロイする
 
-**Key Objectives:**
+**学べること**
 
 -  Learn how to deploy and configure MySQL Database Service with Heatwave
 -  Learn how to create the Administrator user for the MDS
@@ -64,9 +64,9 @@ HeatWaveは、MySQL Database Service(MDS)用に新しく統合された高性能
   
 **[Click here for Lab 3](/Lab3/README.md)**
 
-## Lab 4 – Connect to the bastion host, install MySQL Shell and download the workshop dataset
+## Lab 4 – Bastionホストに接続し、MySQL Shellのインストールとサンプルデータのダウンロード
 
-**Key Objectives:**
+**学べること**
 
 -  Learn how to connect to the cloud shell and to the bastion host
 -  Learn how to launch MySQL shell
@@ -74,50 +74,50 @@ HeatWaveは、MySQL Database Service(MDS)用に新しく統合された高性能
 
 **[Click here for Lab 4](/Lab4/README.md)**
 
-## Lab 4a – Create a compute instance, install mysqlrouter for Oracle Analytics Cloud
+## Lab 4a – Oracle Analytics Cloud用のMySQL Routerインスタンスを作成し、MDS/HeatWaveに接続する
 
-**Key Objectives:**
+**学べること**
 
 -  Learn how to install mysqlrouter 
 -  Learn how to configure mysqlrouter to allow Oracle Analytics Cloud to connect to MDS/HeatWave
 
 **[Click here for Lab 4a](/Lab4a/README.md)**
 
-## Lab 5 – Add HeatWave cluster to MySQL Database Service
+## Lab 5 – HeatWaveクラスターをMySQL Database Serviceに追加する
 
-**Key Objectives:**
+**学べること**
 
 -  Learn how to enable the HeatWave cluster for MDS
   
 **[Click here for Lab 5](/Lab5/README.md)**
 
-## Lab 6 – Import data into MDS and load tables to HeatWave
+## Lab 6 – MDSへのデータインポートとHeatWaveへのデータロード
 
-**Key Objectives:**
+**学べること**
 
 -  Learn how to connect to MDS and import a dataset 
   
 **[Click here for Lab 6](/Lab6/README.md)**
 
-## Lab 7 – Execute queries leveraging HeatWave
+## Lab 7 – HeatWaveを有効にしてクエリを実行する
 
-**Key Objectives:**
+**学べること**
 
 -  Learn how to enable Heatwave and compare the query execution time with and without HeatWave enabled
   
 **[Click here for Lab 7](/Lab7/README.md)**
 
-## Bonus Lab 8a - Use OCI Bastion Service to manage MDS
+## Bonus Lab 8a - OCI Bastion Serviceを利用してMDSをリモートで使う
 
-**Key Objectives:**
+**学べること**
 
 - Learn how to use the free OCI Bastion Service to manage MDS remotely
 
 **[Click here for Lab 8a](/Lab8a/README.md)**
 
-## Bonus Lab 8b - Deploy your mission critical application on MDS High Availability
+## Bonus Lab 8b - MDS高可用性構成をデプロイする
 
-**Key Objectives:**
+**学べること**
 
 - Learn how to provision MDS with High Availability enabled for your mission-critical application
 
