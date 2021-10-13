@@ -8,12 +8,12 @@
 
 Oracle Cloud Infrastructure(OCI)のトライアルアカウントにサインアップして、MySQL Database ServiceやHeatWaveなどのクラウドサービスを試すことができます。30日間300米ドルの無料クレジットが付与されます。無料クレジットをすべて使い切るか、30日が経過すると、トライアルアカウントはFreeTier(無償)に移行されます。
 
-## Steps
+## 手順
 
 ### **Step - 1:** Oracle Cloud Infrastructureに登録する
 
 **参考動画(英語)**: https://www.linkedin.com/feed/update/urn:li:activity:6724226562507595776/
-1. Oracle Cloud Free Tier Accountに登録する際にはWebページ https://www.oracle.com/jp/cloud/free/ で **無料で始める** をクリックしてください </br>
+1. Oracle Cloud Free Tier Accountに登録する際には **Webページ(https://www.oracle.com/jp/cloud/free/)** で **無料で始める** をクリックしてください </br>
 ![](./images/account0.png)
 </br>
 
@@ -86,7 +86,7 @@ _**[Start my free trial]**_ボタンをクリックします。</br>
 </br>
 
 ### **Step 9**
-OCIコンソールの基本的な操作、コンパートメントの作成方法については _**OCIチュートリアル**_ https://oracle-japan.github.io/ocitutorials/beginners/getting-started/ をご参照ください。 </br>
+OCIコンソールの基本的な操作、コンパートメントの作成方法については **OCIチュートリアル (https://oracle-japan.github.io/ocitutorials/beginners/getting-started/)** をご参照ください。 </br>
 ![](./images/account17.png)
 </br>
 
