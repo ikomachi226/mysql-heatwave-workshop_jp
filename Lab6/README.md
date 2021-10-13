@@ -113,4 +113,4 @@ ORDER BY l_returnflag , l_linestatus;
 次の演習でHeatwaveサービスを有効にしてクエリを再度実行し、結果を比較してみましょう！
 
 
-**[<< Go to Lab 5](/Lab5/README.md)** | **[Home](../README.md)** | **[Go to Lab 7 >>](/Lab7/README.md)**
+**[<< Lab 5](/Lab5/README.md)** | **[Home](../README.md)** | **[Lab 7 >>](/Lab7/README.md)**
