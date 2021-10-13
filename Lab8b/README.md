@@ -37,14 +37,14 @@ MDS高可用性構成の概要については、**[高可用性](https://docs.or
  ![](./images/ha-4.png)
 
 ### **Step 1.4:**
- Click on _**Create**_ to create the MDS High Availabilty configuration, you should be able to use MDS HA in a few minutes once it is provisioned. Enjoy!
+ _**作成**_ をクリックするとMDS高可用性構成が数分後に利用できるようになります。 Enjoy!
  
  ![](./images/ha-5.png)
  
-## Conclusion
+## まとめ
 
-Congratulations! You have completed the 2 bonus labs. 
+ボーナストラックの演習が完了しました！Congratulations!
 
-**[<< Go to Lab 8a](/Lab6/README.md)** | **[Home](../README.md)** 
+**[<< Lab 8a](/Lab8a/README.md)** | **[Home](../README.md)** 
 
 
