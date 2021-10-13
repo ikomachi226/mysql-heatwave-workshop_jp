@@ -1,9 +1,8 @@
 # Lab 4a: MySQL Routerインスタンスを作成し、MDS/HeatWaveに接続する
 
 ## 実施すること
-- 特定のコンパートメントにコンピュート・インスタンスを作成する
-- SSH経由でCloud Shellを利用してコンピュート・インスタンスに接続する
-- Modify the MySQL Routerの接続先をMDS/HeatWaveに変更し接続する
+- MySQL Routerのインストール方法
+- Cloud Shellを利用してSSH経由でコンピュート・インスタンスに接続する
 
 ## 概要
 このでは、MySQLルーターをホストするコンピュート・インスタンスをデプロイします。MDS/HeatWaveはプライベートIPアドレスのみを公開しているため、インターネットを介してネイティブに通信することはできません。インターネットとの通信は、次の2つの方法で実現できます。
@@ -223,10 +222,11 @@ show databases;
 - Cloud Shellウィンドウを最小化し、次の演習に進みます。
 
 
-## Conclusion
+## まとめ
 
 このラボでは、インターネット接続を備えたコンピューティングインスタンスにMySQL Routerルーターをデプロイして設定し、MDS/HeatWaveインスタンスをポイントしました。
-これで、次のLabに進むことができます!
+次の演習に進みましょう!
 
 **[MySQL Router](https://www.mysql.com/jp/products/enterprise/router.html)**
+
 **[<< Lab 4](/Lab4/README.md)** | **[Home](../README.md)** | **[Lab 5 >>](/Lab5/README.md)**
