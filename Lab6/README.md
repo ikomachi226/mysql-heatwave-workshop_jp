@@ -1,42 +1,42 @@
-# Lab 6: Import data into MDS and load tables to HeatWave
+# Lab 6: MDSへのデータインポートとHeatWaveへのデータロード
 
-## Key Objectives:
-- Learn how to connect to MDS and import a dataset 
+## 実施すること
+- MDSに接続し、データを格納する方法を学ぶ 
 
 ## Steps
 
 ### **Step 6.1:**
-- Back to the ssh connection.
+- Cloud ShellのSSH接続に戻ります。
 
 ![](./images/HW35_hw.png)
 
-- Connect to MySQL DB System using MySQL Shell, with the following command:
+- 以下のコマンドを実行してMySQL Shellを使用してMDSに接続します。
 ```
 mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --js
 ```
 
 ### **Step 6.2:**
-- From the MySQL Shell connection, import the data set into MySQL DB System:
+- MySQL ShellプロンプトでMDSにデータが格納できるか確認します。
 ```
 util.loadDump("/home/opc/tpch_dump", {dryRun: true, resetProgress:true, ignoreVersion:true})
 ```
 ![](./images/HW36_hw.png)
 
-This command will run a dry run of the import. If it terminates without errors, execute the followin to load the dump for real:
+上記のコマンドは予行演習オプション(dryRun: true)が指定されていおり、実行時に何もエラーが発生しなければ次のコマンドを実行してデータを格納します。
 ```
 util.loadDump("/home/opc/tpch_dump", {dryRun: false, resetProgress:true, ignoreVersion:true})
 ```
 ![](./images/HW37_hw.png)
 
 ### **Step 6.3:**
-- Check the imported data. From MySQL Shell execute the commands:
+- MySQL Shellで以下のコマンドを実行してデータが格納されたことを確認します。
 
 ```
 \sql
 
 SHOW DATABASES;
 ```
-(You should see the following output:)
+(実行結果)
 ```
 +--------------------+
 | Database           |
@@ -48,13 +48,13 @@ SHOW DATABASES;
 | tpch               |
 +--------------------+
 ```
-Continue with commands:
+続いて、以下のコマンドを実行します。
 ```
 USE tpch;
 
 SHOW TABLES;
 ```
-(You shoul see the following output:)
+(実行結果)
 ```
 +----------------+
 | Tables_in_tpch |
@@ -71,8 +71,8 @@ SHOW TABLES;
 ```
 
 ### **Step 6.4:**
-- Let's start testing a simple query but yet effective query.
-From the previous SQL prompt, run the following query and check the execution time (approximately 12-13s):
+- それでは、クエリを実行してみましょう。 
+同じプロンプトで以下のSQLの実行時間を確認します。(約12-13秒):
 ```
 SELECT
     l_returnflag,
@@ -103,15 +103,14 @@ ORDER BY l_returnflag , l_linestatus;
 +--------------+--------------+-------------+-----------------+-------------------+---------------------+-----------+--------------+----------+-------------+
 4 rows in set (12.6570 sec)
 ```
-- Exit from MySQL Shell:
+- 以下のコマンドを実行して、MySQL Shellを終了します。
   
 ```
  \exit
 ```
 
 ## Conclusion
-
-As we can see the time consumed to run the query is relatively long, so let's enable Heatwave service and run the query again to compare the result in the next Lab!
+次の演習でHeatwaveサービスを有効にしてクエリを再度実行し、結果を比較してみましょう！
 
 
 **[<< Go to Lab 5](/Lab5/README.md)** | **[Home](../README.md)** | **[Go to Lab 7 >>](/Lab7/README.md)**
