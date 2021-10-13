@@ -1,4 +1,4 @@
-# Lab 4a: Oracle Analytics Cloud用のMySQL Routerインスタンスを作成し、MDS/HeatWaveに接続する
+# Lab 4a: MySQL Routerインスタンスを作成し、MDS/HeatWaveに接続する
 
 ## 実施すること
 - 特定のコンパートメントにコンピュート・インスタンスを作成する
