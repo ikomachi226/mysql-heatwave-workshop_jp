@@ -1,8 +1,8 @@
 # Lab 3: MySQL DB System (MDS) および Heatwaveをデプロイする 
 
-## ここで実施すること:
-- MySQL Database Service および Heatwaveをデプロイし、設定する方法を学ぶ.
-- 管理者の作成方法を学ぶ
+## 学べること
+- MySQL Database Service および Heatwaveをデプロイし、設定する方法
+- 管理者の作成方法
 
 ## 概要
 
