@@ -1,13 +1,13 @@
 # Lab 7: HeatWaveを有効にしてクエリを実行する
 
-## 実施すること
+## 学べること
 - HeatWaveを有効にする方法を学び、HeatWaveが無効になっている場合とクエリ実行時間を比較する
 
-## Introduction
+## 概要
 
 HeatWaveクラスターノード数の見積もりを行うと、ワークロードを実行するために推奨されるHeatWaveノード数を提供します。 サービスの開始時に、OLAPワークロード専用のデータベーステーブルをHeatWaveクラスターメモリにロードする必要があります。 HeatWaveクラスターのサイズは、ロードされたテーブルと列、およびこのデータのメモリで達成された圧縮によって異なります。HeatWaveクラスターのプロビジョニングが不十分な場合、スペースの制限により、データのロードまたはクエリの実行が失敗します。
 
-## Steps
+## 手順
 
 ### **Step 7.1:**
 - OCIコンソールでHeatWaveノードが _**アクティブ**_ の状態になっていることを確認します。
@@ -157,9 +157,9 @@ diff -y rapid_rt_profiles.log mysql_rt_profiles.log
 クエリ実行時間を見てみると、HeatWaveクラスタが有効になっている場合、1秒以内にクエリ結果が返却されました。特定の条件を満たすクエリは、実行を加速するためにMySQL DBシステムからHeatWaveクラスタに自動的にオフロードされます。 クエリは、HeatWaveクラスタが有効になっているMDS経由でMySQLクライアントまたはアプリケーションから発行されます。 結果は、経由でクエリを発行したMySQLクライアントまたはアプリケーションに返却されます。
 
 
-## 全て完了です！All Done!
+## 全て完了です！Well Done!
 
 Oracle Bastion Serviceの使用方法を学び、MySQL Database Serviceの高可用性構成をプロビジョニングするための2つのボーナストラックがあります！
-引き続き学習を続けましょう。
+引き続き演習を続けましょう。
 
-**[<< Go to Lab 6](/Lab6/README.md)** | **[Home](../README.md)** | **[Go to Lab 8a >>](/Lab8a/README.md)**
+**[<< Lab 6](/Lab6/README.md)** | **[Home](../README.md)** | **[Lab 8a >>](/Lab8a/README.md)**
