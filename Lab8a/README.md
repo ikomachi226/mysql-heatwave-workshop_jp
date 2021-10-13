@@ -1,8 +1,8 @@
 # Lab 8a: OCI Bastion Serviceを利用してMDSをリモートで使う
 
-## Key Objectives:
+## 学べること
 
-- リモートでMDSを管理するためのOCI Bastion Serviceの構築方法を学ぶ 
+- リモートでMDSを管理するためのOCI Bastion Serviceの構築方法 
 
 ## 概要
 
@@ -11,7 +11,7 @@ Bastionコンピュート・インスタンスを使用せずに、安全な接�
 
 OCI Bastion Serviceについては、**[OCI Bastion Service](https://docs.oracle.com/ja-jp/iaas/Content/Bastion/Concepts/bastionoverview.htm)** をご参照ください。
 
-## Steps
+## 手順
 
 ### **Step 1.1:**
   OCIコンソール画面左上のメニュー_**Identity & Security >> 要塞**_ を選択します。
