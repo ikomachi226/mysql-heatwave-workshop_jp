@@ -1,41 +1,40 @@
-# MySQL Database Service powered by HeatWave for your Analytics project on Oracle Cloud
+# HeatWaveを活用した驚異的なパフォーマンスを持つ分析基盤構築
 
-This workshop will walk you through the process to deploy and configure MySQL Database Service & Heatwave to run Analytics workloads in Oracle Cloud. 
+このワークショップでは、Oracle Cloud Infrastructureで分析ワークロードを実行する、もしくはクエリ処理を高速化するためにMySQL Database ServiceとHeatwaveをデプロイするプロセスについて説明します。
  
-HeatWave is a new, integrated, high-performance analytics engine for MySQL Database Service. HeatWave accelerates MySQL performance by 400X for analytics queries, scales out to thousands of cores, and is 2.7X faster at one-third the cost of Amazon Redshift. MySQL Database Service, with HeatWave, is the only service that enables database admins and app developers to run OLTP and OLAP workloads directly from their MySQL database, eliminating the need for complex, time-consuming, and expensive data movement and integration with a separate analytics database. The service is optimized for and exclusively available in Oracle Cloud Infrastructure (OCI).
+HeatWaveは、MySQL Database Service(MDS)用に新しく統合された高性能クエリ実行エンジンです。 HeatWaveは、分析クエリ実行のパフォーマンスを400倍高速化し、数千コアにスケールアウトし、Amazon Redshiftの3分の1のコストで2.7倍処理が高速になります。 HeatWaveを備えたMDSは、データベース管理者とアプリ開発者がMySQLデータベースから直接OLTPおよびOLAPワークロードを実行できるようにする唯一のサービスであり、複雑で時間と費用のかかるデータ移動や分析ワークロードと分離する必要性を排除します。このサービスは、Oracle Cloud Infrastructure（OCI）向けに最適化されています。
  
-At the end of the workshop you will be able to run some queries on a sample dataset loaded into MySQL Database Service and compare the execution times with and without Heatwave. Prepare yourself to be surprised! 
- 
+ハンズオンを進めるとMDSにロードされたサンプルデータに対してクエリを実行し、Heatwaveを利用する場合と利用しない場合の実行時間の比較ができるようになります。HeatWaveの性能を体感してください！
 
 ![](./images/Intro.png)
 
 
-**Key Objectives:**
+**学べること**
 
--	Learn how to deploy MySQL Database Service (MDS) DB System with HeatWave 
--	Learn how to enable an HeatWave cluster to MDS DB System
--	Learn how to import data into MDS from an external data source
--	Understand how tables are loaded to HeatWave
--	Learn how to run queries on MDS leveraging or not HeatWave
+-	MySQL Database Service (MDS) および HeatWaveのデプロイ
+-	HeatWaveクラスタを有効にする方法
+-	MDSへのデータ格納
+-	HeatWaveへのテーブルロード
+-	HeatWaveを利用したクエリ実行方法
 
 
-**Prerequisites:**
--  This workshop requires an Oracle Public Cloud account. You may use a paid cloud account or a trial cloud account.
--  A Cloud tenancy where you have a compartment provisioned in.
+**前提条件**
+-  このハンズオンでは、Oracle Cloud Infrastructureのアカウントが必要になります。有償アカウント、もしくはトライアルアカウントをご用意ください。
+-  コンパートメントが作成されたテナンシが必要になります。
   
 
-# Workshop Overview
+# ハンズオン概要
  
- **All set? Let's start**
+ **準備ができたら始めましょう**
  
-## Lab 0 - Create a Trial account on Oracle Cloud Infrastructure
+## Lab 0 - Oracle Cloud Infrastructureのトライアルアカウントを作成する
 
-**Key Objectives:**
+**学べること**
 
-- Learn how to create a Trial account on Oracle Cloud Infrastructure
-- Choose an appropriate Cloud Region
+- トライアルアカウントの作成方法
+- 適切なリージョンの選択
 
-**[Click here for Lab 0](/Lab0/README.md)**
+**[Go to Lab 0](/Lab0/README.md)**
 
 ## Lab 1 - Create a Virtual Cloud Network and allow traffic through MySQL Database Service port
 
