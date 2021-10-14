@@ -21,53 +21,53 @@ VCNの概要、許容サイズ、デフォルトのVCN、およびVCNを使用�
 ### **Step 1.1:**
   OCIテナンシにログインし、画面左上の　_**メニュー**_　から　_**ネットワーキング >> 仮想クラウド・ネットワーク**_ を選択します。
 
-![](./images/HW1_vcn_jp.png)
+![](./images/HW1_vcn.png)
 
 ### **Step 1.2:**
  画面左下のコンパートメント一覧から利用するコンパートメントを選択します。
 
-![](./images/HW1b_vcn_jp.png)
+![](./images/HW1b_vcn.png)
 
 ### **Step 1.3:** 
  仮想クラウド・ネットワークを作成するために _**VCNウィザードの起動**_ をクリックします。 
   
-![](./images/HW2_vcn_jp.png)
+![](./images/HW2_vcn.png)
 
 ### **Step 1.4:** 
  _**インターネット接続性を持つVCNの作成**_ を選択して _**VCNウィザードの起動**_　をクリックします。
 
-![](./images/HW3_vcn_jp.png)
+![](./images/HW3_vcn.png)
 
 ### **Step 1.5:**
  VCNに必要な情報をいくつか設定します。_**VCN名**_ には _**analytics_vcn_test**_ (もしくは任意の名前)を入力し、正しいコンパートメントが選択されていることを確認します。その他の項目はデフォルトのまま設定し、_**次**_ をクリックします。
 
-![](./images/HW4_vcn_jp.png)
+![](./images/HW4_vcn.png)
 
 ### **Step 1.6:** 
  入力内容を確認し、_**作成**_　をクリックします。
 
-![](./images/HW5_vcn_jp.png)
+![](./images/HW5_vcn.png)
 
 ### **Step 1.7:** 
  VCNの作成が完了したら _**仮想クラウド・ネットワークの表示**_　をクリックします。
 
-![](./images/HW6_vcn_jp.png)
+![](./images/HW6_vcn.png)
 
 ### **Step 1.8:** 
  _**パブリック・サブネット-analytics_vcn_test**_ のリンクをクリックします。
 
-![](./images/HW7_vcn_jp.png)
+![](./images/HW7_vcn.png)
 
 ### **Step 1.9:** 
  VCNウィザードでデフォルトのセキュリティリストを使用するようにサブネットを設定しました。このリストには、Oracle Cloudの使用を簡単に開始できるようにデフォルトのルールが設計されています。
  次に、VCNのデフォルトのセキュリティリストをカスタマイズして、_**Default_Security_List_for_analytics_vcn_test**_　をクリックしてMySQLデータベースのポートを通過するトラフィックを許可します。  
 
-![](./images/HW8_vcn_jp.png)
+![](./images/HW8_vcn.png)
 
 ### **Step 1.10:** 
   _**イングレス・ルールの追加**_　をクリックします。
 
-![](./images/HW9_vcn_jp.png)
+![](./images/HW9_vcn.png)
 
 ### **Step 1.11:**
  必要なルールをデフォルトのセキュリティリストに追加して、MySQLデータベースサービスポートを介したトラフィックを有効にします。
@@ -77,7 +77,7 @@ VCNの概要、許容サイズ、デフォルトのVCN、およびVCNを使用�
 
 入力したら _**イングレス・ルールの追加**_　をクリックします。
 
-![](./images/HW11_vcn_jp.png)
+![](./images/HW11_vcn.png)
 
 
 ## まとめ
