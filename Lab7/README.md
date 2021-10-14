@@ -149,7 +149,7 @@ diff -y rapid_rt_profiles.log mysql_rt_profiles.log
 
 - ここまで、HeatWave(RAPIDエンジン)、MDS(InnoDBエンジン)単体それぞれを使用した場合の実行時間を比較しました。
 
-補足: inspect tpch_queries_mysql.sql と tpch_queries_rapid.sql の違いについてはviを利用して確認してみてください。
+補足: inspect tpch_queries_mysql.sql と tpch_queries_rapid.sql の違いについてはviなどを利用して確認してみてください。
 
 
 ## まとめ
