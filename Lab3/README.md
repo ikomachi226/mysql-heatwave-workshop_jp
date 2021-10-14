@@ -56,7 +56,7 @@ In the _**バックアップ・プランの構成**_ セクションはデフォ
 ![](./images/HW24_mds.png)
 
 ### **Step 3.8:**
-- In the _**構成の参照**_ 画面で、MySQL.HeatWave.VM.Standard.E3.Standaloneを選択し、_**構成の選択**_ をクリックします。 
+- _**構成の参照**_ 画面で、MySQL.HeatWave.VM.Standard.E3.Standaloneを選択し、_**構成の選択**_ をクリックします。 
 
 ![](./images/HW25_mds.png)
 
