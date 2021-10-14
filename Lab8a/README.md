@@ -14,14 +14,14 @@ OCI Bastion Serviceについては、**[OCI Bastion Service](https://docs.oracle
 ## 手順
 
 ### **Step 1.1:**
-  OCIコンソール画面左上のメニュー_**Identity & Security >> 要塞**_ を選択します。
+  OCIコンソール画面左上のメニューから _**Identity & Security >> 要塞**_ を選択します。
   
-![](./images/bas-1.png)
+![](./images/bastion_service1.png)
 
 ### **Step 1.2:**
  左側のコンパートメントが正しく選択されていることを確認し、_**要塞の作成**_ をクリックします。
 
-![](./images/bas-2.png)
+![](./images/bastion_service2.png)
 
 ### **Step 1.3:** 
 Fill in the details of the following fields:
