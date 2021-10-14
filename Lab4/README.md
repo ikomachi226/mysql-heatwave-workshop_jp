@@ -39,6 +39,7 @@ Oracle Cloud Infrastructure (OCI) Cloud Shellは、OCIコンソールからア�
 
 ### **Step 4.6:**
 - 保存してある秘密キーをCloud Shellウィンドウにドラッグ・アンド・ドロップします。_**ll**_ コマンドでファイル名を取得します。
+- もしくはCloud Shellウィンドウ左上のメニューから _**アップロード**_ を選択し、秘密キーのファイルをアップロードします。
   
 ![](./images/cloud-shell-5.png)
 
