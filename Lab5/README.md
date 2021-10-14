@@ -53,4 +53,4 @@ MySQL DBシステムノードには、クラスタ管理、クエリスケジュ
 **[Oracle Cloud上のHeatWaveサービス](https://docs.oracle.com/ja-jp/iaas/mysql-database/doc/heatwave.html)**
 それではHeatWaveクラスタを有効にする前に、次の演習ではMySQL DBシステムでクエリを実行してみましょう。
 
-**[<< Lab 4](/Lab4/README.md)** | **[Home](../Readme.md)** | **[Lab 6 >>](/Lab6/README.md)**
+**[<< Lab 4](/Lab4/README.md)** | **[Home](../README.md)** | **[Lab 6 >>](/Lab6/README.md)**
