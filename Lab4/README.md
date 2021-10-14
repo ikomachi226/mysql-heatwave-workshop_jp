@@ -1,7 +1,7 @@
-# Lab 4: Bastionへの接続、MySQL Shellのインストールとサンプルデータのダウンロード
+# Lab 4: 踏み台サーバーにMySQL Shellをインストール、サンプルデータのダウンロード
 
 ## 学べること
-- Oracle Cloud Infrastructure (OCI) Cloud ShellとBastionホストへの接続方法
+- OCI Cloud Shellと踏み台サーバーへの接続方法
 - MySQL shellの起動方法
 - サンプルデータのダウンロード、およびセットアップ
   
@@ -102,7 +102,8 @@ cd /home/opc
 ```
 
 ```
-wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/XNaQbUfOeeNW1QAGVXpep9I6lddFD1RoYUOF4HffjRIxOoXMA7POXk2SY0N6JYNI/n/idazzjlcjqzj/b/workshop/o/heatwave_workshop.zip
+wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei__e51gGpufa2PI6tVUAkWS2lDT3HGeDqnGTKyM2HEWjH1gHMvfoLCBvaq26LXO/n/idazzjlcjqzj/b/workshop/o/heatwave_workshop.zip
+
 ```
 
 ![](./images/cloud-shell-10.png)
