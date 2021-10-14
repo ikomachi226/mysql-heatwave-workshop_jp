@@ -136,4 +136,4 @@ _**tpch_queries_rapid.sql**_
 
 ここまでの操作で、Cloud Shellの起動、コンピュート・インスタンスに接続するための秘密キーをインポートしました。 更に、MySQL ShellとMySQLクライアントをインストールし、最後に後でベンチマークに使用する資材をダウンロードして解凍しました。
 
-**[<< Lab 3](/Lab3/README.md)** | **[Home](../README.md)** | **[Lab 4a >>](/Lab4a/README.md)**
+**[<< Lab 3](/Lab3/README.md)** | **[Home](../README.md)** | **[Lab 5 >>](/Lab5/README.md)**
