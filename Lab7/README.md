@@ -5,7 +5,9 @@
 
 ## 概要
 
-HeatWaveクラスターノード数の見積もりを行うと、ワークロードを実行するために推奨されるHeatWaveノード数を提供します。 サービスの開始時に、OLAPワークロード専用のデータベーステーブルをHeatWaveクラスターメモリにロードする必要があります。 HeatWaveクラスターのサイズは、ロードされたテーブルと列、およびこのデータのメモリで達成された圧縮によって異なります。HeatWaveクラスターのプロビジョニングが不十分な場合、スペースの制限により、データのロードまたはクエリの実行が失敗します。
+HeatWaveを利用する際にはクエリ実行する対象のテーブルをHeatWaveクラスタのメモリにロードする必要があります。</br>
+HeatWaveクラスタのサイズは、ロードされたテーブルと列、およびこのデータのメモリで達成された圧縮によって異なります。HeatWaveクラスターのプロビジョニングが不十分な場合、スペースの制限により、データのロードまたはクエリの実行が失敗します。</br>
+なおHeatWaveを有効化する際に、HeatWaveクラスタに必要なノード数の見積もりを行うと、ワークロードを実行するために推奨されるHeatWaveノード数が算出されます。 
 
 ## 手順
 
@@ -16,7 +18,7 @@ HeatWaveクラスターノード数の見積もりを行うと、ワークロー
 
 
 ### **Step 7.2:**
-- HeatWaveノードが _**アクティブ**_ となっている場合は、以下のコマンドを使用してBastionホストのSSH接続からtpchテーブルをHeatWaveにロードします。
+- HeatWaveノードが _**アクティブ**_ となっている場合は、以下のコマンドを使用して踏み台サーバー(SSH接続)でサンプルデータ'tpch'をHeatWaveにロードします。
 
 ```
 mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --sql < tpch_offload.sql
@@ -28,7 +30,7 @@ mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --p
 
 tpch_offload.sqlは、「RAPID_COLUMN = ENCODING = SORTED」（オプションの手順）を使用して一部の列に辞書エンコーディングを適用する以外に、次の値を設定してテーブルをHeatWaveにロードします。
 
-- **以下のコマンドを実行する必要はありません** (tpch_offload.sqlファイルに追加のテーブルをロードする場合を除く)
+- **以下のコマンドは実行する必要はありません** 
 
 alter table <table_name> secondary_engine=rapid;
 
@@ -159,7 +161,7 @@ diff -y rapid_rt_profiles.log mysql_rt_profiles.log
 
 ## 全て完了です！Well Done!
 
-Oracle Bastion Serviceの使用方法を学び、MySQL Database Serviceの高可用性構成をプロビジョニングするための2つのボーナストラックがあります！
+踏み台サーバーではなく、Oracle Bastion Serviceを使用する方法や、MySQL Database Serviceの高可用性構成をプロビジョニングするための2つのボーナストラックがあります！
 引き続き演習を続けましょう。
 
 **[<< Lab 6](/Lab6/README.md)** | **[Home](../README.md)** | **[Lab 8a >>](/Lab8a/README.md)**
