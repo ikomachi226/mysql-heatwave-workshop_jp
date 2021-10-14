@@ -85,4 +85,4 @@ MySQL X プロトコル・ポート: 33060
  
 詳細は **[DBシステムの作成](https://docs.oracle.com/ja-jp/iaas/mysql-database/doc/creating-db-system1.html)** を参照してください。
 
-**[<< Go to Lab 2](/Lab2/README.md)** | **[Home](../README.md)** | **[Go to Lab 4 >>](/Lab4/README.md)**
+**[<< Lab 2](/Lab2/README.md)** | **[Home](../README.md)** | **[Lab 4 >>](/Lab4/README.md)**
