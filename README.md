@@ -74,15 +74,6 @@ HeatWaveは、MySQL Database Service(MDS)用に新しく統合された高性能
 
 **[Click here for Lab 4](/Lab4/README.md)**
 
-## Lab 4a – MySQL Routerインスタンスを作成し、MDS/HeatWaveに接続する
-
-**学べること**
-
--  MySQL Routerのインストール方法
--  Cloud Shellを利用してSSH経由でコンピュート・インスタンスに接続する方法
-
-**[Click here for Lab 4a](/Lab4a/README.md)**
-
 ## Lab 5 – HeatWaveクラスタをMySQL Database Serviceに追加する
 
 **学べること**
