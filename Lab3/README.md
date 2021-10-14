@@ -23,7 +23,7 @@ HeatWaveを有効にすると、HeatWaveのシェイプ（MySQL.HeatWave.VM.Stan
 ![](./images/HW18_mds.png)
 
 ### **Step 3.3:**
-- DBシステムの作成を開始します。 コンパートメントを再度チェックし、DBシステムに _**mysql-analytics-test**_ という名前を入力し、[HeatWave]を選択します。 これにより、HeatWave対応のMySQLDBシステムを作成できます。 今回は他のチェックボックスは無視してください。
+- DBシステムの作成を開始します。 コンパートメントを再度チェックし、名前に _**mysql-analytics-test**_ という名前を入力し、[HeatWave]を選択します。 これにより、HeatWave対応のMDSインスタンスを作成できます。 今回は他のチェックボックスは無視してください。
   
 ![](./images/HW19_mds.png)
 
