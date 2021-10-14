@@ -46,7 +46,7 @@ HeatWaveは、MySQL Database Service(MDS)用に新しく統合された高性能
 
 **[Click here for Lab 1](/Lab1/README.md)**
 
-## Lab 2 – Bastionホストとして機能するコンピュートインスタンスを作成する
+## Lab 2 – 踏み台サーバーとなるコンピュートインスタンスを作成する
 
 **学べること**
 
@@ -64,12 +64,12 @@ HeatWaveは、MySQL Database Service(MDS)用に新しく統合された高性能
   
 **[Click here for Lab 3](/Lab3/README.md)**
 
-## Lab 4 – Bastionホストに接続し、MySQL Shellのインストールとサンプルデータのダウンロード
+## Lab 4 – 踏み台サーバーでのMySQL Shellのインストールとサンプルデータのダウンロード
 
 **学べること**
 
--  Oracle Cloud Infrastructure (OCI) Cloud ShellとBastionホストへの接続方法
--  MySQL shellの起動方法
+-  Oracle Cloud Infrastructure (OCI) Cloud Shellと踏み台サーバーへの接続方法
+-  MySQL Shellの起動方法
 -  サンプルデータのダウンロード、およびセットアップ
 
 **[Click here for Lab 4](/Lab4/README.md)**
