@@ -67,14 +67,14 @@ sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
 ```
 ![](./images/cloud-shell-7.png)
 
-_**公開キーについて警告が表示された場合は "y"を入力します**_ 
+_**確認メッセージが表示された場合は "y"を入力します**_ 
 
 ```
 sudo yum install mysql-shell  
 ```
 ![](./images/cloud-shell-8.png)
 
-_**公開キーについて警告が表示された場合は "y"を入力します**_
+_**確認メッセージが表示された場合は "y"を入力します**_
 
 ```
 sudo yum install mysql-community-client
@@ -82,7 +82,7 @@ sudo yum install mysql-community-client
 
 ![](./images/cloud-shell-9.png)
 
-_**公開キーについて警告が表示された場合は "y"を入力します**_
+_**確認メッセージが表示された場合は "y"を入力します**_
 
 
 ### **Step 4.9:**
@@ -102,7 +102,7 @@ cd /home/opc
 ```
 
 ```
-wget https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/wRGvQM7cJAXu6_YoMIfzLeWQnnw5zUXlSOynelMlADOFfQI3t1ugdRB7U8fFnFHG/n/odca/b/MySQL_Data/o/heatwave_workshop.zip
+wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/XNaQbUfOeeNW1QAGVXpep9I6lddFD1RoYUOF4HffjRIxOoXMA7POXk2SY0N6JYNI/n/idazzjlcjqzj/b/workshop/o/heatwave_workshop.zip
 ```
 
 ![](./images/cloud-shell-10.png)
