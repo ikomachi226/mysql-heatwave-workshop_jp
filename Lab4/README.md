@@ -2,7 +2,7 @@
 
 ## 学べること
 - OCI Cloud Shellと踏み台サーバーへの接続方法
-- MySQL shellの起動方法
+- MySQL Shellの起動方法
 - サンプルデータのダウンロード、およびセットアップ
   
 ## 概要
@@ -44,7 +44,7 @@ Oracle Cloud Infrastructure (OCI) Cloud Shellは、OCIコンソールからア�
 ![](./images/cloud-shell-5.png)
 
 ### **Step 4.7:**
-- パブリックIPアドレスを用いてBastionホストとSSH接続を確立させるため、以下のコマンドを実行します。
+- パブリックIPアドレスを用いて踏み台サーバーにSSH接続を行うため、以下のコマンドを実行します。
 ```
 chmod 600 <private-key-file-name>.key
 ssh -i <private-key-file-name>.key opc@<compute_instance_public_ip>
