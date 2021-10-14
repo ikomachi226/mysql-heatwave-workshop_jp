@@ -18,7 +18,7 @@ Oracle Cloud Infrastructure (OCI) Cloud Shellは、OCIコンソールからア�
 ![](./images/HW16_ci4.png)
 
 ### **Step 4.2:**
-- Bastionホストに接続するためにOCIコンソールに付属しているLinuxターミナルであるCloud Shellを利用します。
+- 踏み台サーバーに接続するためにOCIコンソールに付属しているLinuxターミナルであるCloud Shellを利用します。
 　Cloud Shellにアクセスするために, 画面右上に表示されているOCIリージョンの右側に表示されているCloud Shellアイコンをクリックします。
 ![](./images/cloud-shell-1.png)
 
