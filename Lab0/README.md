@@ -12,8 +12,8 @@ Oracle Cloud Infrastructure(OCI)のトライアルアカウントにサインア
 
 ### **Step - 1:** Oracle Cloud Infrastructureに登録する
 
-**参考動画(英語)**: https://www.linkedin.com/feed/update/urn:li:activity:6724226562507595776/
 Oracle Cloud Free Tier Accountに登録する際には **[Oracle Cloud Free Tier webページ](https://www.oracle.com/jp/cloud/free/)** にアクセスし、**無料で始める** をクリックしてください </br>
+**参考動画(英語)**: https://www.linkedin.com/feed/update/urn:li:activity:6724226562507595776/ </br>
 ![](./images/account0.png)
 </br>
 **[Oracle Cloud Free Tierよくある質問](https://www.oracle.com/jp/cloud/free/faq.html)** </br>
