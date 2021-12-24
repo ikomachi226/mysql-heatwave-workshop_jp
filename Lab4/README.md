@@ -15,33 +15,33 @@ Oracle Cloud Infrastructure (OCI) Cloud Shellは、OCIコンソールからア�
 - 画面左上のメニューから _**コンピュート >> インスタンス**_ を選択します。
  作成済のインスタンス mysql-analytics-test-bridge をクリックして _**パブリックIPアドレス**_ をコピーします。
 
-![](./images/HW16_ci4.png)
+![](./images/HW16_ci4_jp.png)
 
 ### **Step 4.2:**
 - 踏み台サーバーに接続するためにOCIコンソールに付属しているLinuxターミナルであるCloud Shellを利用します。
 　Cloud Shellにアクセスするために, 画面右上に表示されているOCIリージョンの右側に表示されているCloud Shellアイコンをクリックします。
-![](./images/cloud-shell-1.png)
+![](./images/cloudshell1_jp.png)
 
 ### **Step 4.3:**
 - Cloud Shellを起動すると、下記画面例のようなターミナルが表示されます。
   
-![](./images/cloud-shell-2.png)
+![](./images/cloudshell2_jp.png)
 
 ### **Step 4.4**
 - 操作しやすくする為に、ここでフォントサイズを変更することを推奨します。
   
-![](./images/cloud-shell-3.png)
+![](./images/cloudshell3_jp.png)
 
 ### **Step 4.5:**
 - Cloud Shellウィンドウの右上隅には、[最小化]、[最大化]、[終了]ボタンがあります。 クラウドシェルを最大化すると、ページ全体のサイズになります。 OCIコンソールのページを移動する前に、サイズを元に戻すか最小化することを忘れないでください。
 
-![](./images/cloud-shell-4.png)
+![](./images/cloudshell4_jp.png)
 
 ### **Step 4.6:**
 - 保存してある秘密キーをCloud Shellウィンドウにドラッグ・アンド・ドロップします。_**ll**_ コマンドでファイル名を取得します。
 - もしくはCloud Shellウィンドウ左上のメニューから _**アップロード**_ を選択し、秘密キーのファイルをアップロードします。
   
-![](./images/cloud-shell-5.png)
+![](./images/cloudshell5_jp.png)
 
 ### **Step 4.7:**
 - パブリックIPアドレスを用いて踏み台サーバーにSSH接続を行うため、以下のコマンドを実行します。
