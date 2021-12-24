@@ -14,7 +14,7 @@ HeatWaveクラスタのサイズは、ロードされたテーブルと列、お
 ### **Step 7.1:**
 - OCIコンソールでHeatWaveノードが _**アクティブ**_ の状態になっていることを確認します。
   
-![](./images/HW34_hw.png)
+![](./images/HW33_hw_jp.png)
 
 
 ### **Step 7.2:**
