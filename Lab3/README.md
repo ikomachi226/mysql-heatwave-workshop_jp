@@ -14,18 +14,18 @@ HeatWaveを有効にすると、HeatWaveのシェイプ（MySQL.HeatWave.VM.Stan
 ### **Step 3.1:**
 - 画面左上のメニューから _**データベース >> DBシステム**_ を選択します。
   
-![](./images/HW17_mds.png)
+![](./images/HW17_mds_jp.png)
 
 ### **Step 3.2:**
 - 前の手順で、DBシステムの作成画面に移動します。
 　左側のコンパートメントが、VCNとコンピュート・インスタンスの作成時に選択したものと同じコンパートメントを選択していることを確認します。確認できたら _**DBシステムの作成**_ をクリックします。
 
-![](./images/HW18_mds.png)
+![](./images/HW18_mds_jp.png)
 
 ### **Step 3.3:**
 - DBシステムの作成を開始します。 コンパートメントを再度チェックし、名前に _**mysql-analytics-test**_ という名前を入力し、[HeatWave]を選択します。 これにより、HeatWave対応のMDSインスタンスを作成できます。 今回は他のチェックボックスは無視してください。
   
-![](./images/HW19_mds.png)
+![](./images/HW19_mds_jp.png)
 
 ### **Step 3.4:**
 - _**管理者資格証明の作成**_ セクションでは以下を入力します:
@@ -37,33 +37,33 @@ HeatWaveを有効にすると、HeatWaveのシェイプ（MySQL.HeatWave.VM.Stan
 
 - アベイラビリティ・ドメインはデフォルトのままとし、_**ハードウェアの構成**_ セクションに進みます。
  
-  ![](./images/HW20_mds.png)
+  ![](./images/HW20_mds_jp.png)
 
 ### **Step 3.5:**
 - _**ハードウェアの構成**_ セクションで、シェイプ: MySQL.HeatWave.VM.Standard.E3, CPUコア数: 16, メモリー・サイズ: 512 GB, データ・ストレージ・サイズ: 1024と設定されていることを確認します。</br>
 _**バックアップ・プランの構成**_ セクションはデフォルトのままバックアップ保持期間を7日間としておきます。
 
-![](./images/HW22_mds.png)
+![](./images/HW21_mds_jp.png)
 
 ### **Step 3.6:**
 - 画面下部にスクロールし、_**拡張オプションの表示**_ リンクをクリックします。
   
-![](./images/HW23_mds.png)
+![](./images/HW22_mds_jp.png)
 
 ### **Step 3.7:**
 - 構成タブで _**構成の選択**_ をクリックします。 
 
-![](./images/HW24_mds.png)
+![](./images/HW23_mds_jp.png)
 
 ### **Step 3.8:**
 - _**構成の参照**_ 画面で、MySQL.HeatWave.VM.Standard.E3.Standaloneを選択し、_**構成の選択**_ をクリックします。 
 
-![](./images/HW25_mds.png)
+![](./images/HW24_mds_jp.png)
 
 ### **Step 3.9:**
 - 正しく選択できていれば、以下のような画面表示になります。
 
-![](./images/HW26_mds.png)
+![](./images/HW25_mds_jp.png)
 
 ### **Step 3.10:**
 - ネットワーキングタブに移動し、ホスト名に _**mysql-analytics-test**_ (DBシステム名と同じ名前)を入力します。 
@@ -72,12 +72,12 @@ MySQLポート: 3306</br>
 MySQL X プロトコル・ポート: 33060</br>
 確認できたら _**作成**_ をクリックします。
 
-![](./images/HW27_mds.png)
+![](./images/HW26_mds_jp.png)
 
 ### **Step 3.11:**
 - MDSは _**作成中**_ の状態になります(下記画面例)。 起動まで少し時間がかかるので、次の演習に進んでいただいて大丈夫です。
   
-![](./images/HW28_mds.png)
+![](./images/HW27_mds_jp.png)
 
 ## まとめ
 
