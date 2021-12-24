@@ -13,7 +13,7 @@ Oracle Cloud Infrastructure (OCI) Cloud Shellは、OCIコンソールからア�
 
 ### **Step 4.1:**
 - 画面左上のメニューから _**コンピュート >> インスタンス**_ を選択します。
- 作成済のインスタンスをクリックして _**パブリックIPアドレス**_ をコピーします。
+ 作成済のインスタンス mysql-analytics-test-bridge をクリックして _**パブリックIPアドレス**_ をコピーします。
 
 ![](./images/HW16_ci4.png)
 
