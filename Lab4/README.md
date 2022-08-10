@@ -103,7 +103,7 @@ cd /home/opc
 ```
 
 ```
-wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei__e51gGpufa2PI6tVUAkWS2lDT3HGeDqnGTKyM2HEWjH1gHMvfoLCBvaq26LXO/n/idazzjlcjqzj/b/workshop/o/heatwave_workshop.zip
+wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/kr3LRMfdmGqcs4gg0QcUVXm7Fe0ClNfL3RLYTAZK8E1Umz-ZOBcLzaQwds1ZfW7I/n/idazzjlcjqzj/b/heatwave-workshop/o/heatwave_workshop.zip
 
 ```
 
